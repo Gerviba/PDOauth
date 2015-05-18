@@ -264,6 +264,7 @@
             <listitem>GetAuthorizationCode. </listitem>
             <listitem>Authorization code can be obtained from uri.  </listitem>
             <listitem>Authorization code can be discarded.  </listitem>
+            <listitem>Auth interface redirects to redirect uri.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -290,7 +291,7 @@
          <title>End user registration</title>
          <itemizedlist>
             <listitem>Registration is done by filling out the registration form.   </listitem>
-            <listitem>If you are not logged in,the authorization uri redirects to login page.  </listitem>
+            <listitem>If you are not logged in,the authorization uri redirects to login page such that after login you can continue.  </listitem>
             <listitem>You can check your data in the ME url.   </listitem>
             <listitem>For some forms you need a csrf token,you can obtain it by logging in.   </listitem>
             <listitem>An assurer can add assurance to other users using the assurance form.   </listitem>
@@ -305,6 +306,13 @@
          <itemizedlist>
             <listitem>The reset link is in the reset email. </listitem>
             <listitem>Password can be reset using the reset link.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>New user</title>
+         <itemizedlist>
+            <listitem>Unregistered user can register with password in the middle of login procedure of a served application.  </listitem>
+            <listitem>Unregistered user can register with facebook in the middle of login procedure of a served application.  </listitem>
          </itemizedlist>
       </section>
       <section>

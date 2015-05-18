@@ -57,14 +57,15 @@
                      <dt><span class="section"><a href="#d54e311">Authorisaton</a></span></dt>
                      <dt><span class="section"><a href="#d54e329">Auth</a></span></dt>
                      <dt><span class="section"><a href="#d54e339">Auth provider</a></span></dt>
-                     <dt><span class="section"><a href="#d54e409">Assurance</a></span></dt>
-                     <dt><span class="section"><a href="#d54e421">Application</a></span></dt>
-                     <dt><span class="section"><a href="#d54e437">End user registration</a></span></dt>
-                     <dt><span class="section"><a href="#d54e459">End user password reset</a></span></dt>
-                     <dt><span class="section"><a href="#d54e467">End user obtaining hash</a></span></dt>
-                     <dt><span class="section"><a href="#d54e474">End user registration and login with facebook</a></span></dt>
-                     <dt><span class="section"><a href="#d54e484">Java script unit</a></span></dt>
-                     <dt><span class="section"><a href="#d54e490">JavaScript tests</a></span></dt>
+                     <dt><span class="section"><a href="#d54e411">Assurance</a></span></dt>
+                     <dt><span class="section"><a href="#d54e423">Application</a></span></dt>
+                     <dt><span class="section"><a href="#d54e439">End user registration</a></span></dt>
+                     <dt><span class="section"><a href="#d54e461">End user password reset</a></span></dt>
+                     <dt><span class="section"><a href="#d54e469">New user</a></span></dt>
+                     <dt><span class="section"><a href="#d54e478">End user obtaining hash</a></span></dt>
+                     <dt><span class="section"><a href="#d54e484">End user registration and login with facebook</a></span></dt>
+                     <dt><span class="section"><a href="#d54e494">Java script unit</a></span></dt>
+                     <dt><span class="section"><a href="#d54e500">JavaScript tests</a></span></dt>
                   </dl>
                </dd>
             </dl>
@@ -581,6 +582,7 @@
                      <li class="listitem">GetAuthorizationCode. </li>
                      <li class="listitem">Authorization code can be obtained from uri.  </li>
                      <li class="listitem">Authorization code can be discarded.  </li>
+                     <li class="listitem">Auth interface redirects to redirect uri.  </li>
                   </ul>
                </div>
             </div>
@@ -588,7 +590,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e409"></a>Assurance
+                        <h3 class="title"><a id="d54e411"></a>Assurance
                         </h3>
                      </div>
                   </div>
@@ -609,7 +611,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e421"></a>Application
+                        <h3 class="title"><a id="d54e423"></a>Application
                         </h3>
                      </div>
                   </div>
@@ -629,7 +631,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e437"></a>End user registration
+                        <h3 class="title"><a id="d54e439"></a>End user registration
                         </h3>
                      </div>
                   </div>
@@ -637,7 +639,9 @@
                <div class="itemizedlist">
                   <ul class="itemizedlist" type="disc">
                      <li class="listitem">Registration is done by filling out the registration form.   </li>
-                     <li class="listitem">If you are not logged in,the authorization uri redirects to login page.  </li>
+                     <li class="listitem">If you are not logged in,the authorization uri redirects to login page such that after
+                        login you can continue.  
+                     </li>
                      <li class="listitem">You can check your data in the ME url.   </li>
                      <li class="listitem">For some forms you need a csrf token,you can obtain it by logging in.   </li>
                      <li class="listitem">An assurer can add assurance to other users using the assurance form.   </li>
@@ -654,7 +658,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e459"></a>End user password reset
+                        <h3 class="title"><a id="d54e461"></a>End user password reset
                         </h3>
                      </div>
                   </div>
@@ -666,11 +670,31 @@
                   </ul>
                </div>
             </div>
+            <div class="section" title="New user">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e469"></a>New user
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" type="disc">
+                     <li class="listitem">Unregistered user can register with password in the middle of login procedure of a
+                        served application.  
+                     </li>
+                     <li class="listitem">Unregistered user can register with facebook in the middle of login procedure of a
+                        served application.  
+                     </li>
+                  </ul>
+               </div>
+            </div>
             <div class="section" title="End user obtaining hash">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e467"></a>End user obtaining hash
+                        <h3 class="title"><a id="d54e478"></a>End user obtaining hash
                         </h3>
                      </div>
                   </div>
@@ -688,7 +712,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e474"></a>End user registration and login with facebook
+                        <h3 class="title"><a id="d54e484"></a>End user registration and login with facebook
                         </h3>
                      </div>
                   </div>
@@ -707,7 +731,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e484"></a>Java script unit
+                        <h3 class="title"><a id="d54e494"></a>Java script unit
                         </h3>
                      </div>
                   </div>
@@ -722,7 +746,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e490"></a>JavaScript tests
+                        <h3 class="title"><a id="d54e500"></a>JavaScript tests
                         </h3>
                      </div>
                   </div>
