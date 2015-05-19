@@ -117,6 +117,9 @@
             <listitem>Registration should give a credential type.  </listitem>
             <listitem>Registration should give an identifier.  </listitem>
             <listitem>Password registration is impossible with already used username.  </listitem>
+            <listitem>When a hash is registered which is already used by another user, the user is notified about the fact.  </listitem>
+            <listitem>When a hash is registered which is already used by another assured user, the user is notified about the fact and registration fails.  </listitem>
+            <listitem>The emailverification assurance does not count in hash collision.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -278,7 +281,9 @@
             <listitem>Assurers without appropriate credential cannot add assurance to user.  </listitem>
             <listitem>Adding assurance is possible using the hash only.  </listitem>
             <listitem>Assurers need assurer assurance.  </listitem>
-            <listitem>Assurers need giving assurance.  that is assurance.[the assurance to give]</listitem>
+            <listitem>Assurers need giving assurance.  that is they have to have assurance.[the assurance to give]</listitem>
+            <listitem>When an assurer wants to add an assurance for a user with hash and without email, and there are multiple users with that hash, then an error is signaled.  </listitem>
+            <listitem>When an assurance added with hash and email, and there is another user with the same hash, the hash from the other user is deleted.  </listitem>
          </itemizedlist>
       </section>
       <section>
