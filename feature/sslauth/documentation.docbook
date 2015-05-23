@@ -11,6 +11,10 @@
          <para>app.route('/login', methods=['POST'])</para> 
       </section>
       <section>
+         <title>ssl_login</title>
+         <para>app.route('/ssl_login', methods=['GET'])</para> 
+      </section>
+      <section>
          <title>deregister</title>
          <para>app.route('/deregister', methods=['POST'])</para> 
       </section>
@@ -80,59 +84,61 @@
    <section>
       <title>Functionality</title>
       <section>
-         <title>Key data</title>
+         <title>End user registration</title>
          <itemizedlist>
-            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
-            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
-            <listitem>None is returned for nonexistent client id.  </listitem>
-            <listitem>None is returned for nonexistent user id.  </listitem>
-            <listitem>None is returned for none as user id.  </listitem>
-            <listitem>None is returned for none as client id.  </listitem>
+            <listitem>Registration is done by filling out the registration form.   </listitem>
+            <listitem>If you are not logged in,the authorization uri redirects to login page such that after login you can continue.  </listitem>
+            <listitem>You can check your data in the ME url.   </listitem>
+            <listitem>For some forms you need a csrf token,you can obtain it by logging in.   </listitem>
+            <listitem>An assurer can add assurance to other users using the assurance form.   </listitem>
+            <listitem>An assurer can get user information using the users email.   </listitem>
+            <listitem>If you are logged in and all the informations are correct the oauth page redirects to the redirect uri with your authorization code as parameter.   </listitem>
+            <listitem>The server can get your access tokens using your authorization code. </listitem>
+            <listitem>The server can get your user info with your access token. </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Server side</title>
+         <title>Java script unit</title>
          <itemizedlist>
-            <listitem>Authorization code can be obtained by an authenticated user using correct client id and redirect uri.  </listitem>
-            <listitem>Server side request.  </listitem>
-            <listitem>Get user info.  </listitem>
-            <listitem>Unauthenticated user is redirected to login page when tries to do oauth with us.  </listitem>
+            <listitem>Javascript unit test run nicely.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Deregister</title>
+         <title>End user registration and login with facebook</title>
          <itemizedlist>
-            <listitem>You can deregister with your login credentials and csrf.  </listitem>
-            <listitem>You have to use the credentials used for login to deregister.  </listitem>
-            <listitem>You need credentialType to deregister.  </listitem>
-            <listitem>You need valid credentialType to deregister.  </listitem>
-            <listitem>You need identifier to deregister.  </listitem>
-            <listitem>You need valid identifier to deregister.  </listitem>
-            <listitem>You need secret to deregister.  </listitem>
-            <listitem>You need valid secret to deregister.  </listitem>
-            <listitem>You need csrf token to deregister.  </listitem>
-            <listitem>You need valid csrf token to deregister.  </listitem>
+            <listitem>If a user without public email tries to register to facebook we ask for email address.  </listitem>
+            <listitem>It is possible to register with facebook.  </listitem>
+            <listitem>You can login using facebook.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Token info by access key</title>
+         <title>New user</title>
          <itemizedlist>
-            <listitem>TokenInfo can be stored by access key. </listitem>
-            <listitem>TokenInfo can be retrieved by access key.  </listitem>
-            <listitem>Find returns None for nonexisting refresh key.  </listitem>
-            <listitem>Access key expires at given time.  </listitem>
-            <listitem>There should not be two records with same access key.  </listitem>
+            <listitem>Unregistered user can register with password in the middle of login procedure of a served application.  </listitem>
+            <listitem>Unregistered user can register with facebook in the middle of login procedure of a served application.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Application</title>
+         <title>End user password reset</title>
          <itemizedlist>
-            <listitem>The application name is stored as given.  </listitem>
-            <listitem>An application can be stored and retrieved.  </listitem>
-            <listitem>The name of the application must be unique.  </listitem>
-            <listitem>The name of the application must be unique case 2.  </listitem>
-            <listitem>The redirect uri is stored as given.  </listitem>
-            <listitem>The redirect uri must be https.  </listitem>
+            <listitem>The reset link is in the reset email. </listitem>
+            <listitem>Password can be reset using the reset link.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>End user obtaining hash</title>
+         <itemizedlist>
+            <listitem>You can obtain the hash by filling in your personal id and pushing the button near it.  In this case your web browser goes directly to anchor.edemokraciagep.org, and gets the hash for you. The SSO server never sees your personal id.</listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Password change</title>
+         <itemizedlist>
+            <listitem>Change password returns 200 and a success message.  </listitem>
+            <listitem>Change password does change password.  </listitem>
+            <listitem>Change password needs csrf.  </listitem>
+            <listitem>Change password for self needs old password.  </listitem>
+            <listitem>Old password for self should be correct.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -157,6 +163,111 @@
             <listitem>Successful password clears the temporary credential.  </listitem>
             <listitem>No password reset for timed out temporary credential.  </listitem>
             <listitem>Bad secret clears up all timed out temporary credentials.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Deregister</title>
+         <itemizedlist>
+            <listitem>You can deregister with your login credentials and csrf.  </listitem>
+            <listitem>You have to use the credentials used for login to deregister.  </listitem>
+            <listitem>You need credentialType to deregister.  </listitem>
+            <listitem>You need valid credentialType to deregister.  </listitem>
+            <listitem>You need identifier to deregister.  </listitem>
+            <listitem>You need valid identifier to deregister.  </listitem>
+            <listitem>You need secret to deregister.  </listitem>
+            <listitem>You need valid secret to deregister.  </listitem>
+            <listitem>You need csrf token to deregister.  </listitem>
+            <listitem>You need valid csrf token to deregister.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Key data</title>
+         <itemizedlist>
+            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
+            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
+            <listitem>None is returned for nonexistent client id.  </listitem>
+            <listitem>None is returned for nonexistent user id.  </listitem>
+            <listitem>None is returned for none as user id.  </listitem>
+            <listitem>None is returned for none as client id.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Credential</title>
+         <itemizedlist>
+            <listitem>Credential representation is readable.  </listitem>
+            <listitem>Credential can be retrieved by type and identifier.  </listitem>
+            <listitem>A logged in user can add credential.  </listitem>
+            <listitem>When a credential is added the response contains user data which contains her credentials.  </listitem>
+            <listitem>A not logged in user cannot add credential.  </listitem>
+            <listitem>The credential is actually added.  </listitem>
+            <listitem>The added credential should contain credentialType.  </listitem>
+            <listitem>The added credential should contain valid credentialType.  </listitem>
+            <listitem>The added credential should contain identifier.  </listitem>
+            <listitem>The added credential should contain valid identifier.  </listitem>
+            <listitem>The added credential should contain secret.  </listitem>
+            <listitem>The password should be at least 8 characters long.  </listitem>
+            <listitem>The password should contain lowercase letters.  </listitem>
+            <listitem>The password should contain uppercase letters.  </listitem>
+            <listitem>Cannot add an already existing identifier.  </listitem>
+            <listitem>A credential can be deleted.  </listitem>
+            <listitem>The credential is actually deleted.  </listitem>
+            <listitem>You should give the credentialType for credential deletion.  </listitem>
+            <listitem>You should give valid credentialType for credential deletion.  </listitem>
+            <listitem>You should give the identifier for credential deletion.  </listitem>
+            <listitem>You should give valid identifier for credential deletion.  </listitem>
+            <listitem>The credential used for login cannot be cleared.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>User</title>
+         <itemizedlist>
+            <listitem>User can be created. </listitem>
+            <listitem>User id is returned by get id.  </listitem>
+            <listitem>User email with plus sign is stored correctly.  </listitem>
+            <listitem>User is created as inactive.  </listitem>
+            <listitem>User is created as unauthenticated.  </listitem>
+            <listitem>Inactive user is loaded as inactive.  </listitem>
+            <listitem>Unauthenticated user is loaded as unauthenticated.  </listitem>
+            <listitem>User can be activated.  </listitem>
+            <listitem>User can be set as authenticated.  </listitem>
+            <listitem>User can be created with credentials.  </listitem>
+            <listitem>User can be retrieved by id.  </listitem>
+            <listitem>User email can be stored.  </listitem>
+            <listitem>User hash can be stored.  </listitem>
+            <listitem>Cannot create user with already existing email.  </listitem>
+            <listitem>GetByDigest does not allow empty digest.  </listitem>
+            <listitem>GetByDigest does not allow null digest.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Logout</title>
+         <itemizedlist>
+            <listitem>You can log out.  </listitem>
+            <listitem>You have to be logged in to log out.  </listitem>
+            <listitem>If you log out you will be logged out.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>User info</title>
+         <itemizedlist>
+            <listitem>Logged in user can get its info.  </listitem>
+            <listitem>Userid returned is the string one.  </listitem>
+            <listitem>User info contains assurance.  </listitem>
+            <listitem>Users with assurer assurance can get email and digest for anyone.  </listitem>
+            <listitem>Users without assurer assurance cannot get email and digest for anyone.  </listitem>
+            <listitem>Users with assurer assurance can get user by email.  </listitem>
+            <listitem>No by email with wrong email.  </listitem>
+            <listitem>Users without assurer assurance cannot get user by email.  </listitem>
+            <listitem>Users without login cannot get user by email.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Server side</title>
+         <itemizedlist>
+            <listitem>Authorization code can be obtained by an authenticated user using correct client id and redirect uri.  </listitem>
+            <listitem>Server side request.  </listitem>
+            <listitem>Get user info.  </listitem>
+            <listitem>Unauthenticated user is redirected to login page when tries to do oauth with us.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -198,19 +309,17 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Email verification</title>
+         <title>Hash</title>
          <itemizedlist>
-            <listitem>Email validation gives emailverification assurance.  </listitem>
-            <listitem>Email verification after expiry will fail.  </listitem>
-            <listitem>Bad email uri signals error.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Auth</title>
-         <itemizedlist>
-            <listitem>Unauthorized response is redirecting to login page.  </listitem>
-            <listitem>Load user loads the user by id.  </listitem>
-            <listitem>Load user returns None for nonexisting id.  </listitem>
+            <listitem>A logged in user can record its hash.  </listitem>
+            <listitem>The users hash is changed to the new one.  </listitem>
+            <listitem>If the user had a hash before,it is overwritten.  </listitem>
+            <listitem>It is possible to delete the hash by not giving a digest in the request.  </listitem>
+            <listitem>The assurances are overwritten on hash update.  </listitem>
+            <listitem>Emailverification assurance is an exception from overwriting.  </listitem>
+            <listitem>Without login it is not possible to update the hash.  </listitem>
+            <listitem>The hash update request should contain csrf token.  </listitem>
+            <listitem>If a hash is given it should be valid.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -231,42 +340,17 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Password change</title>
+         <title>Assurance</title>
          <itemizedlist>
-            <listitem>Change password returns 200 and a success message.  </listitem>
-            <listitem>Change password does change password.  </listitem>
-            <listitem>Change password needs csrf.  </listitem>
-            <listitem>Change password for self needs old password.  </listitem>
-            <listitem>Old password for self should be correct.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>User</title>
-         <itemizedlist>
-            <listitem>User can be created. </listitem>
-            <listitem>User id is returned by get id.  </listitem>
-            <listitem>User email with plus sign is stored correctly.  </listitem>
-            <listitem>User is created as inactive.  </listitem>
-            <listitem>User is created as unauthenticated.  </listitem>
-            <listitem>Inactive user is loaded as inactive.  </listitem>
-            <listitem>Unauthenticated user is loaded as unauthenticated.  </listitem>
-            <listitem>User can be activated.  </listitem>
-            <listitem>User can be set as authenticated.  </listitem>
-            <listitem>User can be created with credentials.  </listitem>
-            <listitem>User can be retrieved by id.  </listitem>
-            <listitem>User email can be stored.  </listitem>
-            <listitem>User hash can be stored.  </listitem>
-            <listitem>Cannot create user with already existing email.  </listitem>
-            <listitem>GetByDigest does not allow empty digest.  </listitem>
-            <listitem>GetByDigest does not allow null digest.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Logout</title>
-         <itemizedlist>
-            <listitem>You can log out.  </listitem>
-            <listitem>You have to be logged in to log out.  </listitem>
-            <listitem>If you log out you will be logged out.  </listitem>
+            <listitem>Assurance form needs csrf.  </listitem>
+            <listitem>Assurers with appropriate credential can add assurance to user using hash.  the appropriate credential is an assurance in the form "assurer.&lt;assurance_name&gt;" where assurance_name is the assurance to be added</listitem>
+            <listitem>No madeup csrf cookie.  </listitem>
+            <listitem>Assurers without appropriate credential cannot add assurance to user.  </listitem>
+            <listitem>Adding assurance is possible using the hash only.  </listitem>
+            <listitem>Assurers need assurer assurance.  </listitem>
+            <listitem>Assurers need giving assurance.  that is they have to have assurance.[the assurance to give]</listitem>
+            <listitem>When an assurer wants to add an assurance for a user with hash and without email, and there are multiple users with that hash, then an error is signaled.  </listitem>
+            <listitem>When an assurance added with hash and email, and there is another user with the same hash, the hash from the other user is deleted.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -282,65 +366,33 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Assurance</title>
+         <title>Application</title>
          <itemizedlist>
-            <listitem>Assurance form needs csrf.  </listitem>
-            <listitem>Assurers with appropriate credential can add assurance to user using hash.  the appropriate credential is an assurance in the form "assurer.&lt;assurance_name&gt;" where assurance_name is the assurance to be added</listitem>
-            <listitem>No madeup csrf cookie.  </listitem>
-            <listitem>Assurers without appropriate credential cannot add assurance to user.  </listitem>
-            <listitem>Adding assurance is possible using the hash only.  </listitem>
-            <listitem>Assurers need assurer assurance.  </listitem>
-            <listitem>Assurers need giving assurance.  that is they have to have assurance.[the assurance to give]</listitem>
-            <listitem>When an assurer wants to add an assurance for a user with hash and without email, and there are multiple users with that hash, then an error is signaled.  </listitem>
-            <listitem>When an assurance added with hash and email, and there is another user with the same hash, the hash from the other user is deleted.  </listitem>
+            <listitem>The application name is stored as given.  </listitem>
+            <listitem>An application can be stored and retrieved.  </listitem>
+            <listitem>The name of the application must be unique.  </listitem>
+            <listitem>The name of the application must be unique case 2.  </listitem>
+            <listitem>The redirect uri is stored as given.  </listitem>
+            <listitem>The redirect uri must be https.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Credential</title>
+         <title>Token info by access key</title>
          <itemizedlist>
-            <listitem>Credential representation is readable.  </listitem>
-            <listitem>Credential can be retrieved by type and identifier.  </listitem>
-            <listitem>A logged in user can add credential.  </listitem>
-            <listitem>When a credential is added the response contains user data which contains her credentials.  </listitem>
-            <listitem>A not logged in user cannot add credential.  </listitem>
-            <listitem>The credential is actually added.  </listitem>
-            <listitem>The added credential should contain credentialType.  </listitem>
-            <listitem>The added credential should contain valid credentialType.  </listitem>
-            <listitem>The added credential should contain identifier.  </listitem>
-            <listitem>The added credential should contain valid identifier.  </listitem>
-            <listitem>The added credential should contain secret.  </listitem>
-            <listitem>The password should be at least 8 characters long.  </listitem>
-            <listitem>The password should contain lowercase letters.  </listitem>
-            <listitem>The password should contain uppercase letters.  </listitem>
-            <listitem>Cannot add an already existing identifier.  </listitem>
-            <listitem>A credential can be deleted.  </listitem>
-            <listitem>The credential is actually deleted.  </listitem>
-            <listitem>You should give the credentialType for credential deletion.  </listitem>
-            <listitem>You should give valid credentialType for credential deletion.  </listitem>
-            <listitem>You should give the identifier for credential deletion.  </listitem>
-            <listitem>You should give valid identifier for credential deletion.  </listitem>
-            <listitem>The credential used for login cannot be cleared.  </listitem>
+            <listitem>TokenInfo can be stored by access key. </listitem>
+            <listitem>TokenInfo can be retrieved by access key.  </listitem>
+            <listitem>Find returns None for nonexisting refresh key.  </listitem>
+            <listitem>Access key expires at given time.  </listitem>
+            <listitem>There should not be two records with same access key.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Hash</title>
+         <title>Facebook</title>
          <itemizedlist>
-            <listitem>A logged in user can record its hash.  </listitem>
-            <listitem>The users hash is changed to the new one.  </listitem>
-            <listitem>If the user had a hash before,it is overwritten.  </listitem>
-            <listitem>It is possible to delete the hash by not giving a digest in the request.  </listitem>
-            <listitem>The assurances are overwritten on hash update.  </listitem>
-            <listitem>Emailverification assurance is an exception from overwriting.  </listitem>
-            <listitem>Without login it is not possible to update the hash.  </listitem>
-            <listitem>The hash update request should contain csrf token.  </listitem>
-            <listitem>If a hash is given it should be valid.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Main</title>
-         <itemizedlist>
-            <listitem>NoRootUri.  </listitem>
-            <listitem>Static files are served.  </listitem>
+            <listitem>Facebook login needs facebook id and access token.  </listitem>
+            <listitem>Facebook login needs facebook id as username.  </listitem>
+            <listitem>Facebook login needs correct access token as password.  </listitem>
+            <listitem>Facebook login needs facebook credentials as registered.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -364,74 +416,34 @@
          </itemizedlist>
       </section>
       <section>
-         <title>User info</title>
+         <title>Auth</title>
          <itemizedlist>
-            <listitem>Logged in user can get its info.  </listitem>
-            <listitem>Userid returned is the string one.  </listitem>
-            <listitem>User info contains assurance.  </listitem>
-            <listitem>Users with assurer assurance can get email and digest for anyone.  </listitem>
-            <listitem>Users without assurer assurance cannot get email and digest for anyone.  </listitem>
-            <listitem>Users with assurer assurance can get user by email.  </listitem>
-            <listitem>No by email with wrong email.  </listitem>
-            <listitem>Users without assurer assurance cannot get user by email.  </listitem>
-            <listitem>Users without login cannot get user by email.  </listitem>
+            <listitem>Unauthorized response is redirecting to login page.  </listitem>
+            <listitem>Load user loads the user by id.  </listitem>
+            <listitem>Load user returns None for nonexisting id.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Facebook</title>
+         <title>S s l login</title>
          <itemizedlist>
-            <listitem>Facebook login needs facebook id and access token.  </listitem>
-            <listitem>Facebook login needs facebook id as username.  </listitem>
-            <listitem>Facebook login needs correct access token as password.  </listitem>
-            <listitem>Facebook login needs facebook credentials as registered.  </listitem>
+            <listitem>You can login using a registered ssl cert.  </listitem>
+            <listitem>You cannot login using an uregistered ssl cert.  </listitem>
+            <listitem>You cannot ssl login without a cert.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>End user obtaining hash</title>
+         <title>Main</title>
          <itemizedlist>
-            <listitem>You can obtain the hash by filling in your personal id and pushing the button near it.  In this case your web browser goes directly to anchor.edemokraciagep.org, and gets the hash for you. The SSO server never sees your personal id.</listitem>
+            <listitem>NoRootUri.  </listitem>
+            <listitem>Static files are served.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>End user registration and login with facebook</title>
+         <title>Email verification</title>
          <itemizedlist>
-            <listitem>If a user without public email tries to register to facebook we ask for email address.  </listitem>
-            <listitem>It is possible to register with facebook.  </listitem>
-            <listitem>You can login using facebook.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>New user</title>
-         <itemizedlist>
-            <listitem>Unregistered user can register with password in the middle of login procedure of a served application.  </listitem>
-            <listitem>Unregistered user can register with facebook in the middle of login procedure of a served application.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Java script unit</title>
-         <itemizedlist>
-            <listitem>Javascript unit test run nicely.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>End user password reset</title>
-         <itemizedlist>
-            <listitem>The reset link is in the reset email. </listitem>
-            <listitem>Password can be reset using the reset link.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>End user registration</title>
-         <itemizedlist>
-            <listitem>Registration is done by filling out the registration form.   </listitem>
-            <listitem>If you are not logged in,the authorization uri redirects to login page such that after login you can continue.  </listitem>
-            <listitem>You can check your data in the ME url.   </listitem>
-            <listitem>For some forms you need a csrf token,you can obtain it by logging in.   </listitem>
-            <listitem>An assurer can add assurance to other users using the assurance form.   </listitem>
-            <listitem>An assurer can get user information using the users email.   </listitem>
-            <listitem>If you are logged in and all the informations are correct the oauth page redirects to the redirect uri with your authorization code as parameter.   </listitem>
-            <listitem>The server can get your access tokens using your authorization code. </listitem>
-            <listitem>The server can get your user info with your access token. </listitem>
+            <listitem>Email validation gives emailverification assurance.  </listitem>
+            <listitem>Email verification after expiry will fail.  </listitem>
+            <listitem>Bad email uri signals error.  </listitem>
          </itemizedlist>
       </section>
       <section>
