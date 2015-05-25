@@ -141,7 +141,9 @@
          <title>S s l login</title>
          <itemizedlist>
             <listitem>You can login using a registered ssl cert.  </listitem>
-            <listitem>You cannot login using an uregistered ssl cert.  </listitem>
+            <listitem>With cert login you get actually logged in.  </listitem>
+            <listitem>You cannot login using an unregistered ssl cert without email.  </listitem>
+            <listitem>You can register and login using an unregistered ssl cert with email.  </listitem>
             <listitem>You cannot ssl login without a cert.  </listitem>
          </itemizedlist>
       </section>
