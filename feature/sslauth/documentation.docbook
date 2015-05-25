@@ -399,6 +399,13 @@
          </itemizedlist>
       </section>
       <section>
+         <title>S s l auth</title>
+         <itemizedlist>
+            <listitem>Ssl login logs in if you are registered and have cert.  </listitem>
+            <listitem>Normal pages do not ask for cert.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>End user registration</title>
          <itemizedlist>
             <listitem>Registration is done by filling out the registration form.   </listitem>
