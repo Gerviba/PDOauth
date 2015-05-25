@@ -5,10 +5,10 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <title>PDOauth documentation</title>
       <link rel="stylesheet" type="text/css" href="../static/docbook.css" />
-      <meta name="generator" content="DocBook XSL Stylesheets V1.76.1" />
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
    </head>
    <body>
-      <div class="article" title="PDOauth documentation">
+      <div class="article">
          <div class="titlepage">
             <div>
                <div>
@@ -20,65 +20,68 @@
          </div>
          <div class="toc">
             <p><strong>Table of Contents</strong></p>
-            <dl>
+            <dl class="toc">
                <dt><span class="section"><a href="#d54e4">Interfaces</a></span></dt>
                <dd>
                   <dl>
                      <dt><span class="section"><a href="#d54e7">authorization_code</a></span></dt>
                      <dt><span class="section"><a href="#d54e15">login</a></span></dt>
-                     <dt><span class="section"><a href="#d54e20">deregister</a></span></dt>
-                     <dt><span class="section"><a href="#d54e25">logout</a></span></dt>
-                     <dt><span class="section"><a href="#d54e32">token</a></span></dt>
-                     <dt><span class="section"><a href="#d54e37">showUser</a></span></dt>
-                     <dt><span class="section"><a href="#d54e42">changePassword</a></span></dt>
-                     <dt><span class="section"><a href="#d54e47">sendPasswordResetEmail</a></span></dt>
-                     <dt><span class="section"><a href="#d54e52">updateHash</a></span></dt>
-                     <dt><span class="section"><a href="#d54e59">passwordReset</a></span></dt>
-                     <dt><span class="section"><a href="#d54e65">register</a></span></dt>
-                     <dt><span class="section"><a href="#d54e70">verifyEmail</a></span></dt>
-                     <dt><span class="section"><a href="#d54e75">get_by_email</a></span></dt>
-                     <dt><span class="section"><a href="#d54e82">add_assurance</a></span></dt>
-                     <dt><span class="section"><a href="#d54e89">add_credential</a></span></dt>
-                     <dt><span class="section"><a href="#d54e96">remove_credential</a></span></dt>
-                     <dt><span class="section"><a href="#d54e103">send_static</a></span></dt>
+                     <dt><span class="section"><a href="#d54e20">ssl_login</a></span></dt>
+                     <dt><span class="section"><a href="#d54e25">deregister</a></span></dt>
+                     <dt><span class="section"><a href="#d54e30">logout</a></span></dt>
+                     <dt><span class="section"><a href="#d54e37">token</a></span></dt>
+                     <dt><span class="section"><a href="#d54e42">showUser</a></span></dt>
+                     <dt><span class="section"><a href="#d54e47">changePassword</a></span></dt>
+                     <dt><span class="section"><a href="#d54e52">sendPasswordResetEmail</a></span></dt>
+                     <dt><span class="section"><a href="#d54e57">updateHash</a></span></dt>
+                     <dt><span class="section"><a href="#d54e65">passwordReset</a></span></dt>
+                     <dt><span class="section"><a href="#d54e70">register</a></span></dt>
+                     <dt><span class="section"><a href="#d54e75">verifyEmail</a></span></dt>
+                     <dt><span class="section"><a href="#d54e80">get_by_email</a></span></dt>
+                     <dt><span class="section"><a href="#d54e87">add_assurance</a></span></dt>
+                     <dt><span class="section"><a href="#d54e94">add_credential</a></span></dt>
+                     <dt><span class="section"><a href="#d54e101">remove_credential</a></span></dt>
+                     <dt><span class="section"><a href="#d54e108">send_static</a></span></dt>
                   </dl>
                </dd>
-               <dt><span class="section"><a href="#d54e108">Functionality</a></span></dt>
+               <dt><span class="section"><a href="#d54e113">Functionality</a></span></dt>
                <dd>
                   <dl>
-                     <dt><span class="section"><a href="#d54e111">User</a></span></dt>
-                     <dt><span class="section"><a href="#d54e148">User info</a></span></dt>
-                     <dt><span class="section"><a href="#d54e170">Token info by access key</a></span></dt>
-                     <dt><span class="section"><a href="#d54e184">Server side</a></span></dt>
-                     <dt><span class="section"><a href="#d54e196">Registration</a></span></dt>
-                     <dt><span class="section"><a href="#d54e231">Password reset</a></span></dt>
-                     <dt><span class="section"><a href="#d54e274">Password change</a></span></dt>
-                     <dt><span class="section"><a href="#d54e288">Main</a></span></dt>
-                     <dt><span class="section"><a href="#d54e296">Logout</a></span></dt>
-                     <dt><span class="section"><a href="#d54e306">Login</a></span></dt>
-                     <dt><span class="section"><a href="#d54e336">Key data</a></span></dt>
-                     <dt><span class="section"><a href="#d54e352">Hash</a></span></dt>
-                     <dt><span class="section"><a href="#d54e374">Facebook</a></span></dt>
-                     <dt><span class="section"><a href="#d54e386">Email verification</a></span></dt>
-                     <dt><span class="section"><a href="#d54e396">Deregister</a></span></dt>
-                     <dt><span class="section"><a href="#d54e420">Credential</a></span></dt>
-                     <dt><span class="section"><a href="#d54e469">Authorisaton</a></span></dt>
-                     <dt><span class="section"><a href="#d54e487">Auth</a></span></dt>
-                     <dt><span class="section"><a href="#d54e497">Auth provider</a></span></dt>
-                     <dt><span class="section"><a href="#d54e569">Assurance</a></span></dt>
-                     <dt><span class="section"><a href="#d54e591">Application</a></span></dt>
-                     <dt><span class="section"><a href="#d54e608">End user registration</a></span></dt>
-                     <dt><span class="section"><a href="#d54e630">End user password reset</a></span></dt>
-                     <dt><span class="section"><a href="#d54e638">New user</a></span></dt>
-                     <dt><span class="section"><a href="#d54e646">End user obtaining hash</a></span></dt>
-                     <dt><span class="section"><a href="#d54e652">End user registration and login with facebook</a></span></dt>
-                     <dt><span class="section"><a href="#d54e662">Java script unit</a></span></dt>
-                     <dt><span class="section"><a href="#d54e668">JavaScript tests</a></span></dt>
+                     <dt><span class="section"><a href="#d54e116">New user</a></span></dt>
+                     <dt><span class="section"><a href="#d54e124">End user registration</a></span></dt>
+                     <dt><span class="section"><a href="#d54e146">End user password reset</a></span></dt>
+                     <dt><span class="section"><a href="#d54e154">End user registration and login with facebook</a></span></dt>
+                     <dt><span class="section"><a href="#d54e164">Java script unit</a></span></dt>
+                     <dt><span class="section"><a href="#d54e172">End user obtaining hash</a></span></dt>
+                     <dt><span class="section"><a href="#d54e178">S s l auth</a></span></dt>
+                     <dt><span class="section"><a href="#d54e186">Application</a></span></dt>
+                     <dt><span class="section"><a href="#d54e202">S s l login</a></span></dt>
+                     <dt><span class="section"><a href="#d54e216">Key data</a></span></dt>
+                     <dt><span class="section"><a href="#d54e233">User</a></span></dt>
+                     <dt><span class="section"><a href="#d54e270">Registration</a></span></dt>
+                     <dt><span class="section"><a href="#d54e305">Credential</a></span></dt>
+                     <dt><span class="section"><a href="#d54e354">Auth provider</a></span></dt>
+                     <dt><span class="section"><a href="#d54e426">Hash</a></span></dt>
+                     <dt><span class="section"><a href="#d54e448">Server side</a></span></dt>
+                     <dt><span class="section"><a href="#d54e460">User info</a></span></dt>
+                     <dt><span class="section"><a href="#d54e482">Email verification</a></span></dt>
+                     <dt><span class="section"><a href="#d54e492">Login</a></span></dt>
+                     <dt><span class="section"><a href="#d54e521">Deregister</a></span></dt>
+                     <dt><span class="section"><a href="#d54e545">Facebook</a></span></dt>
+                     <dt><span class="section"><a href="#d54e558">Logout</a></span></dt>
+                     <dt><span class="section"><a href="#d54e568">Assurance</a></span></dt>
+                     <dt><span class="section"><a href="#d54e590">Token info by access key</a></span></dt>
+                     <dt><span class="section"><a href="#d54e604">Password change</a></span></dt>
+                     <dt><span class="section"><a href="#d54e618">Auth</a></span></dt>
+                     <dt><span class="section"><a href="#d54e628">Password reset</a></span></dt>
+                     <dt><span class="section"><a href="#d54e671">Main</a></span></dt>
+                     <dt><span class="section"><a href="#d54e679">Authorisaton</a></span></dt>
+                     <dt><span class="section"><a href="#d54e697">JavaScript tests</a></span></dt>
                   </dl>
                </dd>
             </dl>
          </div>
-         <div class="section" title="Interfaces">
+         <div class="section">
             <div class="titlepage">
                <div>
                   <div>
@@ -87,7 +90,7 @@
                   </div>
                </div>
             </div>
-            <div class="section" title="authorization_code">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
@@ -99,7 +102,7 @@
                <p>app.route('/v1/oauth2/auth', methods=['GET'])</p>
                <p>login_required</p>  see http://tech.shift.com/post/39516330935/implementing-a-python-oauth-2-0-provider-part-1
             </div>
-            <div class="section" title="login">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
@@ -110,22 +113,33 @@
                </div>
                <p>app.route('/login', methods=['POST'])</p>
             </div>
-            <div class="section" title="deregister">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e20"></a>deregister
+                        <h3 class="title"><a id="d54e20"></a>ssl_login
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <p>app.route('/ssl_login', methods=['GET'])</p>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e25"></a>deregister
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/deregister', methods=['POST'])</p>
             </div>
-            <div class="section" title="logout">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e25"></a>logout
+                        <h3 class="title"><a id="d54e30"></a>logout
                         </h3>
                      </div>
                   </div>
@@ -133,55 +147,55 @@
                <p>app.route('/logout', methods=['GET'])</p>
                <p>login_required</p>
             </div>
-            <div class="section" title="token">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e32"></a>token
+                        <h3 class="title"><a id="d54e37"></a>token
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/v1/oauth2/token', methods=['POST'])</p>
             </div>
-            <div class="section" title="showUser">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e37"></a>showUser
+                        <h3 class="title"><a id="d54e42"></a>showUser
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/v1/users/&lt;userid&gt;', methods=['GET'])</p>
             </div>
-            <div class="section" title="changePassword">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e42"></a>changePassword
+                        <h3 class="title"><a id="d54e47"></a>changePassword
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/v1/users/me/change_password', methods=['POST'])</p>
             </div>
-            <div class="section" title="sendPasswordResetEmail">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e47"></a>sendPasswordResetEmail
+                        <h3 class="title"><a id="d54e52"></a>sendPasswordResetEmail
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/v1/users/&lt;email&gt;/passwordreset', methods=['GET'])</p>
             </div>
-            <div class="section" title="updateHash">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e52"></a>updateHash
+                        <h3 class="title"><a id="d54e57"></a>updateHash
                         </h3>
                      </div>
                   </div>
@@ -189,44 +203,44 @@
                <p>app.route('/v1/users/me/update_hash', methods=['POST'])</p>
                <p>login_required</p>
             </div>
-            <div class="section" title="passwordReset">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e59"></a>passwordReset
+                        <h3 class="title"><a id="d54e65"></a>passwordReset
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/v1/password_reset', methods=['POST'])</p>
             </div>
-            <div class="section" title="register">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e65"></a>register
+                        <h3 class="title"><a id="d54e70"></a>register
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/v1/register', methods=['POST'])</p>
             </div>
-            <div class="section" title="verifyEmail">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e70"></a>verifyEmail
+                        <h3 class="title"><a id="d54e75"></a>verifyEmail
                         </h3>
                      </div>
                   </div>
                </div>
                <p>app.route('/v1/verify_email/&lt;token&gt;', methods=['GET'])</p>
             </div>
-            <div class="section" title="get_by_email">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e75"></a>get_by_email
+                        <h3 class="title"><a id="d54e80"></a>get_by_email
                         </h3>
                      </div>
                   </div>
@@ -234,11 +248,11 @@
                <p>app.route('/v1/user_by_email/&lt;email&gt;', methods=['GET'])</p>
                <p>login_required</p>
             </div>
-            <div class="section" title="add_assurance">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e82"></a>add_assurance
+                        <h3 class="title"><a id="d54e87"></a>add_assurance
                         </h3>
                      </div>
                   </div>
@@ -246,11 +260,11 @@
                <p>app.route('/v1/add_assurance', methods=['POST'])</p>
                <p>login_required</p>
             </div>
-            <div class="section" title="add_credential">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e89"></a>add_credential
+                        <h3 class="title"><a id="d54e94"></a>add_credential
                         </h3>
                      </div>
                   </div>
@@ -258,11 +272,11 @@
                <p>app.route('/v1/add_credential', methods=['POST'])</p>
                <p>login_required</p>
             </div>
-            <div class="section" title="remove_credential">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e96"></a>remove_credential
+                        <h3 class="title"><a id="d54e101"></a>remove_credential
                         </h3>
                      </div>
                   </div>
@@ -270,11 +284,11 @@
                <p>app.route('/v1/remove_credential', methods=['POST'])</p>
                <p>login_required</p>
             </div>
-            <div class="section" title="send_static">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e103"></a>send_static
+                        <h3 class="title"><a id="d54e108"></a>send_static
                         </h3>
                      </div>
                   </div>
@@ -282,26 +296,217 @@
                <p>app.route('/static/&lt;path:path&gt;')</p>
             </div>
          </div>
-         <div class="section" title="Functionality">
+         <div class="section">
             <div class="titlepage">
                <div>
                   <div>
-                     <h2 class="title" style="clear: both"><a id="d54e108"></a>Functionality
+                     <h2 class="title" style="clear: both"><a id="d54e113"></a>Functionality
                      </h2>
                   </div>
                </div>
             </div>
-            <div class="section" title="User">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e111"></a>User
+                        <h3 class="title"><a id="d54e116"></a>New user
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Unregistered user can register with password in the middle of login procedure of a
+                        served application.  
+                     </li>
+                     <li class="listitem">Unregistered user can register with facebook in the middle of login procedure of a
+                        served application.  
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e124"></a>End user registration
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Registration is done by filling out the registration form.   </li>
+                     <li class="listitem">If you are not logged in,the authorization uri redirects to login page such that after
+                        login you can continue.  
+                     </li>
+                     <li class="listitem">You can check your data in the ME url.   </li>
+                     <li class="listitem">For some forms you need a csrf token,you can obtain it by logging in.   </li>
+                     <li class="listitem">An assurer can add assurance to other users using the assurance form.   </li>
+                     <li class="listitem">An assurer can get user information using the users email.   </li>
+                     <li class="listitem">If you are logged in and all the informations are correct the oauth page redirects
+                        to the redirect uri with your authorization code as parameter.   
+                     </li>
+                     <li class="listitem">The server can get your access tokens using your authorization code. </li>
+                     <li class="listitem">The server can get your user info with your access token. </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e146"></a>End user password reset
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">The reset link is in the reset email. </li>
+                     <li class="listitem">Password can be reset using the reset link.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e154"></a>End user registration and login with facebook
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">If a user without public email tries to register to facebook we ask for email address.
+                        
+                     </li>
+                     <li class="listitem">It is possible to register with facebook.  </li>
+                     <li class="listitem">You can login using facebook.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e164"></a>Java script unit
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Javascript unit test run nicely.  </li>
+                     <li class="listitem">The me link works.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e172"></a>End user obtaining hash
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">You can obtain the hash by filling in your personal id and pushing the button near
+                        it.  In this case your web browser goes directly to anchor.edemokraciagep.org, and
+                        gets the hash for you. The SSO server never sees your personal id.
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e178"></a>S s l auth
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Ssl login logs in if you are registered and have cert.  </li>
+                     <li class="listitem">Normal pages do not ask for cert.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e186"></a>Application
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">The application name is stored as given.  </li>
+                     <li class="listitem">An application can be stored and retrieved.  </li>
+                     <li class="listitem">The name of the application must be unique.  </li>
+                     <li class="listitem">The name of the application must be unique case 2.  </li>
+                     <li class="listitem">The redirect uri is stored as given.  </li>
+                     <li class="listitem">The redirect uri must be https.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e202"></a>S s l login
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">You can login using a registered ssl cert.  </li>
+                     <li class="listitem">With cert login you get actually logged in.  </li>
+                     <li class="listitem">You cannot login using an unregistered ssl cert without email.  </li>
+                     <li class="listitem">You can register and login using an unregistered ssl cert with email.  </li>
+                     <li class="listitem">You cannot ssl login without a cert.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e216"></a>Key data
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">KeyData can be created with client id,user id,acess key,and,refresh key. </li>
+                     <li class="listitem">Access key and refresh key can be retrieved by client id and user id.  </li>
+                     <li class="listitem">None is returned for nonexistent client id.  </li>
+                     <li class="listitem">None is returned for nonexistent user id.  </li>
+                     <li class="listitem">None is returned for none as user id.  </li>
+                     <li class="listitem">None is returned for none as client id.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e233"></a>User
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">User can be created. </li>
                      <li class="listitem">User id is returned by get id.  </li>
                      <li class="listitem">User email with plus sign is stored correctly.  </li>
@@ -321,81 +526,17 @@
                   </ul>
                </div>
             </div>
-            <div class="section" title="User info">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e148"></a>User info
+                        <h3 class="title"><a id="d54e270"></a>Registration
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Logged in user can get its info.  </li>
-                     <li class="listitem">Userid returned is the string one.  </li>
-                     <li class="listitem">User info contains assurance.  </li>
-                     <li class="listitem">Users with assurer assurance can get email and digest for anyone.  </li>
-                     <li class="listitem">Users without assurer assurance cannot get email and digest for anyone.  </li>
-                     <li class="listitem">Users with assurer assurance can get user by email.  </li>
-                     <li class="listitem">No by email with wrong email.  </li>
-                     <li class="listitem">Users without assurer assurance cannot get user by email.  </li>
-                     <li class="listitem">Users without login cannot get user by email.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Token info by access key">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e170"></a>Token info by access key
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">TokenInfo can be stored by access key. </li>
-                     <li class="listitem">TokenInfo can be retrieved by access key.  </li>
-                     <li class="listitem">Find returns None for nonexisting refresh key.  </li>
-                     <li class="listitem">Access key expires at given time.  </li>
-                     <li class="listitem">There should not be two records with same access key.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Server side">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e184"></a>Server side
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Authorization code can be obtained by an authenticated user using correct client id
-                        and redirect uri.  
-                     </li>
-                     <li class="listitem">Server side request.  </li>
-                     <li class="listitem">Get user info.  </li>
-                     <li class="listitem">Unauthenticated user is redirected to login page when tries to do oauth with us. 
-                        
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Registration">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e196"></a>Registration
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">You can register with username,password,email and hash.  </li>
                      <li class="listitem">On registration a temporary email verification credential is registered.  </li>
                      <li class="listitem">The emailcheck secret is not shown in the registration answer.  </li>
@@ -418,230 +559,17 @@
                   </ul>
                </div>
             </div>
-            <div class="section" title="Password reset">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e231"></a>Password reset
+                        <h3 class="title"><a id="d54e305"></a>Credential
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Have passwordreset uri.  </li>
-                     <li class="listitem">Password reset success message.  </li>
-                     <li class="listitem">Password reset email is sent.  </li>
-                     <li class="listitem">The reset link is in the reset email. </li>
-                     <li class="listitem">Password reset email contains a password reset link.  </li>
-                     <li class="listitem">Password reset link is of correct form.  </li>
-                     <li class="listitem">Password reset link contains correct secret.  </li>
-                     <li class="listitem">Password reset credential have 4 hours expiration time.  </li>
-                     <li class="listitem">Password reset for invalid email fails.  </li>
-                     <li class="listitem">Invalid email response have correct message.  </li>
-                     <li class="listitem">Password reset link leads to password reset form.  </li>
-                     <li class="listitem">Password reset needs password.  </li>
-                     <li class="listitem">Password reset needs secret.  </li>
-                     <li class="listitem">Password reset secret have to be valid.  </li>
-                     <li class="listitem">Valid secret is accepted.  </li>
-                     <li class="listitem">Successful password reset sets the password.  </li>
-                     <li class="listitem">Successful password clears the temporary credential.  </li>
-                     <li class="listitem">No password reset for timed out temporary credential.  </li>
-                     <li class="listitem">Bad secret clears up all timed out temporary credentials.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Password change">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e274"></a>Password change
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Change password returns 200 and a success message.  </li>
-                     <li class="listitem">Change password does change password.  </li>
-                     <li class="listitem">Change password needs csrf.  </li>
-                     <li class="listitem">Change password for self needs old password.  </li>
-                     <li class="listitem">Old password for self should be correct.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Main">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e288"></a>Main
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">NoRootUri.  </li>
-                     <li class="listitem">Static files are served.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Logout">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e296"></a>Logout
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">You can log out.  </li>
-                     <li class="listitem">You have to be logged in to log out.  </li>
-                     <li class="listitem">If you log out you will be logged out.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Login">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e306"></a>Login
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Login does not accept get.  </li>
-                     <li class="listitem">Password login needs identifier.  </li>
-                     <li class="listitem">Password login needs secret.  </li>
-                     <li class="listitem">Password login should send hidden field credentialType.  </li>
-                     <li class="listitem">Password login needs correct identifier and secret.  </li>
-                     <li class="listitem">Password login needs correct credentialType.  </li>
-                     <li class="listitem">Password login works with correct identifier and secret.  </li>
-                     <li class="listitem">User can authenticate on login page.  </li>
-                     <li class="listitem">Login sets the csrf cookie.  </li>
-                     <li class="listitem">Inactive user cannot authenticate.  </li>
-                     <li class="listitem">Authentication with bad userid is rejected.  </li>
-                     <li class="listitem">Authentication with bad secret is rejected.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Key data">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e336"></a>Key data
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">KeyData can be created with client id,user id,acess key,and,refresh key. </li>
-                     <li class="listitem">Access key and refresh key can be retrieved by client id and user id.  </li>
-                     <li class="listitem">None is returned for nonexistent client id.  </li>
-                     <li class="listitem">None is returned for nonexistent user id.  </li>
-                     <li class="listitem">None is returned for none as user id.  </li>
-                     <li class="listitem">None is returned for none as client id.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Hash">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e352"></a>Hash
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">A logged in user can record its hash.  </li>
-                     <li class="listitem">The users hash is changed to the new one.  </li>
-                     <li class="listitem">If the user had a hash before,it is overwritten.  </li>
-                     <li class="listitem">It is possible to delete the hash by not giving a digest in the request.  </li>
-                     <li class="listitem">The assurances are overwritten on hash update.  </li>
-                     <li class="listitem">Emailverification assurance is an exception from overwriting.  </li>
-                     <li class="listitem">Without login it is not possible to update the hash.  </li>
-                     <li class="listitem">The hash update request should contain csrf token.  </li>
-                     <li class="listitem">If a hash is given it should be valid.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Facebook">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e374"></a>Facebook
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Facebook login needs facebook id and access token.  </li>
-                     <li class="listitem">Facebook login needs facebook id as username.  </li>
-                     <li class="listitem">Facebook login needs correct access token as password.  </li>
-                     <li class="listitem">Facebook login needs facebook credentials as registered.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Email verification">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e386"></a>Email verification
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Email validation gives emailverification assurance.  </li>
-                     <li class="listitem">Email verification after expiry will fail.  </li>
-                     <li class="listitem">Bad email uri signals error.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Deregister">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e396"></a>Deregister
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">You can deregister with your login credentials and csrf.  </li>
-                     <li class="listitem">You have to use the credentials used for login to deregister.  </li>
-                     <li class="listitem">You need credentialType to deregister.  </li>
-                     <li class="listitem">You need valid credentialType to deregister.  </li>
-                     <li class="listitem">You need identifier to deregister.  </li>
-                     <li class="listitem">You need valid identifier to deregister.  </li>
-                     <li class="listitem">You need secret to deregister.  </li>
-                     <li class="listitem">You need valid secret to deregister.  </li>
-                     <li class="listitem">You need csrf token to deregister.  </li>
-                     <li class="listitem">You need valid csrf token to deregister.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Credential">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e420"></a>Credential
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">Credential representation is readable.  </li>
                      <li class="listitem">Credential can be retrieved by type and identifier.  </li>
                      <li class="listitem">A logged in user can add credential.  </li>
@@ -669,55 +597,17 @@
                   </ul>
                </div>
             </div>
-            <div class="section" title="Authorisaton">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e469"></a>Authorisaton
+                        <h3 class="title"><a id="d54e354"></a>Auth provider
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Authorisation can be created with client id,code and scope. </li>
-                     <li class="listitem">Created authorisation can be retrieved using client id and scope.  </li>
-                     <li class="listitem">Created authorisation have the client id given.  </li>
-                     <li class="listitem">Created authorisation have the code given.  </li>
-                     <li class="listitem">Authorisation should have empty scope.  </li>
-                     <li class="listitem">Authorisation code expires in configured time.  </li>
-                     <li class="listitem">Authorisation code can be retrieved before configured expiry.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Auth">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e487"></a>Auth
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Unauthorized response is redirecting to login page.  </li>
-                     <li class="listitem">Load user loads the user by id.  </li>
-                     <li class="listitem">Load user returns None for nonexisting id.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Auth provider">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e497"></a>Auth provider
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">Validate client id returns False for None.  </li>
                      <li class="listitem">Validate client id returns False for empty string.  </li>
                      <li class="listitem">Validate client id returns False for wrong id.  </li>
@@ -756,17 +646,187 @@
                   </ul>
                </div>
             </div>
-            <div class="section" title="Assurance">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e569"></a>Assurance
+                        <h3 class="title"><a id="d54e426"></a>Hash
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">A logged in user can record its hash.  </li>
+                     <li class="listitem">The users hash is changed to the new one.  </li>
+                     <li class="listitem">If the user had a hash before,it is overwritten.  </li>
+                     <li class="listitem">It is possible to delete the hash by not giving a digest in the request.  </li>
+                     <li class="listitem">The assurances are overwritten on hash update.  </li>
+                     <li class="listitem">Emailverification assurance is an exception from overwriting.  </li>
+                     <li class="listitem">Without login it is not possible to update the hash.  </li>
+                     <li class="listitem">The hash update request should contain csrf token.  </li>
+                     <li class="listitem">If a hash is given it should be valid.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e448"></a>Server side
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Authorization code can be obtained by an authenticated user using correct client id
+                        and redirect uri.  
+                     </li>
+                     <li class="listitem">Server side request.  </li>
+                     <li class="listitem">Get user info.  </li>
+                     <li class="listitem">Unauthenticated user is redirected to login page when tries to do oauth with us. 
+                        
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e460"></a>User info
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Logged in user can get its info.  </li>
+                     <li class="listitem">Userid returned is the string one.  </li>
+                     <li class="listitem">User info contains assurance.  </li>
+                     <li class="listitem">Users with assurer assurance can get email and digest for anyone.  </li>
+                     <li class="listitem">Users without assurer assurance cannot get email and digest for anyone.  </li>
+                     <li class="listitem">Users with assurer assurance can get user by email.  </li>
+                     <li class="listitem">No by email with wrong email.  </li>
+                     <li class="listitem">Users without assurer assurance cannot get user by email.  </li>
+                     <li class="listitem">Users without login cannot get user by email.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e482"></a>Email verification
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Email validation gives emailverification assurance.  </li>
+                     <li class="listitem">Email verification after expiry will fail.  </li>
+                     <li class="listitem">Bad email uri signals error.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e492"></a>Login
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Login does not accept get.  </li>
+                     <li class="listitem">Password login needs identifier.  </li>
+                     <li class="listitem">Password login needs secret.  </li>
+                     <li class="listitem">Password login should send hidden field credentialType.  </li>
+                     <li class="listitem">Password login needs correct identifier and secret.  </li>
+                     <li class="listitem">Password login needs correct credentialType.  </li>
+                     <li class="listitem">Password login works with correct identifier and secret.  </li>
+                     <li class="listitem">User can authenticate on login page.  </li>
+                     <li class="listitem">Login sets the csrf cookie.  </li>
+                     <li class="listitem">Inactive user cannot authenticate.  </li>
+                     <li class="listitem">Authentication with bad userid is rejected.  </li>
+                     <li class="listitem">Authentication with bad secret is rejected.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e521"></a>Deregister
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">You can deregister with your login credentials and csrf.  </li>
+                     <li class="listitem">You have to use the credentials used for login to deregister.  </li>
+                     <li class="listitem">You need credentialType to deregister.  </li>
+                     <li class="listitem">You need valid credentialType to deregister.  </li>
+                     <li class="listitem">You need identifier to deregister.  </li>
+                     <li class="listitem">You need valid identifier to deregister.  </li>
+                     <li class="listitem">You need secret to deregister.  </li>
+                     <li class="listitem">You need valid secret to deregister.  </li>
+                     <li class="listitem">You need csrf token to deregister.  </li>
+                     <li class="listitem">You need valid csrf token to deregister.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e545"></a>Facebook
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Facebook login needs facebook id and access token.  </li>
+                     <li class="listitem">Facebook login needs facebook id as username.  </li>
+                     <li class="listitem">Facebook login needs correct access token as password.  </li>
+                     <li class="listitem">Facebook login needs facebook credentials as registered.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e558"></a>Logout
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">You can log out.  </li>
+                     <li class="listitem">You have to be logged in to log out.  </li>
+                     <li class="listitem">If you log out you will be logged out.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e568"></a>Assurance
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">Assurance form needs csrf.  </li>
                      <li class="listitem">Assurers with appropriate credential can add assurance to user using hash.  the appropriate
                         credential is an assurance in the form "assurer.&lt;assurance_name&gt;" where assurance_name
@@ -788,152 +848,142 @@
                   </ul>
                </div>
             </div>
-            <div class="section" title="Application">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e591"></a>Application
+                        <h3 class="title"><a id="d54e590"></a>Token info by access key
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">The application name is stored as given.  </li>
-                     <li class="listitem">An application can be stored and retrieved.  </li>
-                     <li class="listitem">The name of the application must be unique.  </li>
-                     <li class="listitem">The name of the application must be unique case 2.  </li>
-                     <li class="listitem">The redirect uri is stored as given.  </li>
-                     <li class="listitem">The redirect uri must be https.  </li>
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">TokenInfo can be stored by access key. </li>
+                     <li class="listitem">TokenInfo can be retrieved by access key.  </li>
+                     <li class="listitem">Find returns None for nonexisting refresh key.  </li>
+                     <li class="listitem">Access key expires at given time.  </li>
+                     <li class="listitem">There should not be two records with same access key.  </li>
                   </ul>
                </div>
             </div>
-            <div class="section" title="End user registration">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e608"></a>End user registration
+                        <h3 class="title"><a id="d54e604"></a>Password change
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Registration is done by filling out the registration form.   </li>
-                     <li class="listitem">If you are not logged in,the authorization uri redirects to login page such that after
-                        login you can continue.  
-                     </li>
-                     <li class="listitem">You can check your data in the ME url.   </li>
-                     <li class="listitem">For some forms you need a csrf token,you can obtain it by logging in.   </li>
-                     <li class="listitem">An assurer can add assurance to other users using the assurance form.   </li>
-                     <li class="listitem">An assurer can get user information using the users email.   </li>
-                     <li class="listitem">If you are logged in and all the informations are correct the oauth page redirects
-                        to the redirect uri with your authorization code as parameter.   
-                     </li>
-                     <li class="listitem">The server can get your access tokens using your authorization code. </li>
-                     <li class="listitem">The server can get your user info with your access token. </li>
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Change password returns 200 and a success message.  </li>
+                     <li class="listitem">Change password does change password.  </li>
+                     <li class="listitem">Change password needs csrf.  </li>
+                     <li class="listitem">Change password for self needs old password.  </li>
+                     <li class="listitem">Old password for self should be correct.  </li>
                   </ul>
                </div>
             </div>
-            <div class="section" title="End user password reset">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e630"></a>End user password reset
+                        <h3 class="title"><a id="d54e618"></a>Auth
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Unauthorized response is redirecting to login page.  </li>
+                     <li class="listitem">Load user loads the user by id.  </li>
+                     <li class="listitem">Load user returns None for nonexisting id.  </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="section">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d54e628"></a>Password reset
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="itemizedlist">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Have passwordreset uri.  </li>
+                     <li class="listitem">Password reset success message.  </li>
+                     <li class="listitem">Password reset email is sent.  </li>
                      <li class="listitem">The reset link is in the reset email. </li>
-                     <li class="listitem">Password can be reset using the reset link.  </li>
+                     <li class="listitem">Password reset email contains a password reset link.  </li>
+                     <li class="listitem">Password reset link is of correct form.  </li>
+                     <li class="listitem">Password reset link contains correct secret.  </li>
+                     <li class="listitem">Password reset credential have 4 hours expiration time.  </li>
+                     <li class="listitem">Password reset for invalid email fails.  </li>
+                     <li class="listitem">Invalid email response have correct message.  </li>
+                     <li class="listitem">Password reset link leads to password reset form.  </li>
+                     <li class="listitem">Password reset needs password.  </li>
+                     <li class="listitem">Password reset needs secret.  </li>
+                     <li class="listitem">Password reset secret have to be valid.  </li>
+                     <li class="listitem">Valid secret is accepted.  </li>
+                     <li class="listitem">Successful password reset sets the password.  </li>
+                     <li class="listitem">Successful password clears the temporary credential.  </li>
+                     <li class="listitem">No password reset for timed out temporary credential.  </li>
+                     <li class="listitem">Bad secret clears up all timed out temporary credentials.  </li>
                   </ul>
                </div>
             </div>
-            <div class="section" title="New user">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e638"></a>New user
+                        <h3 class="title"><a id="d54e671"></a>Main
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Unregistered user can register with password in the middle of login procedure of a
-                        served application.  
-                     </li>
-                     <li class="listitem">Unregistered user can register with facebook in the middle of login procedure of a
-                        served application.  
-                     </li>
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">NoRootUri.  </li>
+                     <li class="listitem">Static files are served.  </li>
                   </ul>
                </div>
             </div>
-            <div class="section" title="End user obtaining hash">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e646"></a>End user obtaining hash
+                        <h3 class="title"><a id="d54e679"></a>Authorisaton
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">You can obtain the hash by filling in your personal id and pushing the button near
-                        it.  In this case your web browser goes directly to anchor.edemokraciagep.org, and
-                        gets the hash for you. The SSO server never sees your personal id.
-                     </li>
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
+                     <li class="listitem">Authorisation can be created with client id,code and scope. </li>
+                     <li class="listitem">Created authorisation can be retrieved using client id and scope.  </li>
+                     <li class="listitem">Created authorisation have the client id given.  </li>
+                     <li class="listitem">Created authorisation have the code given.  </li>
+                     <li class="listitem">Authorisation should have empty scope.  </li>
+                     <li class="listitem">Authorisation code expires in configured time.  </li>
+                     <li class="listitem">Authorisation code can be retrieved before configured expiry.  </li>
                   </ul>
                </div>
             </div>
-            <div class="section" title="End user registration and login with facebook">
+            <div class="section">
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e652"></a>End user registration and login with facebook
+                        <h3 class="title"><a id="d54e697"></a>JavaScript tests
                         </h3>
                      </div>
                   </div>
                </div>
                <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">If a user without public email tries to register to facebook we ask for email address.
-                        
-                     </li>
-                     <li class="listitem">It is possible to register with facebook.  </li>
-                     <li class="listitem">You can login using facebook.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="Java script unit">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e662"></a>Java script unit
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
-                     <li class="listitem">Javascript unit test run nicely.  </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="section" title="JavaScript tests">
-               <div class="titlepage">
-                  <div>
-                     <div>
-                        <h3 class="title"><a id="d54e668"></a>JavaScript tests
-                        </h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="itemizedlist">
-                  <ul class="itemizedlist" type="disc">
+                  <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">Ajaxpost can be mocked.</li>
                      <li class="listitem">Ajaxget can be mocked.</li>
                      <li class="listitem">With processErrors message is shown in the message element.</li>
