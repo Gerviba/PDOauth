@@ -11,6 +11,14 @@
          <para>app.route('/login', methods=['POST'])</para> 
       </section>
       <section>
+         <title>ssl_login</title>
+         <para>app.route('/ssl_login', methods=['GET'])</para> 
+      </section>
+      <section>
+         <title>keygen</title>
+         <para>app.route('/keygen', methods=['POST'])</para> 
+      </section>
+      <section>
          <title>deregister</title>
          <para>app.route('/deregister', methods=['POST'])</para> 
       </section>
@@ -73,6 +81,10 @@
          <para>login_required</para>  
       </section>
       <section>
+         <title>uriservice</title>
+         <para>app.route('/uris', methods=['GET'])</para> 
+      </section>
+      <section>
          <title>send_static</title>
          <para>app.route('/static/&lt;path:path&gt;')</para>  
       </section>
@@ -115,6 +127,16 @@
          </itemizedlist>
       </section>
       <section>
+         <title>Uri service</title>
+         <itemizedlist>
+            <listitem>The uri service gives back the BASE URL.  </listitem>
+            <listitem>The uri service gives back the SSL LOGIN BASE URL.  </listitem>
+            <listitem>The uri service gives back the PASSWORD RESET FORM URL.  </listitem>
+            <listitem>The uri service gives back the START URL.  </listitem>
+            <listitem>The uri service gives back the SSL LOGOUT URL.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>Token info by access key</title>
          <itemizedlist>
             <listitem>TokenInfo can be stored by access key. </listitem>
@@ -131,6 +153,24 @@
             <listitem>Server side request.  </listitem>
             <listitem>Get user info.  </listitem>
             <listitem>Unauthenticated user is redirected to login page when tries to do oauth with us.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>S s l login</title>
+         <itemizedlist>
+            <listitem>There is a SSL LOGIN BASE URL config option containing the base url of the site with the optional no ca config.  </listitem>
+            <listitem>There is a BASE URL config option containing the plain ssl base url.  where no certificate is asked</listitem>
+            <listitem>There is a SSL LOGOUT URL config option pointing to a location which is set up with SSLVerifyClient require and SSLVerifyDepth 0 within SSL LOGIN BASE URL.  </listitem>
+            <listitem>There is a START URL config option which contains the starting point useable for unregistered and or not logged in user.  </listitem>
+            <listitem>You can login using a registered ssl cert.  </listitem>
+            <listitem>With cert login you get actually logged in.  </listitem>
+            <listitem>You cannot login using an unregistered ssl cert without email.  </listitem>
+            <listitem>You cannot login without a cert.  </listitem>
+            <listitem>Empty certstring gives error.  </listitem>
+            <listitem>Junk certstring gives error.  </listitem>
+            <listitem>Ssl login is cors enabled.  </listitem>
+            <listitem>You can register and login using an unregistered ssl cert with email.  </listitem>
+            <listitem>You cannot ssl login without a cert.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -220,6 +260,16 @@
          </itemizedlist>
       </section>
       <section>
+         <title>Keygen</title>
+         <itemizedlist>
+            <listitem>With keygen you get back a certificate.  </listitem>
+            <listitem>With keygen you get back a certificate for the given email.  </listitem>
+            <listitem>If the user is logged in,a credential is added to the user for the cert.  </listitem>
+            <listitem>If createUser is set,a new user is created with the cert and logged in.  </listitem>
+            <listitem>If the user is logged in and createUser is set,a credential is added to the user for the cert.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>Key data</title>
          <itemizedlist>
             <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
@@ -251,6 +301,7 @@
             <listitem>Facebook login needs facebook id as username.  </listitem>
             <listitem>Facebook login needs correct access token as password.  </listitem>
             <listitem>Facebook login needs facebook credentials as registered.  </listitem>
+            <listitem>FacebookMe reaches facebook.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -301,6 +352,7 @@
             <listitem>You should give the identifier for credential deletion.  </listitem>
             <listitem>You should give valid identifier for credential deletion.  </listitem>
             <listitem>The credential used for login cannot be cleared.  </listitem>
+            <listitem>An already existing credential cannot be addedd.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -318,7 +370,7 @@
       <section>
          <title>Auth</title>
          <itemizedlist>
-            <listitem>Unauthorized response is redirecting to login page.  </listitem>
+            <listitem>Unauthorized response is redirecting to START URL.  more specifically to START_URL?next={request.url}</listitem>
             <listitem>Load user loads the user by id.  </listitem>
             <listitem>Load user returns None for nonexisting id.  </listitem>
          </itemizedlist>
@@ -387,6 +439,16 @@
          </itemizedlist>
       </section>
       <section>
+         <title>S s l auth</title>
+         <itemizedlist>
+            <listitem>Ssl login logs in if you are registered and have cert.  </listitem>
+            <listitem>Ssl login registers and logs in if you have cert and give email.  </listitem>
+            <listitem>No ssl login on base url.  </listitem>
+            <listitem>SSl LOGIN BASE URL works if no cert is given.  </listitem>
+            <listitem>Normal pages do not ask for cert.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>End user registration</title>
          <itemizedlist>
             <listitem>Registration is done by filling out the registration form.   </listitem>
@@ -432,6 +494,7 @@
          <title>Java script unit</title>
          <itemizedlist>
             <listitem>Javascript unit test run nicely.  </listitem>
+            <listitem>The me link works.  </listitem>
          </itemizedlist>
       </section>
       <section>
