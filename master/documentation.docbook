@@ -118,6 +118,7 @@
             <listitem>Logged in user can get its info.  </listitem>
             <listitem>Userid returned is the string one.  </listitem>
             <listitem>User info contains assurance.  </listitem>
+            <listitem>User info contains hash.  </listitem>
             <listitem>Users with assurer assurance can get email and digest for anyone.  </listitem>
             <listitem>Users without assurer assurance cannot get email and digest for anyone.  </listitem>
             <listitem>Users with assurer assurance can get user by email.  </listitem>
@@ -177,6 +178,7 @@
          <title>Registration</title>
          <itemizedlist>
             <listitem>You can register with username,password,email and hash.  </listitem>
+            <listitem>Registration sets the csrf cookie.  </listitem>
             <listitem>On registration a temporary email verification credential is registered.  </listitem>
             <listitem>The emailcheck secret is not shown in the registration answer.  </listitem>
             <listitem>You can register without hash.  </listitem>
@@ -449,13 +451,13 @@
       <section>
          <title>End user registration</title>
          <itemizedlist>
-            <listitem>Registration is done by filling out the registration form.   </listitem>
+            <listitem>Registration is done by filling out the registration form.  </listitem>
             <listitem>If you are not logged in,the authorization uri redirects to login page such that after login you can continue.  </listitem>
-            <listitem>You can check your data in the ME url.   </listitem>
-            <listitem>For some forms you need a csrf token,you can obtain it by logging in.   </listitem>
-            <listitem>An assurer can add assurance to other users using the assurance form.   </listitem>
-            <listitem>An assurer can get user information using the users email.   </listitem>
-            <listitem>If you are logged in and all the informations are correct the oauth page redirects to the redirect uri with your authorization code as parameter.   </listitem>
+            <listitem>You can check your data in the ME url.  </listitem>
+            <listitem>For some forms you need a csrf token,you can obtain it by logging in.  </listitem>
+            <listitem>An assurer can add assurance to other users using the assurance form.  </listitem>
+            <listitem>An assurer can get user information using the users email.  </listitem>
+            <listitem>If you are logged in and all the informations are correct the oauth page redirects to the redirect uri with your authorization code as parameter.  </listitem>
             <listitem>The server can get your access tokens using your authorization code. </listitem>
             <listitem>The server can get your user info with your access token. </listitem>
          </itemizedlist>
@@ -486,6 +488,14 @@
             <listitem>If a user without public email tries to register to facebook we ask for email address.  </listitem>
             <listitem>It is possible to register with facebook.  </listitem>
             <listitem>You can login using facebook.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>End user digest management</title>
+         <itemizedlist>
+            <listitem>You can add a digest as a logged in user.  </listitem>
+            <listitem>You can change the digest as a logged in user.  </listitem>
+            <listitem>You can delete the digest as a logged in user by giving empty one.  </listitem>
          </itemizedlist>
       </section>
       <section>
