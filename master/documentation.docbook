@@ -85,128 +85,6 @@
    <section>
       <title>Functionality</title>
       <section>
-         <title>S s l auth</title>
-         <itemizedlist>
-            <listitem>Ssl login logs in if you are registered and have cert.  </listitem>
-            <listitem>Ssl login registers and logs in if you have cert and give email.  </listitem>
-            <listitem>No ssl login on base url.  </listitem>
-            <listitem>SSl LOGIN BASE URL works if no cert is given.  </listitem>
-            <listitem>Normal pages do not ask for cert.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>End user registration and login with facebook</title>
-         <itemizedlist>
-            <listitem>If a user without public email tries to register to facebook we ask for email address.  </listitem>
-            <listitem>It is possible to register with facebook.  </listitem>
-            <listitem>You can login using facebook.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>End user digest management</title>
-         <itemizedlist>
-            <listitem>You can add a digest as a logged in user.  </listitem>
-            <listitem>You can change the digest as a logged in user.  </listitem>
-            <listitem>You can delete the digest as a logged in user by giving empty one.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>End user obtaining hash</title>
-         <itemizedlist>
-            <listitem>You can obtain the hash by filling in your personal id and pushing the button near it.  In this case your web browser goes directly to anchor.edemokraciagep.org, and gets the hash for you. The SSO server never sees your personal id.</listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>New user</title>
-         <itemizedlist>
-            <listitem>Unregistered user can register with password in the middle of login procedure of a served application.  </listitem>
-            <listitem>Unregistered user can register with facebook in the middle of login procedure of a served application.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Java script unit</title>
-         <itemizedlist>
-            <listitem>Javascript unit test run nicely.  </listitem>
-            <listitem>The me link works.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>End user registration</title>
-         <itemizedlist>
-            <listitem>Registration is done by filling out the registration form.  </listitem>
-            <listitem>If you are not logged in,the authorization uri redirects to login page such that after login you can continue.  </listitem>
-            <listitem>You can check your data in the ME url.  </listitem>
-            <listitem>For some forms you need a csrf token,you can obtain it by logging in.  </listitem>
-            <listitem>An assurer can add assurance to other users using the assurance form.  </listitem>
-            <listitem>An assurer can get user information using the users email.  </listitem>
-            <listitem>If you are logged in and all the informations are correct the oauth page redirects to the redirect uri with your authorization code as parameter.  </listitem>
-            <listitem>The server can get your access tokens using your authorization code. </listitem>
-            <listitem>The server can get your user info with your access token. </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>End user password reset</title>
-         <itemizedlist>
-            <listitem>The reset link is in the reset email. </listitem>
-            <listitem>Password can be reset using the reset link.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Token info by access key</title>
-         <itemizedlist>
-            <listitem>TokenInfo can be stored by access key. </listitem>
-            <listitem>TokenInfo can be retrieved by access key.  </listitem>
-            <listitem>Find returns None for nonexisting refresh key.  </listitem>
-            <listitem>Access key expires at given time.  </listitem>
-            <listitem>There should not be two records with same access key.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Login</title>
-         <itemizedlist>
-            <listitem>Login does not accept get.  </listitem>
-            <listitem>Password login needs identifier.  </listitem>
-            <listitem>Password login needs secret.  </listitem>
-            <listitem>Password login should send hidden field credentialType.  </listitem>
-            <listitem>Password login needs correct identifier and secret.  </listitem>
-            <listitem>Password login needs correct credentialType.  </listitem>
-            <listitem>Password login works with correct identifier and secret.  </listitem>
-            <listitem>User can authenticate on login page.  </listitem>
-            <listitem>Login sets the csrf cookie.  </listitem>
-            <listitem>Inactive user cannot authenticate.  </listitem>
-            <listitem>Authentication with bad userid is rejected.  </listitem>
-            <listitem>Authentication with bad secret is rejected.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Auth</title>
-         <itemizedlist>
-            <listitem>Unauthorized response is redirecting to START URL.  more specifically to START_URL?next={request.url}</listitem>
-            <listitem>Load user loads the user by id.  </listitem>
-            <listitem>Load user returns None for nonexisting id.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Authorisaton</title>
-         <itemizedlist>
-            <listitem>Authorisation can be created with client id,code and scope. </listitem>
-            <listitem>Created authorisation can be retrieved using client id and scope.  </listitem>
-            <listitem>Created authorisation have the client id given.  </listitem>
-            <listitem>Created authorisation have the code given.  </listitem>
-            <listitem>Authorisation should have empty scope.  </listitem>
-            <listitem>Authorisation code expires in configured time.  </listitem>
-            <listitem>Authorisation code can be retrieved before configured expiry.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Logout</title>
-         <itemizedlist>
-            <listitem>You can log out.  </listitem>
-            <listitem>You have to be logged in to log out.  </listitem>
-            <listitem>If you log out you will be logged out.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
          <title>User</title>
          <itemizedlist>
             <listitem>User can be created. </listitem>
@@ -228,16 +106,6 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Keygen</title>
-         <itemizedlist>
-            <listitem>With keygen you get back a certificate.  </listitem>
-            <listitem>With keygen you get back a certificate for the given email.  </listitem>
-            <listitem>If the user is logged in,a credential is added to the user for the cert.  </listitem>
-            <listitem>If createUser is set,a new user is created with the cert and logged in.  </listitem>
-            <listitem>If the user is logged in and createUser is set,a credential is added to the user for the cert.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
          <title>User info</title>
          <itemizedlist>
             <listitem>Logged in user can get its info.  </listitem>
@@ -253,63 +121,34 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Auth provider</title>
+         <title>Uri service</title>
          <itemizedlist>
-            <listitem>Validate client id returns False for None.  </listitem>
-            <listitem>Validate client id returns False for empty string.  </listitem>
-            <listitem>Validate client id returns False for wrong id.  </listitem>
-            <listitem>Validate client id returns True for good id.  </listitem>
-            <listitem>Validate client secret returns False for None.  </listitem>
-            <listitem>Validate client secret returns False for empty string.  </listitem>
-            <listitem>Validate client secret returns False for wrong secret.  </listitem>
-            <listitem>Validate client secret returns False for None id.  </listitem>
-            <listitem>Validate client secret returns True for good secret.  </listitem>
-            <listitem>Validate redirect uri returns False for None.  </listitem>
-            <listitem>Validate redirect uri returns False for bad app.  </listitem>
-            <listitem>Validate redirect uri returns False for empty.  </listitem>
-            <listitem>Validate redirect uri returns False for wrong uri.  </listitem>
-            <listitem>Validate redirect uri returns True for good uri.  </listitem>
-            <listitem>Validate redirect uri returns True for good uri with parameters.  </listitem>
-            <listitem>Validate scope returns True for empty.  </listitem>
-            <listitem>Validate scope returns False for nonempty.  </listitem>
-            <listitem>Validate scope returns False for None.  </listitem>
-            <listitem>Validate access works only if user have logged in.  </listitem>
-            <listitem>Validate access false with no login.  </listitem>
-            <listitem>Token information can be persisted. with client_id, scope, access_token, token_type, expiry, refresh_token and_data</listitem>
-            <listitem>Data can be retrieved from client id,refresh token and scope.  </listitem>
-            <listitem>Nonempty scope is an error.  </listitem>
-            <listitem>Refresh token can be discarded.  </listitem>
-            <listitem>Discarding nonexistent refresh token is an error.  </listitem>
-            <listitem>Authorization code can be persisted with key data.  </listitem>
-            <listitem>Key data can be retrieved by authorization code.  </listitem>
-            <listitem>Authorization code can be obtained with client id,secret and uri.  </listitem>
-            <listitem>Authorization code cannot be obtained without user.  </listitem>
-            <listitem>GetAuthorizationCode. </listitem>
-            <listitem>Authorization code can be obtained from uri.  </listitem>
-            <listitem>Authorization code can be discarded.  </listitem>
-            <listitem>Auth interface redirects to redirect uri.  </listitem>
+            <listitem>The uri service gives back the BASE URL.  </listitem>
+            <listitem>The uri service gives back the SSL LOGIN BASE URL.  </listitem>
+            <listitem>The uri service gives back the PASSWORD RESET FORM URL.  </listitem>
+            <listitem>The uri service gives back the START URL.  </listitem>
+            <listitem>The uri service gives back the SSL LOGOUT URL.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Application</title>
+         <title>Token info by access key</title>
          <itemizedlist>
-            <listitem>The application name is stored as given.  </listitem>
-            <listitem>An application can be stored and retrieved.  </listitem>
-            <listitem>The name of the application must be unique.  </listitem>
-            <listitem>The name of the application must be unique case 2.  </listitem>
-            <listitem>The redirect uri is stored as given.  </listitem>
-            <listitem>The redirect uri must be https.  </listitem>
+            <listitem>TokenInfo can be stored by access key. </listitem>
+            <listitem>TokenInfo can be retrieved by access key.  </listitem>
+            <listitem>Find returns None for nonexisting refresh key.  </listitem>
+            <listitem>Access key expires at given time.  </listitem>
+            <listitem>There should not be two records with same access key.  </listitem>
          </itemizedlist>
       </section>
       <section>
-         <title>Key data</title>
+         <title>Server side</title>
          <itemizedlist>
-            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
-            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
-            <listitem>None is returned for nonexistent client id.  </listitem>
-            <listitem>None is returned for nonexistent user id.  </listitem>
-            <listitem>None is returned for none as user id.  </listitem>
-            <listitem>None is returned for none as client id.  </listitem>
+            <listitem>CreateApplication. </listitem>
+            <listitem>BuildAuthUrl.  </listitem>
+            <listitem>LoginAndGetCode. </listitem>
+            <listitem>Authorization code can be obtained by an authenticated user using correct client id and redirect uri.  </listitem>
+            <listitem>Server side request.  </listitem>
+            <listitem>Get user info.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -351,14 +190,96 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Server side</title>
+         <title>Password reset</title>
          <itemizedlist>
-            <listitem>CreateApplication. </listitem>
-            <listitem>BuildAuthUrl.  </listitem>
-            <listitem>LoginAndGetCode. </listitem>
-            <listitem>Authorization code can be obtained by an authenticated user using correct client id and redirect uri.  </listitem>
-            <listitem>Server side request.  </listitem>
-            <listitem>Get user info.  </listitem>
+            <listitem>Have passwordreset uri.  </listitem>
+            <listitem>Password reset success message.  </listitem>
+            <listitem>Password reset email is sent.  </listitem>
+            <listitem>The reset link is in the reset email. </listitem>
+            <listitem>Password reset email contains a password reset link.  </listitem>
+            <listitem>Password reset link is of correct form.  </listitem>
+            <listitem>Password reset link contains correct secret.  </listitem>
+            <listitem>Password reset credential have 4 hours expiration time.  </listitem>
+            <listitem>Password reset for invalid email fails.  </listitem>
+            <listitem>Invalid email response have correct message.  </listitem>
+            <listitem>Password reset link leads to password reset form.  </listitem>
+            <listitem>Password reset needs password.  </listitem>
+            <listitem>Password reset needs secret.  </listitem>
+            <listitem>Password reset secret have to be valid.  </listitem>
+            <listitem>Valid secret is accepted.  </listitem>
+            <listitem>Successful password reset sets the password.  </listitem>
+            <listitem>Successful password clears the temporary credential.  </listitem>
+            <listitem>No password reset for timed out temporary credential.  </listitem>
+            <listitem>Bad secret clears up all timed out temporary credentials.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Password change</title>
+         <itemizedlist>
+            <listitem>Change password returns 200 and a success message.  </listitem>
+            <listitem>Change password does change password.  </listitem>
+            <listitem>Change password needs csrf.  </listitem>
+            <listitem>Change password for self needs old password.  </listitem>
+            <listitem>Old password for self should be correct.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Main</title>
+         <itemizedlist>
+            <listitem>NoRootUri.  </listitem>
+            <listitem>Static files are served.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Logout</title>
+         <itemizedlist>
+            <listitem>You can log out.  </listitem>
+            <listitem>You have to be logged in to log out.  </listitem>
+            <listitem>If you log out you will be logged out.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Login</title>
+         <itemizedlist>
+            <listitem>Login does not accept get.  </listitem>
+            <listitem>Password login needs identifier.  </listitem>
+            <listitem>Password login needs secret.  </listitem>
+            <listitem>Password login should send hidden field credentialType.  </listitem>
+            <listitem>Password login needs correct identifier and secret.  </listitem>
+            <listitem>Password login needs correct credentialType.  </listitem>
+            <listitem>Password login works with correct identifier and secret.  </listitem>
+            <listitem>User can authenticate on login page.  </listitem>
+            <listitem>Login sets the csrf cookie.  </listitem>
+            <listitem>Inactive user cannot authenticate.  </listitem>
+            <listitem>Authentication with bad userid is rejected.  </listitem>
+            <listitem>Authentication with bad secret is rejected.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Keygen</title>
+         <itemizedlist>
+            <listitem>With keygen you get back a certificate.  </listitem>
+            <listitem>With keygen you get back a certificate for the given email.  </listitem>
+            <listitem>If the user is logged in,a credential is added to the user for the cert.  </listitem>
+            <listitem>If createUser is set,a new user is created with the cert and logged in.  </listitem>
+            <listitem>If the user is logged in and createUser is set,a credential is added to the user for the cert.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Key data</title>
+         <itemizedlist>
+            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
+            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
+            <listitem>None is returned for nonexistent client id.  </listitem>
+            <listitem>None is returned for nonexistent user id.  </listitem>
+            <listitem>None is returned for none as user id.  </listitem>
+            <listitem>None is returned for none as client id.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>I</title>
+         <itemizedlist>
+            <listitem>Unauthenticated user is redirected to login page when tries to do oauth with us.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -373,54 +294,6 @@
             <listitem>Without login it is not possible to update the hash.  </listitem>
             <listitem>The hash update request should contain csrf token.  </listitem>
             <listitem>If a hash is given it should be valid.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Assurance</title>
-         <itemizedlist>
-            <listitem>Assurance form needs csrf.  </listitem>
-            <listitem>Assurers with appropriate credential can add assurance to user using hash.  the appropriate credential is an assurance in the form "assurer.&lt;assurance_name&gt;" where assurance_name is the assurance to be added</listitem>
-            <listitem>No madeup csrf cookie.  </listitem>
-            <listitem>Assurers without appropriate credential cannot add assurance to user.  </listitem>
-            <listitem>Adding assurance is possible using the hash only.  </listitem>
-            <listitem>Assurers need assurer assurance.  </listitem>
-            <listitem>Assurers need giving assurance.  that is they have to have assurance.[the assurance to give]</listitem>
-            <listitem>When an assurer wants to add an assurance for a user with hash and without email, and there are multiple users with that hash, then an error is signaled.  </listitem>
-            <listitem>When an assurance added with hash and email, and there is another user with the same hash, the hash from the other user is deleted.  </listitem>
-            <listitem>Adding assurance with invalid hash and email fails.  </listitem>
-            <listitem>Adding assurance with invalid hash and no email fails.  </listitem>
-            <listitem>Adding assurance with email and hash of someone other fails.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>I</title>
-         <itemizedlist>
-            <listitem>Unauthenticated user is redirected to login page when tries to do oauth with us.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Main</title>
-         <itemizedlist>
-            <listitem>NoRootUri.  </listitem>
-            <listitem>Static files are served.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Deregister</title>
-         <itemizedlist>
-            <listitem>You can deregister with your login credentials and csrf.  </listitem>
-            <listitem>Your credentials are deleted in deregistration.  </listitem>
-            <listitem>Your assurances are deleted in deregistration.  </listitem>
-            <listitem>Your user is deleted in deregistration.  </listitem>
-            <listitem>You have to use the credentials used for login to deregister.  </listitem>
-            <listitem>You need credentialType to deregister.  </listitem>
-            <listitem>You need valid credentialType to deregister.  </listitem>
-            <listitem>You need identifier to deregister.  </listitem>
-            <listitem>You need valid identifier to deregister.  </listitem>
-            <listitem>You need secret to deregister.  </listitem>
-            <listitem>You need valid secret to deregister.  </listitem>
-            <listitem>You need csrf token to deregister.  </listitem>
-            <listitem>You need valid csrf token to deregister.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -442,23 +315,21 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Uri service</title>
+         <title>Deregister</title>
          <itemizedlist>
-            <listitem>The uri service gives back the BASE URL.  </listitem>
-            <listitem>The uri service gives back the SSL LOGIN BASE URL.  </listitem>
-            <listitem>The uri service gives back the PASSWORD RESET FORM URL.  </listitem>
-            <listitem>The uri service gives back the START URL.  </listitem>
-            <listitem>The uri service gives back the SSL LOGOUT URL.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Password change</title>
-         <itemizedlist>
-            <listitem>Change password returns 200 and a success message.  </listitem>
-            <listitem>Change password does change password.  </listitem>
-            <listitem>Change password needs csrf.  </listitem>
-            <listitem>Change password for self needs old password.  </listitem>
-            <listitem>Old password for self should be correct.  </listitem>
+            <listitem>You can deregister with your login credentials and csrf.  </listitem>
+            <listitem>Your credentials are deleted in deregistration.  </listitem>
+            <listitem>Your assurances are deleted in deregistration.  </listitem>
+            <listitem>Your user is deleted in deregistration.  </listitem>
+            <listitem>You have to use the credentials used for login to deregister.  </listitem>
+            <listitem>You need credentialType to deregister.  </listitem>
+            <listitem>You need valid credentialType to deregister.  </listitem>
+            <listitem>You need identifier to deregister.  </listitem>
+            <listitem>You need valid identifier to deregister.  </listitem>
+            <listitem>You need secret to deregister.  </listitem>
+            <listitem>You need valid secret to deregister.  </listitem>
+            <listitem>You need csrf token to deregister.  </listitem>
+            <listitem>You need valid csrf token to deregister.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -490,27 +361,156 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Password reset</title>
+         <title>Authorisaton</title>
          <itemizedlist>
-            <listitem>Have passwordreset uri.  </listitem>
-            <listitem>Password reset success message.  </listitem>
-            <listitem>Password reset email is sent.  </listitem>
+            <listitem>Authorisation can be created with client id,code and scope. </listitem>
+            <listitem>Created authorisation can be retrieved using client id and scope.  </listitem>
+            <listitem>Created authorisation have the client id given.  </listitem>
+            <listitem>Created authorisation have the code given.  </listitem>
+            <listitem>Authorisation should have empty scope.  </listitem>
+            <listitem>Authorisation code expires in configured time.  </listitem>
+            <listitem>Authorisation code can be retrieved before configured expiry.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Auth</title>
+         <itemizedlist>
+            <listitem>Unauthorized response is redirecting to START URL.  more specifically to START_URL?next={request.url}</listitem>
+            <listitem>Load user loads the user by id.  </listitem>
+            <listitem>Load user returns None for nonexisting id.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Auth provider</title>
+         <itemizedlist>
+            <listitem>Validate client id returns False for None.  </listitem>
+            <listitem>Validate client id returns False for empty string.  </listitem>
+            <listitem>Validate client id returns False for wrong id.  </listitem>
+            <listitem>Validate client id returns True for good id.  </listitem>
+            <listitem>Validate client secret returns False for None.  </listitem>
+            <listitem>Validate client secret returns False for empty string.  </listitem>
+            <listitem>Validate client secret returns False for wrong secret.  </listitem>
+            <listitem>Validate client secret returns False for None id.  </listitem>
+            <listitem>Validate client secret returns True for good secret.  </listitem>
+            <listitem>Validate redirect uri returns False for None.  </listitem>
+            <listitem>Validate redirect uri returns False for bad app.  </listitem>
+            <listitem>Validate redirect uri returns False for empty.  </listitem>
+            <listitem>Validate redirect uri returns False for wrong uri.  </listitem>
+            <listitem>Validate redirect uri returns True for good uri.  </listitem>
+            <listitem>Validate redirect uri returns True for good uri with parameters.  </listitem>
+            <listitem>Validate scope returns True for empty.  </listitem>
+            <listitem>Validate scope returns False for nonempty.  </listitem>
+            <listitem>Validate scope returns False for None.  </listitem>
+            <listitem>Validate access works only if user have logged in.  </listitem>
+            <listitem>Validate access false with no login.  </listitem>
+            <listitem>Token information can be persisted. with client_id, scope, access_token, token_type, expiry, refresh_token and_data</listitem>
+            <listitem>Data can be retrieved from client id,refresh token and scope.  </listitem>
+            <listitem>Nonempty scope is an error.  </listitem>
+            <listitem>Refresh token can be discarded.  </listitem>
+            <listitem>Discarding nonexistent refresh token is an error.  </listitem>
+            <listitem>Authorization code can be persisted with key data.  </listitem>
+            <listitem>Key data can be retrieved by authorization code.  </listitem>
+            <listitem>Authorization code can be obtained with client id,secret and uri.  </listitem>
+            <listitem>Authorization code cannot be obtained without user.  </listitem>
+            <listitem>GetAuthorizationCode. </listitem>
+            <listitem>Authorization code can be obtained from uri.  </listitem>
+            <listitem>Authorization code can be discarded.  </listitem>
+            <listitem>Auth interface redirects to redirect uri.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Assurance</title>
+         <itemizedlist>
+            <listitem>Assurance form needs csrf.  </listitem>
+            <listitem>Assurers with appropriate credential can add assurance to user using hash.  the appropriate credential is an assurance in the form "assurer.&lt;assurance_name&gt;" where assurance_name is the assurance to be added</listitem>
+            <listitem>No madeup csrf cookie.  </listitem>
+            <listitem>Assurers without appropriate credential cannot add assurance to user.  </listitem>
+            <listitem>Adding assurance is possible using the hash only.  </listitem>
+            <listitem>Assurers need assurer assurance.  </listitem>
+            <listitem>Assurers need giving assurance.  that is they have to have assurance.[the assurance to give]</listitem>
+            <listitem>When an assurer wants to add an assurance for a user with hash and without email, and there are multiple users with that hash, then an error is signaled.  </listitem>
+            <listitem>When an assurance added with hash and email, and there is another user with the same hash, the hash from the other user is deleted.  </listitem>
+            <listitem>Adding assurance with invalid hash and email fails.  </listitem>
+            <listitem>Adding assurance with invalid hash and no email fails.  </listitem>
+            <listitem>Adding assurance with email and hash of someone other fails.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Application</title>
+         <itemizedlist>
+            <listitem>The application name is stored as given.  </listitem>
+            <listitem>An application can be stored and retrieved.  </listitem>
+            <listitem>The name of the application must be unique.  </listitem>
+            <listitem>The name of the application must be unique case 2.  </listitem>
+            <listitem>The redirect uri is stored as given.  </listitem>
+            <listitem>The redirect uri must be https.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>S s l auth</title>
+         <itemizedlist>
+            <listitem>Ssl login logs in if you are registered and have cert.  </listitem>
+            <listitem>Ssl login registers and logs in if you have cert and give email.  </listitem>
+            <listitem>No ssl login on base url.  </listitem>
+            <listitem>SSl LOGIN BASE URL works if no cert is given.  </listitem>
+            <listitem>Normal pages do not ask for cert.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>End user registration</title>
+         <itemizedlist>
+            <listitem>Registration is done by filling out the registration form.  </listitem>
+            <listitem>If you are not logged in,the authorization uri redirects to login page such that after login you can continue.  </listitem>
+            <listitem>You can check your data in the ME url.  </listitem>
+            <listitem>For some forms you need a csrf token,you can obtain it by logging in.  </listitem>
+            <listitem>An assurer can add assurance to other users using the assurance form.  </listitem>
+            <listitem>An assurer can get user information using the users email.  </listitem>
+            <listitem>If you are logged in and all the informations are correct the oauth page redirects to the redirect uri with your authorization code as parameter.  </listitem>
+            <listitem>The server can get your access tokens using your authorization code. </listitem>
+            <listitem>The server can get your user info with your access token. </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>End user password reset</title>
+         <itemizedlist>
             <listitem>The reset link is in the reset email. </listitem>
-            <listitem>Password reset email contains a password reset link.  </listitem>
-            <listitem>Password reset link is of correct form.  </listitem>
-            <listitem>Password reset link contains correct secret.  </listitem>
-            <listitem>Password reset credential have 4 hours expiration time.  </listitem>
-            <listitem>Password reset for invalid email fails.  </listitem>
-            <listitem>Invalid email response have correct message.  </listitem>
-            <listitem>Password reset link leads to password reset form.  </listitem>
-            <listitem>Password reset needs password.  </listitem>
-            <listitem>Password reset needs secret.  </listitem>
-            <listitem>Password reset secret have to be valid.  </listitem>
-            <listitem>Valid secret is accepted.  </listitem>
-            <listitem>Successful password reset sets the password.  </listitem>
-            <listitem>Successful password clears the temporary credential.  </listitem>
-            <listitem>No password reset for timed out temporary credential.  </listitem>
-            <listitem>Bad secret clears up all timed out temporary credentials.  </listitem>
+            <listitem>Password can be reset using the reset link.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>New user</title>
+         <itemizedlist>
+            <listitem>Unregistered user can register with password in the middle of login procedure of a served application.  </listitem>
+            <listitem>Unregistered user can register with facebook in the middle of login procedure of a served application.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>End user obtaining hash</title>
+         <itemizedlist>
+            <listitem>You can obtain the hash by filling in your personal id and pushing the button near it.  In this case your web browser goes directly to anchor.edemokraciagep.org, and gets the hash for you. The SSO server never sees your personal id.</listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>End user registration and login with facebook</title>
+         <itemizedlist>
+            <listitem>If a user without public email tries to register to facebook we ask for email address.  </listitem>
+            <listitem>It is possible to register with facebook.  </listitem>
+            <listitem>You can login using facebook.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>End user digest management</title>
+         <itemizedlist>
+            <listitem>You can add a digest as a logged in user.  </listitem>
+            <listitem>You can change the digest as a logged in user.  </listitem>
+            <listitem>You can delete the digest as a logged in user by giving empty one.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Java script unit</title>
+         <itemizedlist>
+            <listitem>Javascript unit test run nicely.  </listitem>
+            <listitem>The me link works.  </listitem>
          </itemizedlist>
       </section>
       <section>
