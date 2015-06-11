@@ -127,7 +127,7 @@
                      </div>
                   </div>
                </div>
-               <p>decorator.interfaceFunc('/v1/oauth2/auth', methods=['GET'], checkLoginFunction=controller.checkLogin)</p> see http://tech.shift.com/post/39516330935/implementing-a-python-oauth-2-0-provider-part-1
+               <p>decorator.interfaceFunc('/v1/oauth2/auth', methods=['GET'], checkLoginFunction=controller.redirectIfNotLoggedIn)</p> see http://tech.shift.com/post/39516330935/implementing-a-python-oauth-2-0-provider-part-1
             </div>
             <div class="section">
                <div class="titlepage">
@@ -160,7 +160,7 @@
                      </div>
                   </div>
                </div>
-               <p>decorator.interfaceFunc('/logout', methods=['GET'], checkLoginFunction=controller.checkLogin)</p>
+               <p>decorator.interfaceFunc('/logout', methods=['GET'], checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</p>
             </div>
             <div class="section">
                <div class="titlepage">
@@ -194,7 +194,7 @@
                   </div>
                </div>
                <p>decorator.interfaceFunc('/v1/users/me/change_password', methods=['POST'], formClass=PasswordChangeForm,
-                  checkLoginFunction=controller.checkLogin)
+                  checkLoginFunction=controller.jsonErrorIfNotLoggedIn)
                </p>
             </div>
             <div class="section">
@@ -218,7 +218,7 @@
                   </div>
                </div>
                <p>decorator.interfaceFunc('/v1/users/me/update_hash', methods=['POST'], formClass=DigestUpdateForm,
-                  checkLoginFunction=controller.checkLogin)
+                  checkLoginFunction=controller.jsonErrorIfNotLoggedIn)
                </p>
             </div>
             <div class="section">
@@ -263,7 +263,7 @@
                      </div>
                   </div>
                </div>
-               <p>decorator.interfaceFunc('/v1/user_by_email/&lt;email&gt;', methods=['GET'], checkLoginFunction=controller.checkLogin)</p>
+               <p>decorator.interfaceFunc('/v1/user_by_email/&lt;email&gt;', methods=['GET'], checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</p>
             </div>
             <div class="section">
                <div class="titlepage">
@@ -275,7 +275,7 @@
                   </div>
                </div>
                <p>decorator.interfaceFunc('/v1/add_assurance', methods=['POST'], formClass=AssuranceForm,
-                  checkLoginFunction=controller.checkLogin)
+                  checkLoginFunction=controller.jsonErrorIfNotLoggedIn)
                </p>
             </div>
             <div class="section">
@@ -288,7 +288,7 @@
                   </div>
                </div>
                <p>decorator.interfaceFunc('/v1/add_credential', methods=['POST'], formClass=CredentialForm,
-                  checkLoginFunction=controller.checkLogin)
+                  checkLoginFunction=controller.jsonErrorIfNotLoggedIn)
                </p>
             </div>
             <div class="section">
@@ -301,7 +301,7 @@
                   </div>
                </div>
                <p>decorator.interfaceFunc('/v1/remove_credential', methods=['POST'], formClass=CredentialIdentifierForm,
-                  checkLoginFunction=controller.checkLogin)
+                  checkLoginFunction=controller.jsonErrorIfNotLoggedIn)
                </p>
             </div>
             <div class="section">

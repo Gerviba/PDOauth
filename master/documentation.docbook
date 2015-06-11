@@ -12,7 +12,7 @@
       </section>
       <section>
          <title>authorization_code</title>
-         <para>decorator.interfaceFunc('/v1/oauth2/auth', methods=['GET'], checkLoginFunction=controller.checkLogin)</para> see http://tech.shift.com/post/39516330935/implementing-a-python-oauth-2-0-provider-part-1</section>
+         <para>decorator.interfaceFunc('/v1/oauth2/auth', methods=['GET'], checkLoginFunction=controller.redirectIfNotLoggedIn)</para> see http://tech.shift.com/post/39516330935/implementing-a-python-oauth-2-0-provider-part-1</section>
       <section>
          <title>keygen</title>
          <para>decorator.interfaceFunc('/keygen', methods=['POST'], formClass=KeygenForm)</para>  
@@ -23,7 +23,7 @@
       </section>
       <section>
          <title>logout</title>
-         <para>decorator.interfaceFunc('/logout', methods=['GET'], checkLoginFunction=controller.checkLogin)</para> 
+         <para>decorator.interfaceFunc('/logout', methods=['GET'], checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</para> 
       </section>
       <section>
          <title>token</title>
@@ -35,7 +35,7 @@
       </section>
       <section>
          <title>changePassword</title>
-         <para>decorator.interfaceFunc('/v1/users/me/change_password', methods=['POST'], formClass=PasswordChangeForm, checkLoginFunction=controller.checkLogin)</para>  
+         <para>decorator.interfaceFunc('/v1/users/me/change_password', methods=['POST'], formClass=PasswordChangeForm, checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</para>  
       </section>
       <section>
          <title>sendPasswordResetEmail</title>
@@ -43,7 +43,7 @@
       </section>
       <section>
          <title>updateHash</title>
-         <para>decorator.interfaceFunc('/v1/users/me/update_hash', methods=['POST'], formClass=DigestUpdateForm, checkLoginFunction=controller.checkLogin)</para>  
+         <para>decorator.interfaceFunc('/v1/users/me/update_hash', methods=['POST'], formClass=DigestUpdateForm, checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</para>  
       </section>
       <section>
          <title>passwordReset</title>
@@ -59,19 +59,19 @@
       </section>
       <section>
          <title>get_by_email</title>
-         <para>decorator.interfaceFunc('/v1/user_by_email/&lt;email&gt;', methods=['GET'], checkLoginFunction=controller.checkLogin)</para>  
+         <para>decorator.interfaceFunc('/v1/user_by_email/&lt;email&gt;', methods=['GET'], checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</para>  
       </section>
       <section>
          <title>add_assurance</title>
-         <para>decorator.interfaceFunc('/v1/add_assurance', methods=['POST'], formClass=AssuranceForm, checkLoginFunction=controller.checkLogin)</para>  
+         <para>decorator.interfaceFunc('/v1/add_assurance', methods=['POST'], formClass=AssuranceForm, checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</para>  
       </section>
       <section>
          <title>add_credential</title>
-         <para>decorator.interfaceFunc('/v1/add_credential', methods=['POST'], formClass=CredentialForm, checkLoginFunction=controller.checkLogin)</para>  
+         <para>decorator.interfaceFunc('/v1/add_credential', methods=['POST'], formClass=CredentialForm, checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</para>  
       </section>
       <section>
          <title>remove_credential</title>
-         <para>decorator.interfaceFunc('/v1/remove_credential', methods=['POST'], formClass=CredentialIdentifierForm, checkLoginFunction=controller.checkLogin)</para>  
+         <para>decorator.interfaceFunc('/v1/remove_credential', methods=['POST'], formClass=CredentialIdentifierForm, checkLoginFunction=controller.jsonErrorIfNotLoggedIn)</para>  
       </section>
       <section>
          <title>uriservice</title>
