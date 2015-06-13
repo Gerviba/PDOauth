@@ -85,6 +85,25 @@
    <section>
       <title>Functionality</title>
       <section>
+         <title>Web interface</title>
+         <itemizedlist>
+            <listitem>WebInterface initializes with the given interface.  </listitem>
+            <listitem>You can getSession.   </listitem>
+            <listitem>You can getRequest.   </listitem>
+            <listitem>Request url corresponds to the real request url.   </listitem>
+            <listitem>User can be logged in with loginUserInFramework.   </listitem>
+            <listitem>Logged in user can be obtained with getCurrentUser.   </listitem>
+            <listitem>Postdata can be put into request context.   </listitem>
+            <listitem>Facebook interface gives error for bad code.   </listitem>
+            <listitem>Fake facebookMe returns okay if interface access token equals code.  </listitem>
+            <listitem>LoginUserInFramework returns true for active user.   </listitem>
+            <listitem>Response cookie can be set.   </listitem>
+            <listitem>Cookie setting sets the header.   </listitem>
+            <listitem>Cookie domain can be set.   </listitem>
+            <listitem>Cookie path can be set.   </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>User</title>
          <itemizedlist>
             <listitem>User can be created. </listitem>
@@ -141,17 +160,6 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Server side</title>
-         <itemizedlist>
-            <listitem>CreateApplication. </listitem>
-            <listitem>BuildAuthUrl.  </listitem>
-            <listitem>LoginAndGetCode. </listitem>
-            <listitem>Authorization code can be obtained by an authenticated user using correct client id and redirect uri.  </listitem>
-            <listitem>Server side request.  </listitem>
-            <listitem>Get user info.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
          <title>S s l login</title>
          <itemizedlist>
             <listitem>There is a SSL LOGIN BASE URL config option containing the base url of the site with the optional no ca config.  </listitem>
@@ -159,13 +167,118 @@
             <listitem>There is a SSL LOGOUT URL config option pointing to a location which is set up with SSLVerifyClient require and SSLVerifyDepth 0 within SSL LOGIN BASE URL.  </listitem>
             <listitem>There is a START URL config option which contains the starting point useable for unregistered and or not logged in user.  </listitem>
             <listitem>You can login using a registered ssl cert.  </listitem>
+            <listitem>Ssl login sets csrf cookie.  </listitem>
+            <listitem>Login cookie have path set to root.  </listitem>
+            <listitem>Login cookie have domain set to COOKIE DOMAIN.  </listitem>
             <listitem>With cert login you get actually logged in.  </listitem>
             <listitem>You cannot login using an unregistered ssl cert without email.  </listitem>
             <listitem>You cannot login without a cert.  </listitem>
             <listitem>Empty certstring gives error.  </listitem>
             <listitem>Junk certstring gives error.  </listitem>
             <listitem>Ssl login is cors enabled.  </listitem>
+            <listitem>RemoveCertUser. </listitem>
             <listitem>You can register and login using an unregistered ssl cert with email.  </listitem>
+            <listitem>When you log in with a cert login credential gets set.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Registration</title>
+         <itemizedlist>
+            <listitem>Password is stored hashed in registration.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Key data</title>
+         <itemizedlist>
+            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
+            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
+            <listitem>None is returned for nonexistent client id.  </listitem>
+            <listitem>None is returned for nonexistent user id.  </listitem>
+            <listitem>None is returned for none as user id.  </listitem>
+            <listitem>None is returned for none as client id.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Facebook</title>
+         <itemizedlist>
+            <listitem>Facebook login needs facebook id and access token.  </listitem>
+            <listitem>Facebook login needs facebook id as username.  </listitem>
+            <listitem>Facebook login needs correct access token as password.  </listitem>
+            <listitem>Facebook login needs facebook credentials as registered.  </listitem>
+            <listitem>FacebookMe reaches facebook.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Credential</title>
+         <itemizedlist>
+            <listitem>Credential removal is resistant to no login credential in session.  </listitem>
+            <listitem>Credential representation is readable.  </listitem>
+            <listitem>A logged in user can add credential.  </listitem>
+            <listitem>When a credential is added the response contains user data which contains her credentials.  </listitem>
+            <listitem>The credential is actually added.  </listitem>
+            <listitem>A credential can be deleted.  </listitem>
+            <listitem>LoginACredential.  </listitem>
+            <listitem>RemoveACredential.  </listitem>
+            <listitem>Password is stored using sha256 hash.  </listitem>
+            <listitem>CreatePasswordCredential.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Authorisaton</title>
+         <itemizedlist>
+            <listitem>Authorisation can be created with client id,code and scope. </listitem>
+            <listitem>Created authorisation can be retrieved using client id and scope.  </listitem>
+            <listitem>Created authorisation have the client id given.  </listitem>
+            <listitem>Created authorisation have the code given.  </listitem>
+            <listitem>Authorisation should have empty scope.  </listitem>
+            <listitem>Authorisation code expires in configured time.  </listitem>
+            <listitem>Authorisation code can be retrieved before configured expiry.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Auth provider</title>
+         <itemizedlist>
+            <listitem>Validate client id returns False for None.  </listitem>
+            <listitem>Validate client id returns False for empty string.  </listitem>
+            <listitem>Validate client id returns False for wrong id.  </listitem>
+            <listitem>Validate client id returns True for good id.  </listitem>
+            <listitem>Validate client secret returns False for None.  </listitem>
+            <listitem>Validate client secret returns False for empty string.  </listitem>
+            <listitem>Validate client secret returns False for wrong secret.  </listitem>
+            <listitem>Validate client secret returns False for None id.  </listitem>
+            <listitem>Validate client secret returns True for good secret.  </listitem>
+            <listitem>Validate redirect uri returns False for None.  </listitem>
+            <listitem>Validate redirect uri returns False for bad app.  </listitem>
+            <listitem>Validate redirect uri returns False for empty.  </listitem>
+            <listitem>Validate redirect uri returns False for wrong uri.  </listitem>
+            <listitem>Validate redirect uri returns True for good uri.  </listitem>
+            <listitem>Validate redirect uri returns True for good uri with parameters.  </listitem>
+            <listitem>Validate scope returns True for empty.  </listitem>
+            <listitem>Validate scope returns False for nonempty.  </listitem>
+            <listitem>Validate scope returns False for None.  </listitem>
+            <listitem>Discarding nonexistent refresh token is an error.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Application</title>
+         <itemizedlist>
+            <listitem>The application name is stored as given.  </listitem>
+            <listitem>An application can be stored and retrieved.  </listitem>
+            <listitem>The name of the application must be unique.  </listitem>
+            <listitem>The name of the application must be unique case 2.  </listitem>
+            <listitem>The redirect uri is stored as given.  </listitem>
+            <listitem>The redirect uri must be https.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Server side</title>
+         <itemizedlist>
+            <listitem>CreateApplication. </listitem>
+            <listitem>BuildAuthUrl.  </listitem>
+            <listitem>OOOloginAndGetCode. </listitem>
+            <listitem>Authorization code can be obtained by an authenticated user using correct client id and redirect uri.  </listitem>
+            <listitem>Server side request.  </listitem>
+            <listitem>Get user info.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -239,7 +352,7 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Login</title>
+         <title>Registration</title>
          <itemizedlist>
             <listitem>Login does not accept get.  </listitem>
             <listitem>Password login needs identifier.  </listitem>
@@ -266,17 +379,6 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Key data</title>
-         <itemizedlist>
-            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
-            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
-            <listitem>None is returned for nonexistent client id.  </listitem>
-            <listitem>None is returned for nonexistent user id.  </listitem>
-            <listitem>None is returned for none as user id.  </listitem>
-            <listitem>None is returned for none as client id.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
          <title>I</title>
          <itemizedlist>
             <listitem>Unauthenticated user is redirected to login page when tries to do oauth with us.  </listitem>
@@ -294,16 +396,6 @@
             <listitem>Without login it is not possible to update the hash.  </listitem>
             <listitem>The hash update request should contain csrf token.  </listitem>
             <listitem>If a hash is given it should be valid.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Facebook</title>
-         <itemizedlist>
-            <listitem>Facebook login needs facebook id and access token.  </listitem>
-            <listitem>Facebook login needs facebook id as username.  </listitem>
-            <listitem>Facebook login needs correct access token as password.  </listitem>
-            <listitem>Facebook login needs facebook credentials as registered.  </listitem>
-            <listitem>FacebookMe reaches facebook.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -333,14 +425,11 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Credential</title>
+         <title>Credential integration</title>
          <itemizedlist>
-            <listitem>Credential representation is readable.  </listitem>
             <listitem>Credential can be retrieved by type and identifier.  </listitem>
             <listitem>A logged in user can add credential.  </listitem>
-            <listitem>When a credential is added the response contains user data which contains her credentials.  </listitem>
             <listitem>A not logged in user cannot add credential.  </listitem>
-            <listitem>The credential is actually added.  </listitem>
             <listitem>The added credential should contain credentialType.  </listitem>
             <listitem>The added credential should contain valid credentialType.  </listitem>
             <listitem>The added credential should contain identifier.  </listitem>
@@ -361,53 +450,14 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Authorisaton</title>
+         <title>Auth provider integration</title>
          <itemizedlist>
-            <listitem>Authorisation can be created with client id,code and scope. </listitem>
-            <listitem>Created authorisation can be retrieved using client id and scope.  </listitem>
-            <listitem>Created authorisation have the client id given.  </listitem>
-            <listitem>Created authorisation have the code given.  </listitem>
-            <listitem>Authorisation should have empty scope.  </listitem>
-            <listitem>Authorisation code expires in configured time.  </listitem>
-            <listitem>Authorisation code can be retrieved before configured expiry.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Auth</title>
-         <itemizedlist>
-            <listitem>Unauthorized response is redirecting to START URL.  more specifically to START_URL?next={request.url}</listitem>
-            <listitem>Load user loads the user by id.  </listitem>
-            <listitem>Load user returns None for nonexisting id.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Auth provider</title>
-         <itemizedlist>
-            <listitem>Validate client id returns False for None.  </listitem>
-            <listitem>Validate client id returns False for empty string.  </listitem>
-            <listitem>Validate client id returns False for wrong id.  </listitem>
-            <listitem>Validate client id returns True for good id.  </listitem>
-            <listitem>Validate client secret returns False for None.  </listitem>
-            <listitem>Validate client secret returns False for empty string.  </listitem>
-            <listitem>Validate client secret returns False for wrong secret.  </listitem>
-            <listitem>Validate client secret returns False for None id.  </listitem>
-            <listitem>Validate client secret returns True for good secret.  </listitem>
-            <listitem>Validate redirect uri returns False for None.  </listitem>
-            <listitem>Validate redirect uri returns False for bad app.  </listitem>
-            <listitem>Validate redirect uri returns False for empty.  </listitem>
-            <listitem>Validate redirect uri returns False for wrong uri.  </listitem>
-            <listitem>Validate redirect uri returns True for good uri.  </listitem>
-            <listitem>Validate redirect uri returns True for good uri with parameters.  </listitem>
-            <listitem>Validate scope returns True for empty.  </listitem>
-            <listitem>Validate scope returns False for nonempty.  </listitem>
-            <listitem>Validate scope returns False for None.  </listitem>
             <listitem>Validate access works only if user have logged in.  </listitem>
             <listitem>Validate access false with no login.  </listitem>
             <listitem>Token information can be persisted. with client_id, scope, access_token, token_type, expiry, refresh_token and_data</listitem>
             <listitem>Data can be retrieved from client id,refresh token and scope.  </listitem>
             <listitem>Nonempty scope is an error.  </listitem>
             <listitem>Refresh token can be discarded.  </listitem>
-            <listitem>Discarding nonexistent refresh token is an error.  </listitem>
             <listitem>Authorization code can be persisted with key data.  </listitem>
             <listitem>Key data can be retrieved by authorization code.  </listitem>
             <listitem>Authorization code can be obtained with client id,secret and uri.  </listitem>
@@ -419,7 +469,7 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Assurance</title>
+         <title>Assurance integration</title>
          <itemizedlist>
             <listitem>Assurance form needs csrf.  </listitem>
             <listitem>Assurers with appropriate credential can add assurance to user using hash.  the appropriate credential is an assurance in the form "assurer.&lt;assurance_name&gt;" where assurance_name is the assurance to be added</listitem>
@@ -433,17 +483,6 @@
             <listitem>Adding assurance with invalid hash and email fails.  </listitem>
             <listitem>Adding assurance with invalid hash and no email fails.  </listitem>
             <listitem>Adding assurance with email and hash of someone other fails.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Application</title>
-         <itemizedlist>
-            <listitem>The application name is stored as given.  </listitem>
-            <listitem>An application can be stored and retrieved.  </listitem>
-            <listitem>The name of the application must be unique.  </listitem>
-            <listitem>The name of the application must be unique case 2.  </listitem>
-            <listitem>The redirect uri is stored as given.  </listitem>
-            <listitem>The redirect uri must be https.  </listitem>
          </itemizedlist>
       </section>
       <section>
