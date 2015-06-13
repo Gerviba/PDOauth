@@ -1,5 +1,22 @@
 <article>
    <title>PDOauth documentation</title>
+   <variablelist>
+      <varlistentry>
+         <term>Branch:</term>
+         <listitem>master</listitem>
+      </varlistentry>
+      <varlistentry>
+         <term>Commit:</term>
+         <listitem>c536e9a285cfd9b36c97206865924539f0047513</listitem>
+      </varlistentry>
+      <varlistentry>
+         <term>Build:</term>
+         <listitem>66705260</listitem>
+      </varlistentry>
+   </variablelist>
+   <para>
+				See commit log <ulink url="commitlog.html">here</ulink>.
+			</para>
    <section>
       <title>Interfaces</title>
       <section>
@@ -104,6 +121,27 @@
          </itemizedlist>
       </section>
       <section>
+         <title>User</title>
+         <itemizedlist>
+            <listitem>User can be created. </listitem>
+            <listitem>User id is returned by get id.  </listitem>
+            <listitem>User email with plus sign is stored correctly.  </listitem>
+            <listitem>User is created as inactive.  </listitem>
+            <listitem>User is created as unauthenticated.  </listitem>
+            <listitem>Inactive user is loaded as inactive.  </listitem>
+            <listitem>Unauthenticated user is loaded as unauthenticated.  </listitem>
+            <listitem>User can be activated.  </listitem>
+            <listitem>User can be set as authenticated.  </listitem>
+            <listitem>User can be created with credentials.  </listitem>
+            <listitem>User can be retrieved by id.  </listitem>
+            <listitem>User email can be stored.  </listitem>
+            <listitem>User hash can be stored.  </listitem>
+            <listitem>Cannot create user with already existing email.  </listitem>
+            <listitem>GetByDigest does not allow empty digest.  </listitem>
+            <listitem>GetByDigest does not allow null digest.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>User info</title>
          <itemizedlist>
             <listitem>Logged in user can get its info.  </listitem>
@@ -116,6 +154,26 @@
             <listitem>No by email with wrong email.  </listitem>
             <listitem>Users without assurer assurance cannot get user by email.  </listitem>
             <listitem>Users without login cannot get user by email.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Uri service</title>
+         <itemizedlist>
+            <listitem>The uri service gives back the BASE URL.  </listitem>
+            <listitem>The uri service gives back the SSL LOGIN BASE URL.  </listitem>
+            <listitem>The uri service gives back the PASSWORD RESET FORM URL.  </listitem>
+            <listitem>The uri service gives back the START URL.  </listitem>
+            <listitem>The uri service gives back the SSL LOGOUT URL.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Token info by access key</title>
+         <itemizedlist>
+            <listitem>TokenInfo can be stored by access key. </listitem>
+            <listitem>TokenInfo can be retrieved by access key.  </listitem>
+            <listitem>Find returns None for nonexisting refresh key.  </listitem>
+            <listitem>Access key expires at given time.  </listitem>
+            <listitem>There should not be two records with same access key.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -147,6 +205,17 @@
          </itemizedlist>
       </section>
       <section>
+         <title>Key data</title>
+         <itemizedlist>
+            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
+            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
+            <listitem>None is returned for nonexistent client id.  </listitem>
+            <listitem>None is returned for nonexistent user id.  </listitem>
+            <listitem>None is returned for none as user id.  </listitem>
+            <listitem>None is returned for none as client id.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>Facebook</title>
          <itemizedlist>
             <listitem>Facebook login needs facebook id and access token.  </listitem>
@@ -172,6 +241,18 @@
          </itemizedlist>
       </section>
       <section>
+         <title>Authorisaton</title>
+         <itemizedlist>
+            <listitem>Authorisation can be created with client id,code and scope. </listitem>
+            <listitem>Created authorisation can be retrieved using client id and scope.  </listitem>
+            <listitem>Created authorisation have the client id given.  </listitem>
+            <listitem>Created authorisation have the code given.  </listitem>
+            <listitem>Authorisation should have empty scope.  </listitem>
+            <listitem>Authorisation code expires in configured time.  </listitem>
+            <listitem>Authorisation code can be retrieved before configured expiry.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
          <title>Auth provider</title>
          <itemizedlist>
             <listitem>Validate client id returns False for None.  </listitem>
@@ -193,70 +274,6 @@
             <listitem>Validate scope returns False for nonempty.  </listitem>
             <listitem>Validate scope returns False for None.  </listitem>
             <listitem>Discarding nonexistent refresh token is an error.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>User</title>
-         <itemizedlist>
-            <listitem>User can be created. </listitem>
-            <listitem>User id is returned by get id.  </listitem>
-            <listitem>User email with plus sign is stored correctly.  </listitem>
-            <listitem>User is created as inactive.  </listitem>
-            <listitem>User is created as unauthenticated.  </listitem>
-            <listitem>Inactive user is loaded as inactive.  </listitem>
-            <listitem>Unauthenticated user is loaded as unauthenticated.  </listitem>
-            <listitem>User can be activated.  </listitem>
-            <listitem>User can be set as authenticated.  </listitem>
-            <listitem>User can be created with credentials.  </listitem>
-            <listitem>User can be retrieved by id.  </listitem>
-            <listitem>User email can be stored.  </listitem>
-            <listitem>User hash can be stored.  </listitem>
-            <listitem>Cannot create user with already existing email.  </listitem>
-            <listitem>GetByDigest does not allow empty digest.  </listitem>
-            <listitem>GetByDigest does not allow null digest.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Uri service</title>
-         <itemizedlist>
-            <listitem>The uri service gives back the BASE URL.  </listitem>
-            <listitem>The uri service gives back the SSL LOGIN BASE URL.  </listitem>
-            <listitem>The uri service gives back the PASSWORD RESET FORM URL.  </listitem>
-            <listitem>The uri service gives back the START URL.  </listitem>
-            <listitem>The uri service gives back the SSL LOGOUT URL.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Token info by access key</title>
-         <itemizedlist>
-            <listitem>TokenInfo can be stored by access key. </listitem>
-            <listitem>TokenInfo can be retrieved by access key.  </listitem>
-            <listitem>Find returns None for nonexisting refresh key.  </listitem>
-            <listitem>Access key expires at given time.  </listitem>
-            <listitem>There should not be two records with same access key.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Key data</title>
-         <itemizedlist>
-            <listitem>KeyData can be created with client id,user id,acess key,and,refresh key. </listitem>
-            <listitem>Access key and refresh key can be retrieved by client id and user id.  </listitem>
-            <listitem>None is returned for nonexistent client id.  </listitem>
-            <listitem>None is returned for nonexistent user id.  </listitem>
-            <listitem>None is returned for none as user id.  </listitem>
-            <listitem>None is returned for none as client id.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Authorisaton</title>
-         <itemizedlist>
-            <listitem>Authorisation can be created with client id,code and scope. </listitem>
-            <listitem>Created authorisation can be retrieved using client id and scope.  </listitem>
-            <listitem>Created authorisation have the client id given.  </listitem>
-            <listitem>Created authorisation have the code given.  </listitem>
-            <listitem>Authorisation should have empty scope.  </listitem>
-            <listitem>Authorisation code expires in configured time.  </listitem>
-            <listitem>Authorisation code can be retrieved before configured expiry.  </listitem>
          </itemizedlist>
       </section>
       <section>
