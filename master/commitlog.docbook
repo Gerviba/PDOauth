@@ -13,6 +13,24 @@
          </thead>
          <tbody>
             <row>
+               <entry>b2328f0</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sun Jun 14 09:30:56 2015 +0200</entry>
+               <entry>Merge pull request 145 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>8bb325d</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sun Jun 14 09:11:55 2015 +0200</entry>
+               <entry>Merge pull request 139 from magwas feature commitdocs_74</entry>
+            </row>
+            <row>
+               <entry>a36668d</entry>
+               <entry>Mag</entry>
+               <entry>Sun Jun 14 08:43:39 2015 +0200</entry>
+               <entry>increased timeout for keygen</entry>
+            </row>
+            <row>
                <entry>c536e9a</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Sun Jun 14 01:34:15 2015 +0200</entry>
@@ -1103,12 +1121,6 @@
                <entry>Mag</entry>
                <entry>Tue May 19 07:08:48 2015 +0200</entry>
                <entry>show current uri in new user test</entry>
-            </row>
-            <row>
-               <entry>c961b6d</entry>
-               <entry>Mag</entry>
-               <entry>Mon May 18 21:50:20 2015 +0200</entry>
-               <entry>password_login_needs_correct_credentialType cannot_create_user_with_already_existing_email</entry>
             </row>
          </tbody>
       </tgroup>
