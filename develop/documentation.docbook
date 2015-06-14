@@ -1,5 +1,22 @@
 <article>
    <title>PDOauth documentation</title>
+   <variablelist>
+      <varlistentry>
+         <term>Branch:</term>
+         <listitem>develop</listitem>
+      </varlistentry>
+      <varlistentry>
+         <term>Commit:</term>
+         <listitem>8bb325dd7eff860edaf3bbf8205827347448f2e5</listitem>
+      </varlistentry>
+      <varlistentry>
+         <term>Build:</term>
+         <listitem>66724450</listitem>
+      </varlistentry>
+   </variablelist>
+   <para>
+				See commit log <ulink url="commitlog.html">here</ulink>.
+			</para>
    <section>
       <title>Interfaces</title>
       <section>

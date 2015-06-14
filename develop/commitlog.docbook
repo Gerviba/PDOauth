@@ -1,0 +1,1104 @@
+<article>
+   <title>PDOauth history</title>
+   <table>
+      <title>commits</title>
+      <tgroup cols="4">
+         <thead>
+            <row>
+               <entry>Commit id</entry>
+               <entry>Author</entry>
+               <entry>Date</entry>
+               <entry>Commit message</entry>
+            </row>
+         </thead>
+         <tbody>
+            <row>
+               <entry>8bb325d</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sun Jun 14 09:11:55 2015 +0200</entry>
+               <entry>Merge pull request 139 from magwas feature commitdocs_74</entry>
+            </row>
+            <row>
+               <entry>a36668d</entry>
+               <entry>Mag</entry>
+               <entry>Sun Jun 14 08:43:39 2015 +0200</entry>
+               <entry>increased timeout for keygen</entry>
+            </row>
+            <row>
+               <entry>454a651</entry>
+               <entry>Mag</entry>
+               <entry>Sun Jun 14 00:46:50 2015 +0200</entry>
+               <entry>fixup gh pages merge is actually in doc</entry>
+            </row>
+            <row>
+               <entry>9e0a602</entry>
+               <entry>Mag</entry>
+               <entry>Sun Jun 14 00:43:36 2015 +0200</entry>
+               <entry>branch commit build number and commit log in documentation. closes 74 closes 19</entry>
+            </row>
+            <row>
+               <entry>d63bb0c</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 23:06:29 2015 +0200</entry>
+               <entry>commitdoc bails out if GH_TOKEN is empty and does a fetch and merge</entry>
+            </row>
+            <row>
+               <entry>98f9458</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sat Jun 13 22:58:55 2015 +0200</entry>
+               <entry>Merge pull request 128 from magwas feature csrf_collision_44</entry>
+            </row>
+            <row>
+               <entry>b00f044</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 22:35:18 2015 +0200</entry>
+               <entry>print failing the build removed</entry>
+            </row>
+            <row>
+               <entry>6210410</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 20:14:01 2015 +0200</entry>
+               <entry>set domain path in cookies. should close 44</entry>
+            </row>
+            <row>
+               <entry>696d170</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 17:47:40 2015 +0200</entry>
+               <entry>fixed condole type in js</entry>
+            </row>
+            <row>
+               <entry>d35ef7e</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 17:30:26 2015 +0200</entry>
+               <entry>password is encrypted in credential add as well. closes 86</entry>
+            </row>
+            <row>
+               <entry>0a081fb</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 16:24:18 2015 +0200</entry>
+               <entry>no authorization heisenbug probably fixed</entry>
+            </row>
+            <row>
+               <entry>be4c045</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 15:42:09 2015 +0200</entry>
+               <entry>fixup for merge</entry>
+            </row>
+            <row>
+               <entry>80d1bc0</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 11:25:06 2015 +0200</entry>
+               <entry>Merge remote tracking branch edemo master into feature webinterface</entry>
+            </row>
+            <row>
+               <entry>0ad19d7</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 13 11:20:01 2015 +0200</entry>
+               <entry>all tests running again</entry>
+            </row>
+            <row>
+               <entry>2b89607</entry>
+               <entry>magwas</entry>
+               <entry>Thu Jun 11 16:12:58 2015 +0200</entry>
+               <entry>Merge pull request 95 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>7d1f992</entry>
+               <entry>magwas</entry>
+               <entry>Thu Jun 11 16:12:36 2015 +0200</entry>
+               <entry>Merge pull request 94 from magwas master</entry>
+            </row>
+            <row>
+               <entry>918a080</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 11 15:53:04 2015 +0200</entry>
+               <entry>Merge branch feature javascript_fixes_2</entry>
+            </row>
+            <row>
+               <entry>c6d9a05</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 11 15:50:54 2015 +0200</entry>
+               <entry>Merge branch feature credential_bug_88 into feature javascript_fixes_2</entry>
+            </row>
+            <row>
+               <entry>d5d7cd6</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 11 15:45:20 2015 +0200</entry>
+               <entry>3 sec for keygen id fix for test</entry>
+            </row>
+            <row>
+               <entry>6b5be47</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 11 15:38:30 2015 +0200</entry>
+               <entry>failing in the middle of refactor</entry>
+            </row>
+            <row>
+               <entry>2ecccf5</entry>
+               <entry>magwas</entry>
+               <entry>Thu Jun 11 08:03:09 2015 +0200</entry>
+               <entry>Merge pull request 93 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>7074a83</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 10 23:41:52 2015 +0200</entry>
+               <entry>Merge branch feature javascript_fixes of https github.com Claymanus PDOauth into local_test_branch</entry>
+            </row>
+            <row>
+               <entry>43ee217</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 10 23:40:51 2015 +0200</entry>
+               <entry>end2end test fixes</entry>
+            </row>
+            <row>
+               <entry>e21fdbc</entry>
+               <entry>György Peng</entry>
+               <entry>Wed Jun 10 20:34:14 2015 +0200</entry>
+               <entry>Update app.wsgi</entry>
+            </row>
+            <row>
+               <entry>30f8358</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 10 20:32:19 2015 +0200</entry>
+               <entry>Merge branch feature javascript_fixes of https github.com Claymanus PDOauth into local_test_branch</entry>
+            </row>
+            <row>
+               <entry>5f7308b</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 10 20:23:00 2015 +0200</entry>
+               <entry>javascript bugfixes</entry>
+            </row>
+            <row>
+               <entry>98bd05b</entry>
+               <entry>magwas</entry>
+               <entry>Wed Jun 10 20:07:02 2015 +0200</entry>
+               <entry>Merge pull request 90 from magwas feature build_times_65</entry>
+            </row>
+            <row>
+               <entry>78189f0</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 19:45:18 2015 +0200</entry>
+               <entry>Merge branch feature build_times_65 into feature credential_bug_88</entry>
+            </row>
+            <row>
+               <entry>5ba11f9</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 19:45:11 2015 +0200</entry>
+               <entry>merge edemo develop</entry>
+            </row>
+            <row>
+               <entry>a7a7c6c</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 19:21:55 2015 +0200</entry>
+               <entry>fixed credential removal bug 88</entry>
+            </row>
+            <row>
+               <entry>f3015a9</entry>
+               <entry>György Peng</entry>
+               <entry>Wed Jun 10 16:03:04 2015 +0200</entry>
+               <entry>Merge pull request 3 from magwas feature javascript_fixes</entry>
+            </row>
+            <row>
+               <entry>9dbd6fa</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 15:57:30 2015 +0200</entry>
+               <entry>one test failure fixed of many</entry>
+            </row>
+            <row>
+               <entry>8757caa</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 10 14:35:04 2015 +0200</entry>
+               <entry>added remove credential functionality to the UI</entry>
+            </row>
+            <row>
+               <entry>11c3594</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 13:10:05 2015 +0200</entry>
+               <entry>shippable should be able to run all tests now</entry>
+            </row>
+            <row>
+               <entry>f4d120c</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 12:44:00 2015 +0200</entry>
+               <entry>make for shippable</entry>
+            </row>
+            <row>
+               <entry>b6fffaf</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 10 12:09:39 2015 +0200</entry>
+               <entry>added twitter login to the UI the logins are organised in one row on login tab with common err.msg div</entry>
+            </row>
+            <row>
+               <entry>b2d489d</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 10 10:50:11 2015 +0200</entry>
+               <entry>added error message container for eatch section in login tab</entry>
+            </row>
+            <row>
+               <entry>a1b0435</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 09:18:30 2015 +0200</entry>
+               <entry>tmp dir creation for smtp</entry>
+            </row>
+            <row>
+               <entry>b3078fc</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 09:09:03 2015 +0200</entry>
+               <entry>only chrome test for shippable</entry>
+            </row>
+            <row>
+               <entry>b42e918</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 09:06:03 2015 +0200</entry>
+               <entry>git for travis</entry>
+            </row>
+            <row>
+               <entry>ffec440</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 07:48:11 2015 +0200</entry>
+               <entry>unzip for travis</entry>
+            </row>
+            <row>
+               <entry>f69debc</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 07:40:58 2015 +0200</entry>
+               <entry>unzip for shippable</entry>
+            </row>
+            <row>
+               <entry>25c8a10</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 07:27:44 2015 +0200</entry>
+               <entry>no sudo removal</entry>
+            </row>
+            <row>
+               <entry>d896ac3</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 07:26:26 2015 +0200</entry>
+               <entry>f back to chrometest</entry>
+            </row>
+            <row>
+               <entry>9db4b32</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 07:18:45 2015 +0200</entry>
+               <entry>even less removals for travis</entry>
+            </row>
+            <row>
+               <entry>b75dc05</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 06:56:38 2015 +0200</entry>
+               <entry>recurse</entry>
+            </row>
+            <row>
+               <entry>4d788ce</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 06:54:05 2015 +0200</entry>
+               <entry>recursive depends for tracis</entry>
+            </row>
+            <row>
+               <entry>b98cc09</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 10 06:24:21 2015 +0200</entry>
+               <entry>rdepends for travis</entry>
+            </row>
+            <row>
+               <entry>4b9524f</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 22:38:09 2015 +0200</entry>
+               <entry>add credential funtion implemented in UI</entry>
+            </row>
+            <row>
+               <entry>cc65866</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 22:05:59 2015 +0200</entry>
+               <entry>insserv</entry>
+            </row>
+            <row>
+               <entry>382ebc2</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 21:56:29 2015 +0200</entry>
+               <entry>no f for chrome test to see shippable behaviour</entry>
+            </row>
+            <row>
+               <entry>7278326</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 21:53:32 2015 +0200</entry>
+               <entry>even less dep</entry>
+            </row>
+            <row>
+               <entry>01cb69c</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 21:45:55 2015 +0200</entry>
+               <entry>no sudo for shippable</entry>
+            </row>
+            <row>
+               <entry>7481ad6</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 21:44:09 2015 +0200</entry>
+               <entry>less packages removed for travis</entry>
+            </row>
+            <row>
+               <entry>73049ec</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 21:34:25 2015 +0200</entry>
+               <entry>sqlalchemy for shippable</entry>
+            </row>
+            <row>
+               <entry>99eee90</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 20:29:20 2015 +0200</entry>
+               <entry>python dev for shippable</entry>
+            </row>
+            <row>
+               <entry>d0d3f5d</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 19:25:58 2015 +0200</entry>
+               <entry>travis ibtool</entry>
+            </row>
+            <row>
+               <entry>8bb3b7d</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 19:24:57 2015 +0200</entry>
+               <entry>shippable xvfb</entry>
+            </row>
+            <row>
+               <entry>64f2971</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 19:18:18 2015 +0200</entry>
+               <entry>apt update for shippable</entry>
+            </row>
+            <row>
+               <entry>499ae2d</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 19:14:51 2015 +0200</entry>
+               <entry>right shippable image</entry>
+            </row>
+            <row>
+               <entry>f21ee02</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 19:13:08 2015 +0200</entry>
+               <entry>removed essential packages from remove list</entry>
+            </row>
+            <row>
+               <entry>1028a6d</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 19:01:17 2015 +0200</entry>
+               <entry>figuring out shippable user</entry>
+            </row>
+            <row>
+               <entry>9dac44c</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 18:58:17 2015 +0200</entry>
+               <entry>shippable xvfb</entry>
+            </row>
+            <row>
+               <entry>4fa80ac</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 18:55:45 2015 +0200</entry>
+               <entry>first try at travis remove</entry>
+            </row>
+            <row>
+               <entry>c1052d6</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 18:47:29 2015 +0200</entry>
+               <entry>shippable.yml</entry>
+            </row>
+            <row>
+               <entry>5186fec</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 18:18:25 2015 +0200</entry>
+               <entry>Merge remote tracking branch remotes origin master into local_test_branch</entry>
+            </row>
+            <row>
+               <entry>7ef9eda</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 18:15:42 2015 +0200</entry>
+               <entry>main.css</entry>
+            </row>
+            <row>
+               <entry>2348109</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 18:07:48 2015 +0200</entry>
+               <entry>Merge remote tracking branch edemo master</entry>
+            </row>
+            <row>
+               <entry>094074e</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 18:07:17 2015 +0200</entry>
+               <entry>javascript bugfix for unit test</entry>
+            </row>
+            <row>
+               <entry>8f32c03</entry>
+               <entry>magwas</entry>
+               <entry>Tue Jun 9 18:01:56 2015 +0200</entry>
+               <entry>Merge pull request 84 from magwas feature twologinchecks_43</entry>
+            </row>
+            <row>
+               <entry>7555f84</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 17:59:45 2015 +0200</entry>
+               <entry>adding change password functionality to the UI</entry>
+            </row>
+            <row>
+               <entry>0f789c0</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 16:37:38 2015 +0200</entry>
+               <entry>hiding the resend emil div from UI if users email address is validated</entry>
+            </row>
+            <row>
+               <entry>05d7f51</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 16:22:38 2015 +0200</entry>
+               <entry>initiate resend the registration email function inserted into the UI</entry>
+            </row>
+            <row>
+               <entry>9c54073</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 16:07:49 2015 +0200</entry>
+               <entry>hide tabs from unautorised userd acount tab changes</entry>
+            </row>
+            <row>
+               <entry>e3edc45</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 11:53:42 2015 +0200</entry>
+               <entry>different login check for html and rest. closes 43</entry>
+            </row>
+            <row>
+               <entry>a49a267</entry>
+               <entry>magwas</entry>
+               <entry>Tue Jun 9 11:52:09 2015 +0200</entry>
+               <entry>Merge pull request 77 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>2b41c05</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 09:39:25 2015 +0200</entry>
+               <entry>wait time for keygen in test is increased to 3 secs</entry>
+            </row>
+            <row>
+               <entry>b43b832</entry>
+               <entry>magwas</entry>
+               <entry>Tue Jun 9 09:21:31 2015 +0200</entry>
+               <entry>Merge pull request 60 from Claymanus feature javascript_fixes</entry>
+            </row>
+            <row>
+               <entry>c18ae90</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 9 08:54:11 2015 +0200</entry>
+               <entry>Merge remote tracking branch remotes origin master into local_test_branch</entry>
+            </row>
+            <row>
+               <entry>8095166</entry>
+               <entry>magwas</entry>
+               <entry>Tue Jun 9 08:49:20 2015 +0200</entry>
+               <entry>Merge pull request 71 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>911a9af</entry>
+               <entry>magwas</entry>
+               <entry>Tue Jun 9 08:22:51 2015 +0200</entry>
+               <entry>Merge pull request 69 from magwas feature verbose_tests</entry>
+            </row>
+            <row>
+               <entry>3260846</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 9 07:54:47 2015 +0200</entry>
+               <entry>verbose tests. hopefully does something to 63</entry>
+            </row>
+            <row>
+               <entry>d30f5b6</entry>
+               <entry>claymanus</entry>
+               <entry>Mon Jun 8 21:47:58 2015 +0200</entry>
+               <entry>deregister functionality hooked into the UI</entry>
+            </row>
+            <row>
+               <entry>18e6a26</entry>
+               <entry>magwas</entry>
+               <entry>Mon Jun 8 20:11:34 2015 +0200</entry>
+               <entry>Merge pull request 57 from magwas feature interface_doc_fix_56</entry>
+            </row>
+            <row>
+               <entry>2afa50a</entry>
+               <entry>claymanus</entry>
+               <entry>Mon Jun 8 18:18:03 2015 +0200</entry>
+               <entry>Merge branch feature javascript_fixes of https github.com Claymanus PDOauth into local_test_branch</entry>
+            </row>
+            <row>
+               <entry>688eb0a</entry>
+               <entry>claymanus</entry>
+               <entry>Mon Jun 8 18:13:00 2015 +0200</entry>
+               <entry>added an own error container for password change form</entry>
+            </row>
+            <row>
+               <entry>df43f22</entry>
+               <entry>Mag</entry>
+               <entry>Mon Jun 8 17:38:43 2015 +0200</entry>
+               <entry>new annotation is used in doc generation. closes 56</entry>
+            </row>
+            <row>
+               <entry>2109c1e</entry>
+               <entry>magwas</entry>
+               <entry>Mon Jun 8 17:27:28 2015 +0200</entry>
+               <entry>Merge pull request 54 from Claymanus feature javascript_fixes</entry>
+            </row>
+            <row>
+               <entry>03be467</entry>
+               <entry>György Peng</entry>
+               <entry>Mon Jun 8 15:42:44 2015 +0200</entry>
+               <entry>Update app.wsgi</entry>
+            </row>
+            <row>
+               <entry>4ae6b5c</entry>
+               <entry>claymanus</entry>
+               <entry>Mon Jun 8 15:34:52 2015 +0200</entry>
+               <entry>Password reset initiator hooked in UI</entry>
+            </row>
+            <row>
+               <entry>e59038a</entry>
+               <entry>György Peng</entry>
+               <entry>Mon Jun 8 12:21:29 2015 +0200</entry>
+               <entry>Merge pull request 2 from magwas feature javascript_fixes</entry>
+            </row>
+            <row>
+               <entry>0bb4395</entry>
+               <entry>Mag</entry>
+               <entry>Mon Jun 8 10:15:27 2015 +0200</entry>
+               <entry>fix for end to end tests to follow ui changes</entry>
+            </row>
+            <row>
+               <entry>6ece58a</entry>
+               <entry>Mag</entry>
+               <entry>Mon Jun 8 08:17:08 2015 +0200</entry>
+               <entry>Merge branch master into HEAD</entry>
+            </row>
+            <row>
+               <entry>43b7a4a</entry>
+               <entry>magwas</entry>
+               <entry>Mon Jun 8 07:55:46 2015 +0200</entry>
+               <entry>Merge pull request 55 from magwas feature installguide</entry>
+            </row>
+            <row>
+               <entry>4c86547</entry>
+               <entry>Mag</entry>
+               <entry>Mon Jun 8 06:48:47 2015 +0200</entry>
+               <entry>installation doc test doc update. closes 51</entry>
+            </row>
+            <row>
+               <entry>864c14f</entry>
+               <entry>claymanus</entry>
+               <entry>Sun Jun 7 21:55:30 2015 +0200</entry>
+               <entry>registration form layot changes</entry>
+            </row>
+            <row>
+               <entry>142e7e2</entry>
+               <entry>claymanus</entry>
+               <entry>Sun Jun 7 18:37:08 2015 +0200</entry>
+               <entry>Merge branch feature javascript_fixes into local_test_branch</entry>
+            </row>
+            <row>
+               <entry>5ab7f00</entry>
+               <entry>claymanus</entry>
+               <entry>Sun Jun 7 18:35:05 2015 +0200</entry>
+               <entry>checkin the user loggid in at startup</entry>
+            </row>
+            <row>
+               <entry>540831b</entry>
+               <entry>György Peng</entry>
+               <entry>Sun Jun 7 15:22:38 2015 +0200</entry>
+               <entry>Update app.wsgi</entry>
+            </row>
+            <row>
+               <entry>ef41d06</entry>
+               <entry>György Peng</entry>
+               <entry>Sun Jun 7 15:21:53 2015 +0200</entry>
+               <entry>Update .gitignore</entry>
+            </row>
+            <row>
+               <entry>6eb21f5</entry>
+               <entry>claymanus</entry>
+               <entry>Sun Jun 7 14:29:47 2015 +0200</entry>
+               <entry>login tab layout changes introduced self error message container for various input forms</entry>
+            </row>
+            <row>
+               <entry>f32a0b9</entry>
+               <entry>magwas</entry>
+               <entry>Sun Jun 7 10:33:07 2015 +0200</entry>
+               <entry>Merge pull request 53 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>52178e5</entry>
+               <entry>magwas</entry>
+               <entry>Sat Jun 6 16:19:09 2015 +0200</entry>
+               <entry>Merge pull request 52 from magwas feature logout_deregistration</entry>
+            </row>
+            <row>
+               <entry>9074de0</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jun 6 15:49:11 2015 +0200</entry>
+               <entry>fix commitdoc git uri</entry>
+            </row>
+            <row>
+               <entry>99427d8</entry>
+               <entry>Mag</entry>
+               <entry>Fri Jun 5 16:04:24 2015 +0200</entry>
+               <entry>declassmetodified</entry>
+            </row>
+            <row>
+               <entry>f9cf482</entry>
+               <entry>Mag</entry>
+               <entry>Fri Jun 5 13:16:33 2015 +0200</entry>
+               <entry>end of decorator hell</entry>
+            </row>
+            <row>
+               <entry>13bda45</entry>
+               <entry>Mag</entry>
+               <entry>Fri Jun 5 10:22:56 2015 +0200</entry>
+               <entry>controller and ssl login test refactor</entry>
+            </row>
+            <row>
+               <entry>469de09</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 21:49:16 2015 +0200</entry>
+               <entry>refactor of controller</entry>
+            </row>
+            <row>
+               <entry>2aff602</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 20:07:33 2015 +0200</entry>
+               <entry>more hidden assertions revealed</entry>
+            </row>
+            <row>
+               <entry>7310980</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 18:20:41 2015 +0200</entry>
+               <entry>hidden exception value checks</entry>
+            </row>
+            <row>
+               <entry>bf61b74</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 17:51:14 2015 +0200</entry>
+               <entry>registration test refactor</entry>
+            </row>
+            <row>
+               <entry>2506cb4</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 15:54:20 2015 +0200</entry>
+               <entry>end2endtest the name of end2end tests</entry>
+            </row>
+            <row>
+               <entry>8999869</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 15:06:21 2015 +0200</entry>
+               <entry>Server side functionality tests refactored</entry>
+            </row>
+            <row>
+               <entry>181224f</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 14:15:47 2015 +0200</entry>
+               <entry>GH_TOKEN for magwas deleted</entry>
+            </row>
+            <row>
+               <entry>7bdde60</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 13:55:42 2015 +0200</entry>
+               <entry>ssl login test refactor</entry>
+            </row>
+            <row>
+               <entry>b684585</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 12:51:41 2015 +0200</entry>
+               <entry>travis env vars</entry>
+            </row>
+            <row>
+               <entry>b6aa768</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 12:44:34 2015 +0200</entry>
+               <entry>Merge remote tracking branch edemo master into feature logout_deregistration</entry>
+            </row>
+            <row>
+               <entry>070655d</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 12:41:45 2015 +0200</entry>
+               <entry>refactoring unit tests. less noisy end to end test</entry>
+            </row>
+            <row>
+               <entry>15e0c94</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 10:15:26 2015 +0200</entry>
+               <entry>test helpers refactor</entry>
+            </row>
+            <row>
+               <entry>f066d3c</entry>
+               <entry>Mag</entry>
+               <entry>Thu Jun 4 08:45:54 2015 +0200</entry>
+               <entry>form validation refactor</entry>
+            </row>
+            <row>
+               <entry>09daca4</entry>
+               <entry>magwas</entry>
+               <entry>Thu Jun 4 07:10:16 2015 +0200</entry>
+               <entry>Merge pull request 50 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>644f695</entry>
+               <entry>magwas</entry>
+               <entry>Wed Jun 3 21:31:44 2015 +0200</entry>
+               <entry>Merge pull request 47 from Claymanus feautere ui</entry>
+            </row>
+            <row>
+               <entry>d39a448</entry>
+               <entry>György Peng</entry>
+               <entry>Wed Jun 3 21:04:33 2015 +0200</entry>
+               <entry>Merge pull request 1 from magwas feautere ui</entry>
+            </row>
+            <row>
+               <entry>84b2a95</entry>
+               <entry>Mag</entry>
+               <entry>Wed Jun 3 20:51:35 2015 +0200</entry>
+               <entry>end to end tests for the new ui</entry>
+            </row>
+            <row>
+               <entry>d529a57</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 20:39:32 2015 +0200</entry>
+               <entry>default velue bugfix</entry>
+            </row>
+            <row>
+               <entry>1859d09</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 20:33:54 2015 +0200</entry>
+               <entry>hidden bugfix</entry>
+            </row>
+            <row>
+               <entry>37bdff2</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 20:30:58 2015 +0200</entry>
+               <entry>adding default value to the select tag</entry>
+            </row>
+            <row>
+               <entry>66639a1</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 20:15:07 2015 +0200</entry>
+               <entry>onclick bugfix</entry>
+            </row>
+            <row>
+               <entry>1c30090</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 19:58:45 2015 +0200</entry>
+               <entry>convertad a s to button</entry>
+            </row>
+            <row>
+               <entry>c461075</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 19:38:32 2015 +0200</entry>
+               <entry>adding missing tab in id s secret input field been set disabled</entry>
+            </row>
+            <row>
+               <entry>407d884</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 19:21:20 2015 +0200</entry>
+               <entry>string bug fix</entry>
+            </row>
+            <row>
+               <entry>4e036b1</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 19:05:31 2015 +0200</entry>
+               <entry>adding real id s for tabs</entry>
+            </row>
+            <row>
+               <entry>287831e</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 18:45:01 2015 +0200</entry>
+               <entry>added encoding meta tag</entry>
+            </row>
+            <row>
+               <entry>70a1350</entry>
+               <entry>claymanus</entry>
+               <entry>Wed Jun 3 16:42:59 2015 +0200</entry>
+               <entry>first ui with hungarian translation for demo</entry>
+            </row>
+            <row>
+               <entry>1721789</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 2 17:51:24 2015 +0200</entry>
+               <entry>assurance fixes flask interface</entry>
+            </row>
+            <row>
+               <entry>8d6b9e0</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 29 11:35:33 2015 +0200</entry>
+               <entry>merge master</entry>
+            </row>
+            <row>
+               <entry>1a37e09</entry>
+               <entry>Mag</entry>
+               <entry>Thu May 28 16:00:24 2015 +0200</entry>
+               <entry>the lost hash related commit</entry>
+            </row>
+            <row>
+               <entry>5001c14</entry>
+               <entry>Mag</entry>
+               <entry>Thu May 28 15:43:20 2015 +0200</entry>
+               <entry>PoC for new interface decorators</entry>
+            </row>
+            <row>
+               <entry>ff6fbf7</entry>
+               <entry>Mag</entry>
+               <entry>Thu May 28 07:50:02 2015 +0200</entry>
+               <entry>deregistration actualy works</entry>
+            </row>
+            <row>
+               <entry>189916a</entry>
+               <entry>Mag</entry>
+               <entry>Thu May 28 07:28:42 2015 +0200</entry>
+               <entry>100 unit test coverage</entry>
+            </row>
+            <row>
+               <entry>f409646</entry>
+               <entry>Mag</entry>
+               <entry>Wed May 27 22:34:37 2015 +0200</entry>
+               <entry>Merge branch feature hashmanagement</entry>
+            </row>
+            <row>
+               <entry>f21e7cb</entry>
+               <entry>Mag</entry>
+               <entry>Wed May 27 22:12:04 2015 +0200</entry>
+               <entry>travis</entry>
+            </row>
+            <row>
+               <entry>3b99bfd</entry>
+               <entry>Mag</entry>
+               <entry>Wed May 27 21:37:35 2015 +0200</entry>
+               <entry>record update hash on UI. registration sets the csrf cookie. user info contains hash. closes 34</entry>
+            </row>
+            <row>
+               <entry>5e9b194</entry>
+               <entry>Mag</entry>
+               <entry>Wed May 27 21:52:41 2015 +0200</entry>
+               <entry>record update hash on UI. registration sets the csrf cookie. user info contains hash. closes 34</entry>
+            </row>
+            <row>
+               <entry>213265c</entry>
+               <entry>Mag</entry>
+               <entry>Wed May 27 21:37:35 2015 +0200</entry>
+               <entry>record update hash on UI. registration sets the csrf cookie. user info contains hash. closes 34</entry>
+            </row>
+            <row>
+               <entry>c5e40c5</entry>
+               <entry>Mag</entry>
+               <entry>Wed May 27 01:46:21 2015 +0200</entry>
+               <entry>ssl login logout chrome integration test. closes 39 38</entry>
+            </row>
+            <row>
+               <entry>6dcb122</entry>
+               <entry>Mag</entry>
+               <entry>Tue May 26 18:39:44 2015 +0200</entry>
+               <entry>BrowserSetup ssl login logout related stuff 38</entry>
+            </row>
+            <row>
+               <entry>421f92a</entry>
+               <entry>Mag</entry>
+               <entry>Tue May 26 09:23:44 2015 +0200</entry>
+               <entry>uriservice beginning of ssl login and ssl logout on the UI</entry>
+            </row>
+            <row>
+               <entry>44a24a1</entry>
+               <entry>Mag</entry>
+               <entry>Mon May 25 22:13:38 2015 +0200</entry>
+               <entry>no oauthlib dep</entry>
+            </row>
+            <row>
+               <entry>863db56</entry>
+               <entry>Mag</entry>
+               <entry>Mon May 25 21:50:05 2015 +0200</entry>
+               <entry>certificate generation. closes 9</entry>
+            </row>
+            <row>
+               <entry>bdde271</entry>
+               <entry>Mag</entry>
+               <entry>Mon May 25 10:35:18 2015 +0200</entry>
+               <entry>fixup ssl login output in integrationtest</entry>
+            </row>
+            <row>
+               <entry>85b00f2</entry>
+               <entry>Mag</entry>
+               <entry>Mon May 25 10:20:42 2015 +0200</entry>
+               <entry>certificate registration closes 8</entry>
+            </row>
+            <row>
+               <entry>72c0a49</entry>
+               <entry>Mag</entry>
+               <entry>Mon May 25 08:36:26 2015 +0200</entry>
+               <entry>certificate is only asked when needed</entry>
+            </row>
+            <row>
+               <entry>199911a</entry>
+               <entry>Mag</entry>
+               <entry>Sun May 24 01:31:22 2015 +0200</entry>
+               <entry>me link</entry>
+            </row>
+            <row>
+               <entry>1791b16</entry>
+               <entry>Mag</entry>
+               <entry>Sun May 24 00:19:27 2015 +0200</entry>
+               <entry>ssl authentication server side</entry>
+            </row>
+            <row>
+               <entry>d109c98</entry>
+               <entry>Mag</entry>
+               <entry>Sun May 24 00:03:35 2015 +0200</entry>
+               <entry>no postgres</entry>
+            </row>
+            <row>
+               <entry>216e0b8</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 23:55:29 2015 +0200</entry>
+               <entry>just upgrade</entry>
+            </row>
+            <row>
+               <entry>ccfda6f</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 20:58:09 2015 +0200</entry>
+               <entry>upgrade options</entry>
+            </row>
+            <row>
+               <entry>8f40910</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 20:09:48 2015 +0200</entry>
+               <entry>nininteractive debian frontend</entry>
+            </row>
+            <row>
+               <entry>efee619</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 19:37:50 2015 +0200</entry>
+               <entry>dist upgrade</entry>
+            </row>
+            <row>
+               <entry>565f27c</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 19:30:26 2015 +0200</entry>
+               <entry>upgrade yes</entry>
+            </row>
+            <row>
+               <entry>0c975bf</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 18:22:24 2015 +0200</entry>
+               <entry>upgrade</entry>
+            </row>
+            <row>
+               <entry>0d79697</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 18:19:11 2015 +0200</entry>
+               <entry>trusty key</entry>
+            </row>
+            <row>
+               <entry>f277720</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 17:45:41 2015 +0200</entry>
+               <entry>restricted universe</entry>
+            </row>
+            <row>
+               <entry>d078efc</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 17:19:06 2015 +0200</entry>
+               <entry>type</entry>
+            </row>
+            <row>
+               <entry>7f4feb2</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 17:04:25 2015 +0200</entry>
+               <entry>trusty on travis https for apache</entry>
+            </row>
+            <row>
+               <entry>304bd00</entry>
+               <entry>Mag</entry>
+               <entry>Sat May 23 13:42:51 2015 +0200</entry>
+               <entry>integration test on apache</entry>
+            </row>
+            <row>
+               <entry>ed88c0e</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 22 15:45:22 2015 +0200</entry>
+               <entry>deregistration. closes 26</entry>
+            </row>
+            <row>
+               <entry>ffe27d4</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 22 15:05:05 2015 +0200</entry>
+               <entry>logout. closes 21</entry>
+            </row>
+            <row>
+               <entry>ea0ee4b</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 22 14:52:59 2015 +0200</entry>
+               <entry>the_credential_used_for_login_cannot_be_cleared. really closes 28</entry>
+            </row>
+            <row>
+               <entry>f9f3e13</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 22 12:19:48 2015 +0200</entry>
+               <entry>credential remove. closes 28</entry>
+            </row>
+            <row>
+               <entry>62d1cb5</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 22 11:35:45 2015 +0200</entry>
+               <entry>password policy. closes 7</entry>
+            </row>
+            <row>
+               <entry>d9b24c7</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 22 10:46:09 2015 +0200</entry>
+               <entry>no secret in user output. closes 29</entry>
+            </row>
+            <row>
+               <entry>1a88bb9</entry>
+               <entry>Mag</entry>
+               <entry>Fri May 22 10:04:26 2015 +0200</entry>
+               <entry>record hash. closes 6</entry>
+            </row>
+            <row>
+               <entry>dbbeb88</entry>
+               <entry>Mag</entry>
+               <entry>Thu May 21 15:39:20 2015 +0200</entry>
+               <entry>javascript tests fixed</entry>
+            </row>
+            <row>
+               <entry>4c98e66</entry>
+               <entry>Mag</entry>
+               <entry>Thu May 21 14:54:49 2015 +0200</entry>
+               <entry>adding credentials. closes 27</entry>
+            </row>
+            <row>
+               <entry>d61b5e3</entry>
+               <entry>Mag</entry>
+               <entry>Wed May 20 07:53:48 2015 +0200</entry>
+               <entry>wsgi app</entry>
+            </row>
+            <row>
+               <entry>1740e3e</entry>
+               <entry>Mag</entry>
+               <entry>Tue May 19 21:58:06 2015 +0200</entry>
+               <entry>assurance with hash hash collision. closes 4 5</entry>
+            </row>
+            <row>
+               <entry>135ba74</entry>
+               <entry>Mag</entry>
+               <entry>Tue May 19 17:33:25 2015 +0200</entry>
+               <entry>adding_assurance_is_possible_using_the_hash_only</entry>
+            </row>
+            <row>
+               <entry>b56c73b</entry>
+               <entry>Mag</entry>
+               <entry>Tue May 19 09:15:22 2015 +0200</entry>
+               <entry>doc site in README.MD</entry>
+            </row>
+            <row>
+               <entry>c3be2c7</entry>
+               <entry>Mag</entry>
+               <entry>Tue May 19 09:10:30 2015 +0200</entry>
+               <entry>default target installs. closes 25</entry>
+            </row>
+         </tbody>
+      </tgroup>
+   </table>
+</article>
