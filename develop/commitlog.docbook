@@ -13,6 +13,30 @@
          </thead>
          <tbody>
             <row>
+               <entry>b89fda2</entry>
+               <entry>György Peng</entry>
+               <entry>Tue Jun 16 10:55:04 2015 +0200</entry>
+               <entry>Merge pull request 154 from magwas feature refactor</entry>
+            </row>
+            <row>
+               <entry>e087d4a</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 16 08:11:20 2015 +0200</entry>
+               <entry>refactor</entry>
+            </row>
+            <row>
+               <entry>33f7968</entry>
+               <entry>Mag</entry>
+               <entry>Mon Jun 15 19:26:54 2015 +0200</entry>
+               <entry>deregistration. closes 75</entry>
+            </row>
+            <row>
+               <entry>23d1eed</entry>
+               <entry>Mag</entry>
+               <entry>Sun Jun 14 15:43:24 2015 +0200</entry>
+               <entry>facebook and ssl login sets session credential. closes 91</entry>
+            </row>
+            <row>
                <entry>8bb325d</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Sun Jun 14 09:11:55 2015 +0200</entry>
@@ -1091,12 +1115,6 @@
                <entry>Mag</entry>
                <entry>Tue May 19 09:15:22 2015 +0200</entry>
                <entry>doc site in README.MD</entry>
-            </row>
-            <row>
-               <entry>c3be2c7</entry>
-               <entry>Mag</entry>
-               <entry>Tue May 19 09:10:30 2015 +0200</entry>
-               <entry>default target installs. closes 25</entry>
             </row>
          </tbody>
       </tgroup>
