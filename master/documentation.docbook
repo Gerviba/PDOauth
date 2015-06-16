@@ -7,11 +7,11 @@
       </varlistentry>
       <varlistentry>
          <term>Commit:</term>
-         <listitem>9e6c3bf8e4e21ee88a8b10deb993fefb4d42b83d</listitem>
+         <listitem>cbefc091f051e7898b66736601dc6a36e85a5a96</listitem>
       </varlistentry>
       <varlistentry>
          <term>Build:</term>
-         <listitem>67007087</listitem>
+         <listitem>67104346</listitem>
       </varlistentry>
    </variablelist>
    <para>
@@ -22,6 +22,42 @@
    </section>
    <section>
       <title>Functionality</title>
+      <section>
+         <title>Ssl login</title>
+         <itemizedlist>
+            <listitem>There is a SSL LOGIN BASE URL config option containing the base url of the site with the optional no ca config.  </listitem>
+            <listitem>There is a BASE URL config option containing the plain ssl base url.  where no certificate is asked</listitem>
+            <listitem>There is a SSL LOGOUT URL config option pointing to a location which is set up with SSLVerifyClient require and SSLVerifyDepth 0 within SSL LOGIN BASE URL.  </listitem>
+            <listitem>There is a START URL config option which contains the starting point useable for unregistered and or not logged in user.  </listitem>
+            <listitem>You can login using a registered ssl cert.  </listitem>
+            <listitem>Ssl login sets csrf cookie.  </listitem>
+            <listitem>Login cookie have path set to root.  </listitem>
+            <listitem>Login cookie have domain set to COOKIE DOMAIN.  </listitem>
+            <listitem>With cert login you get actually logged in.  </listitem>
+            <listitem>You cannot login using an unregistered ssl cert without email.  </listitem>
+            <listitem>You cannot login without a cert.  </listitem>
+            <listitem>Empty certstring gives error.  </listitem>
+            <listitem>Junk certstring gives error.  </listitem>
+            <listitem>Ssl login is cors enabled.  </listitem>
+            <listitem>You can register and login using an unregistered ssl cert with email.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Credential</title>
+         <itemizedlist>
+            <listitem>Credential representation is readable.  </listitem>
+            <listitem>A logged in user can add credential.  </listitem>
+            <listitem>When a credential is added the response contains user data which contains her credentials.  </listitem>
+            <listitem>The credential is actually added.  </listitem>
+            <listitem>A credential can be deleted.  </listitem>
+            <listitem>Password is stored using sha256 hash.  </listitem>
+            <listitem>An already existing credential cannot be addedd.  </listitem>
+            <listitem>The credential used for login cannot be cleared.  </listitem>
+            <listitem>Certificate credential can be added by a logged in user without email.  </listitem>
+            <listitem>Certificate credential can be added by a logged in user with email.  </listitem>
+            <listitem>Certificate credential can removed.  </listitem>
+         </itemizedlist>
+      </section>
       <section>
          <title>Web interface</title>
          <itemizedlist>
@@ -98,26 +134,6 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Ssl login</title>
-         <itemizedlist>
-            <listitem>There is a SSL LOGIN BASE URL config option containing the base url of the site with the optional no ca config.  </listitem>
-            <listitem>There is a BASE URL config option containing the plain ssl base url.  where no certificate is asked</listitem>
-            <listitem>There is a SSL LOGOUT URL config option pointing to a location which is set up with SSLVerifyClient require and SSLVerifyDepth 0 within SSL LOGIN BASE URL.  </listitem>
-            <listitem>There is a START URL config option which contains the starting point useable for unregistered and or not logged in user.  </listitem>
-            <listitem>You can login using a registered ssl cert.  </listitem>
-            <listitem>Ssl login sets csrf cookie.  </listitem>
-            <listitem>Login cookie have path set to root.  </listitem>
-            <listitem>Login cookie have domain set to COOKIE DOMAIN.  </listitem>
-            <listitem>With cert login you get actually logged in.  </listitem>
-            <listitem>You cannot login using an unregistered ssl cert without email.  </listitem>
-            <listitem>You cannot login without a cert.  </listitem>
-            <listitem>Empty certstring gives error.  </listitem>
-            <listitem>Junk certstring gives error.  </listitem>
-            <listitem>Ssl login is cors enabled.  </listitem>
-            <listitem>You can register and login using an unregistered ssl cert with email.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
          <title>Registration</title>
          <itemizedlist>
             <listitem>Password is stored hashed in registration.  </listitem>
@@ -167,19 +183,6 @@
             <listitem>Your credentials are deleted in deregistration.  </listitem>
             <listitem>Your assurances are deleted in deregistration.  </listitem>
             <listitem>Your user is deleted in deregistration.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Credential</title>
-         <itemizedlist>
-            <listitem>Credential representation is readable.  </listitem>
-            <listitem>A logged in user can add credential.  </listitem>
-            <listitem>When a credential is added the response contains user data which contains her credentials.  </listitem>
-            <listitem>The credential is actually added.  </listitem>
-            <listitem>A credential can be deleted.  </listitem>
-            <listitem>Password is stored using sha256 hash.  </listitem>
-            <listitem>An already existing credential cannot be addedd.  </listitem>
-            <listitem>The credential used for login cannot be cleared.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -241,6 +244,40 @@
             <listitem>The name of the application must be unique case 2.  </listitem>
             <listitem>The redirect uri is stored as given.  </listitem>
             <listitem>The redirect uri must be https.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Keygen</title>
+         <itemizedlist>
+            <listitem>With keygen you get back a certificate.  </listitem>
+            <listitem>With keygen you get back a certificate for the given email.  </listitem>
+            <listitem>If the user is logged in,a credential is added to the user for the cert.  </listitem>
+            <listitem>If createUser is set,a new user is created with the cert and logged in.  </listitem>
+            <listitem>If the user is logged in and createUser is set,a credential is added to the user for the cert.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Credential integration</title>
+         <itemizedlist>
+            <listitem>Credential can be retrieved by type and identifier.  </listitem>
+            <listitem>A logged in user can add credential.  </listitem>
+            <listitem>A not logged in user cannot add credential.  </listitem>
+            <listitem>The added credential should contain credentialType.  </listitem>
+            <listitem>The added credential should contain valid credentialType.  </listitem>
+            <listitem>The added credential should contain identifier.  </listitem>
+            <listitem>The added credential should contain valid identifier.  </listitem>
+            <listitem>The added credential should contain secret.  </listitem>
+            <listitem>The password should be at least 8 characters long.  </listitem>
+            <listitem>The password should contain lowercase letters.  </listitem>
+            <listitem>The password should contain uppercase letters.  </listitem>
+            <listitem>Cannot add an already existing identifier.  </listitem>
+            <listitem>A credential can be deleted.  </listitem>
+            <listitem>The credential is actually deleted.  </listitem>
+            <listitem>You can delete certificate credential.  </listitem>
+            <listitem>You should give the credentialType for credential deletion.  </listitem>
+            <listitem>You should give valid credentialType for credential deletion.  </listitem>
+            <listitem>You should give the identifier for credential deletion.  </listitem>
+            <listitem>You should give valid identifier for credential deletion.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -341,16 +378,6 @@
          </itemizedlist>
       </section>
       <section>
-         <title>Keygen</title>
-         <itemizedlist>
-            <listitem>With keygen you get back a certificate.  </listitem>
-            <listitem>With keygen you get back a certificate for the given email.  </listitem>
-            <listitem>If the user is logged in,a credential is added to the user for the cert.  </listitem>
-            <listitem>If createUser is set,a new user is created with the cert and logged in.  </listitem>
-            <listitem>If the user is logged in and createUser is set,a credential is added to the user for the cert.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
          <title>Hash</title>
          <itemizedlist>
             <listitem>A logged in user can record its hash.  </listitem>
@@ -385,29 +412,6 @@
             <listitem>Deregistration doit needs a logged in user.  </listitem>
             <listitem>You need deregister secret for deregister doit.  </listitem>
             <listitem>You need valid deregister secret for deregister doit.  </listitem>
-         </itemizedlist>
-      </section>
-      <section>
-         <title>Credential integration</title>
-         <itemizedlist>
-            <listitem>Credential can be retrieved by type and identifier.  </listitem>
-            <listitem>A logged in user can add credential.  </listitem>
-            <listitem>A not logged in user cannot add credential.  </listitem>
-            <listitem>The added credential should contain credentialType.  </listitem>
-            <listitem>The added credential should contain valid credentialType.  </listitem>
-            <listitem>The added credential should contain identifier.  </listitem>
-            <listitem>The added credential should contain valid identifier.  </listitem>
-            <listitem>The added credential should contain secret.  </listitem>
-            <listitem>The password should be at least 8 characters long.  </listitem>
-            <listitem>The password should contain lowercase letters.  </listitem>
-            <listitem>The password should contain uppercase letters.  </listitem>
-            <listitem>Cannot add an already existing identifier.  </listitem>
-            <listitem>A credential can be deleted.  </listitem>
-            <listitem>The credential is actually deleted.  </listitem>
-            <listitem>You should give the credentialType for credential deletion.  </listitem>
-            <listitem>You should give valid credentialType for credential deletion.  </listitem>
-            <listitem>You should give the identifier for credential deletion.  </listitem>
-            <listitem>You should give valid identifier for credential deletion.  </listitem>
          </itemizedlist>
       </section>
       <section>

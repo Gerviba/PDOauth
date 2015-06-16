@@ -13,6 +13,24 @@
          </thead>
          <tbody>
             <row>
+               <entry>cbefc09</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Tue Jun 16 21:42:03 2015 +0000</entry>
+               <entry>Merge 1387b3334922ed760d4c9ae4f333bbee62d43329 into 9e6c3bf8e4e21ee88a8b10deb993fefb4d42b83d</entry>
+            </row>
+            <row>
+               <entry>1387b33</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Tue Jun 16 19:07:05 2015 +0200</entry>
+               <entry>Merge pull request 168 from magwas develop</entry>
+            </row>
+            <row>
+               <entry>bec1bae</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 16 14:35:14 2015 +0200</entry>
+               <entry>certificate credential can be deleted. closes 89</entry>
+            </row>
+            <row>
                <entry>9e6c3bf</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Tue Jun 16 12:43:10 2015 +0200</entry>
