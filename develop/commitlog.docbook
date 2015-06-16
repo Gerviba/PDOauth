@@ -13,6 +13,24 @@
          </thead>
          <tbody>
             <row>
+               <entry>1387b33</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Tue Jun 16 19:07:05 2015 +0200</entry>
+               <entry>Merge pull request 168 from magwas develop</entry>
+            </row>
+            <row>
+               <entry>bec1bae</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 16 14:35:14 2015 +0200</entry>
+               <entry>certificate credential can be deleted. closes 89</entry>
+            </row>
+            <row>
+               <entry>9e6c3bf</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Tue Jun 16 12:43:10 2015 +0200</entry>
+               <entry>Merge pull request 158 from edemo develop</entry>
+            </row>
+            <row>
                <entry>9b4cce7</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Tue Jun 16 12:14:55 2015 +0200</entry>
@@ -1247,12 +1265,6 @@
                <entry>Mag</entry>
                <entry>Tue May 19 17:33:25 2015 +0200</entry>
                <entry>adding_assurance_is_possible_using_the_hash_only</entry>
-            </row>
-            <row>
-               <entry>b56c73b</entry>
-               <entry>Mag</entry>
-               <entry>Tue May 19 09:15:22 2015 +0200</entry>
-               <entry>doc site in README.MD</entry>
             </row>
          </tbody>
       </tgroup>

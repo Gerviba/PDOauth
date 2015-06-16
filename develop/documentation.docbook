@@ -7,11 +7,11 @@
       </varlistentry>
       <varlistentry>
          <term>Commit:</term>
-         <listitem>9b4cce7d3af779775abada483dc6fd5c01038672</listitem>
+         <listitem>1387b3334922ed760d4c9ae4f333bbee62d43329</listitem>
       </varlistentry>
       <varlistentry>
          <term>Build:</term>
-         <listitem>67004184</listitem>
+         <listitem>67063549</listitem>
       </varlistentry>
    </variablelist>
    <para>
@@ -180,6 +180,9 @@
             <listitem>Password is stored using sha256 hash.  </listitem>
             <listitem>An already existing credential cannot be addedd.  </listitem>
             <listitem>The credential used for login cannot be cleared.  </listitem>
+            <listitem>Certificate credential can be added by a logged in user without email.  </listitem>
+            <listitem>Certificate credential can be added by a logged in user with email.  </listitem>
+            <listitem>Certificate credential can removed.  </listitem>
          </itemizedlist>
       </section>
       <section>
@@ -404,6 +407,7 @@
             <listitem>Cannot add an already existing identifier.  </listitem>
             <listitem>A credential can be deleted.  </listitem>
             <listitem>The credential is actually deleted.  </listitem>
+            <listitem>You can delete certificate credential.  </listitem>
             <listitem>You should give the credentialType for credential deletion.  </listitem>
             <listitem>You should give valid credentialType for credential deletion.  </listitem>
             <listitem>You should give the identifier for credential deletion.  </listitem>
