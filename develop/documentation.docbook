@@ -7,11 +7,11 @@
       </varlistentry>
       <varlistentry>
          <term>Commit:</term>
-         <listitem>b89fda2aa6f18bd68f9fdd3686b9f74f1b2b6b2e</listitem>
+         <listitem>9b4cce7d3af779775abada483dc6fd5c01038672</listitem>
       </varlistentry>
       <varlistentry>
          <term>Build:</term>
-         <listitem>66994746</listitem>
+         <listitem>67004184</listitem>
       </varlistentry>
    </variablelist>
    <para>
@@ -509,9 +509,16 @@
          <itemizedlist>
             <listitem>Ajaxpost can be mocked.</listitem>
             <listitem>Ajaxget can be mocked.</listitem>
-            <listitem>With processErrors message is shown in the message element.</listitem>
-            <listitem>With processErrors errors are shown in the errorMsg element.</listitem>
-            <listitem>With processErrors assurances, email and userid are shown in the userdata element.</listitem>
+            <listitem>With processErrors - message is returned in message property.</listitem>
+            <listitem>With processErrors - errors is returned in error property.</listitem>
+            <listitem>With processErrors - assurances, email and userid are returned in success property.</listitem>
+            <listitem>With displayMsg the popup div apears.</listitem>
+            <listitem>With displayMsg string in message property is shown in the PopupWindow MessageDiv element.</listitem>
+            <listitem>With displayMsg string in error property is shown in the PopupWindow ErrorDiv element.</listitem>
+            <listitem>With displayMsg string in success property is shown in the PopupWindow SuccessDiv element.</listitem>
+            <listitem>With displayMsg string in title property is shown in the PopupWindow TitleDiv element.</listitem>
+            <listitem>With closePopup the popup div hides and a callback function is calling.</listitem>
+            <listitem>With displayMsg a callback function is injected into the PopupWindow CloseButton button onclick propoerty callback function.</listitem>
             <listitem>MyCallback processes the data through processErrors.</listitem>
             <listitem>PasswordReset calls /v1/password reset with secret and password.</listitem>
             <listitem>Login calls /login with password as credential type, username and password.</listitem>
@@ -522,6 +529,7 @@
             <listitem>GetCookie extracts the named cookie.</listitem>
             <listitem>AddAssurance calls /v1/add assurance with digest,assurance and email.</listitem>
             <listitem>DigestGetter puts the result for the predigest input to the digest for the named form.</listitem>
+            <listitem>MenuHandler can hide and display the tabs.</listitem>
          </itemizedlist>
       </section>
    </section>

@@ -13,10 +13,34 @@
          </thead>
          <tbody>
             <row>
+               <entry>9b4cce7</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Tue Jun 16 12:14:55 2015 +0200</entry>
+               <entry>Merge pull request 157 from magwas feature refactor</entry>
+            </row>
+            <row>
+               <entry>df6e34c</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 16 11:24:37 2015 +0200</entry>
+               <entry>Merge remote tracking branch edemo master into feature refactor</entry>
+            </row>
+            <row>
+               <entry>c6630b1</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 16 11:24:26 2015 +0200</entry>
+               <entry>fixup for merge</entry>
+            </row>
+            <row>
                <entry>b89fda2</entry>
                <entry>György Peng</entry>
                <entry>Tue Jun 16 10:55:04 2015 +0200</entry>
                <entry>Merge pull request 154 from magwas feature refactor</entry>
+            </row>
+            <row>
+               <entry>d401cda</entry>
+               <entry>Mag</entry>
+               <entry>Tue Jun 16 08:27:05 2015 +0200</entry>
+               <entry>Merge remote tracking branch claymanus fixtures UI into feature refactor</entry>
             </row>
             <row>
                <entry>e087d4a</entry>
@@ -25,16 +49,94 @@
                <entry>refactor</entry>
             </row>
             <row>
+               <entry>612c22e</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 16 01:55:54 2015 +0200</entry>
+               <entry>app.wsgi</entry>
+            </row>
+            <row>
+               <entry>4a859a0</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 16 01:55:18 2015 +0200</entry>
+               <entry>fixed scripts.js</entry>
+            </row>
+            <row>
+               <entry>5e3af6f</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 16 01:12:55 2015 +0200</entry>
+               <entry>fixed sslauthtest</entry>
+            </row>
+            <row>
+               <entry>097771d</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 16 00:45:02 2015 +0200</entry>
+               <entry>ssl</entry>
+            </row>
+            <row>
+               <entry>062e804</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 16 00:36:32 2015 +0200</entry>
+               <entry>Merge branch fixtures UI of https github.com Claymanus PDOauth into local_test_branch</entry>
+            </row>
+            <row>
+               <entry>79c5914</entry>
+               <entry>claymanus</entry>
+               <entry>Tue Jun 16 00:34:19 2015 +0200</entry>
+               <entry>merge</entry>
+            </row>
+            <row>
+               <entry>3e76e37</entry>
+               <entry>György Peng</entry>
+               <entry>Tue Jun 16 00:24:01 2015 +0200</entry>
+               <entry>Update app.wsgi</entry>
+            </row>
+            <row>
+               <entry>7eae0cb</entry>
+               <entry>claymanus</entry>
+               <entry>Mon Jun 15 23:40:31 2015 +0200</entry>
+               <entry>added new javascript unittests for menuHandler processErrors displayMsg closePopup 107</entry>
+            </row>
+            <row>
                <entry>33f7968</entry>
                <entry>Mag</entry>
                <entry>Mon Jun 15 19:26:54 2015 +0200</entry>
                <entry>deregistration. closes 75</entry>
             </row>
             <row>
+               <entry>d739fa5</entry>
+               <entry>claymanus</entry>
+               <entry>Mon Jun 15 01:07:27 2015 +0200</entry>
+               <entry>javascript unittest fixes</entry>
+            </row>
+            <row>
+               <entry>d460313</entry>
+               <entry>claymanus</entry>
+               <entry>Sun Jun 14 22:38:11 2015 +0200</entry>
+               <entry>refactorer message system of UI 127</entry>
+            </row>
+            <row>
                <entry>23d1eed</entry>
                <entry>Mag</entry>
                <entry>Sun Jun 14 15:43:24 2015 +0200</entry>
                <entry>facebook and ssl login sets session credential. closes 91</entry>
+            </row>
+            <row>
+               <entry>88dc6e1</entry>
+               <entry>claymanus</entry>
+               <entry>Sun Jun 14 12:40:00 2015 +0200</entry>
+               <entry>reset email function added to login tab 140</entry>
+            </row>
+            <row>
+               <entry>74c2464</entry>
+               <entry>claymanus</entry>
+               <entry>Sun Jun 14 10:05:28 2015 +0200</entry>
+               <entry>E2E test changes according new menu nad messaging system 140</entry>
+            </row>
+            <row>
+               <entry>b2328f0</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sun Jun 14 09:30:56 2015 +0200</entry>
+               <entry>Merge pull request 145 from edemo develop</entry>
             </row>
             <row>
                <entry>8bb325d</entry>
@@ -49,6 +151,12 @@
                <entry>increased timeout for keygen</entry>
             </row>
             <row>
+               <entry>c536e9a</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sun Jun 14 01:34:15 2015 +0200</entry>
+               <entry>Merge pull request 135 from magwas feature commitdocs_74</entry>
+            </row>
+            <row>
                <entry>454a651</entry>
                <entry>Mag</entry>
                <entry>Sun Jun 14 00:46:50 2015 +0200</entry>
@@ -59,6 +167,18 @@
                <entry>Mag</entry>
                <entry>Sun Jun 14 00:43:36 2015 +0200</entry>
                <entry>branch commit build number and commit log in documentation. closes 74 closes 19</entry>
+            </row>
+            <row>
+               <entry>e340371</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sat Jun 13 23:46:10 2015 +0200</entry>
+               <entry>Merge pull request 134 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>a9c01e4</entry>
+               <entry>claymanus</entry>
+               <entry>Sat Jun 13 23:27:51 2015 +0200</entry>
+               <entry>anchore link targeted to _blank 121</entry>
             </row>
             <row>
                <entry>d63bb0c</entry>
@@ -77,6 +197,18 @@
                <entry>Mag</entry>
                <entry>Sat Jun 13 22:35:18 2015 +0200</entry>
                <entry>print failing the build removed</entry>
+            </row>
+            <row>
+               <entry>5bda5f4</entry>
+               <entry>claymanus</entry>
+               <entry>Sat Jun 13 22:32:26 2015 +0200</entry>
+               <entry>buttonize 61</entry>
+            </row>
+            <row>
+               <entry>8b0b27b</entry>
+               <entry>claymanus</entry>
+               <entry>Sat Jun 13 22:06:44 2015 +0200</entry>
+               <entry>menu handling is converted from css to javascript</entry>
             </row>
             <row>
                <entry>6210410</entry>
@@ -119,6 +251,12 @@
                <entry>Mag</entry>
                <entry>Sat Jun 13 11:20:01 2015 +0200</entry>
                <entry>all tests running again</entry>
+            </row>
+            <row>
+               <entry>44ec54e</entry>
+               <entry>claymanus</entry>
+               <entry>Sat Jun 13 10:28:43 2015 +0200</entry>
+               <entry>added a popup for error messages</entry>
             </row>
             <row>
                <entry>2b89607</entry>

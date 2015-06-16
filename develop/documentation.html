@@ -74,9 +74,9 @@
                <dt><span class="term">Branch:</span></dt>
                <dd>develop</dd>
                <dt><span class="term">Commit:</span></dt>
-               <dd>b89fda2aa6f18bd68f9fdd3686b9f74f1b2b6b2e</dd>
+               <dd>9b4cce7d3af779775abada483dc6fd5c01038672</dd>
                <dt><span class="term">Build:</span></dt>
-               <dd>66994746</dd>
+               <dd>67004184</dd>
             </dl>
          </div>
          <p>
@@ -992,9 +992,22 @@
                   <ul class="itemizedlist" style="list-style-type: disc; ">
                      <li class="listitem">Ajaxpost can be mocked.</li>
                      <li class="listitem">Ajaxget can be mocked.</li>
-                     <li class="listitem">With processErrors message is shown in the message element.</li>
-                     <li class="listitem">With processErrors errors are shown in the errorMsg element.</li>
-                     <li class="listitem">With processErrors assurances, email and userid are shown in the userdata element.</li>
+                     <li class="listitem">With processErrors - message is returned in message property.</li>
+                     <li class="listitem">With processErrors - errors is returned in error property.</li>
+                     <li class="listitem">With processErrors - assurances, email and userid are returned in success property.</li>
+                     <li class="listitem">With displayMsg the popup div apears.</li>
+                     <li class="listitem">With displayMsg string in message property is shown in the PopupWindow MessageDiv
+                        element.
+                     </li>
+                     <li class="listitem">With displayMsg string in error property is shown in the PopupWindow ErrorDiv element.</li>
+                     <li class="listitem">With displayMsg string in success property is shown in the PopupWindow SuccessDiv
+                        element.
+                     </li>
+                     <li class="listitem">With displayMsg string in title property is shown in the PopupWindow TitleDiv element.</li>
+                     <li class="listitem">With closePopup the popup div hides and a callback function is calling.</li>
+                     <li class="listitem">With displayMsg a callback function is injected into the PopupWindow CloseButton button
+                        onclick propoerty callback function.
+                     </li>
                      <li class="listitem">MyCallback processes the data through processErrors.</li>
                      <li class="listitem">PasswordReset calls /v1/password reset with secret and password.</li>
                      <li class="listitem">Login calls /login with password as credential type, username and password.</li>
@@ -1007,6 +1020,7 @@
                      <li class="listitem">GetCookie extracts the named cookie.</li>
                      <li class="listitem">AddAssurance calls /v1/add assurance with digest,assurance and email.</li>
                      <li class="listitem">DigestGetter puts the result for the predigest input to the digest for the named form.</li>
+                     <li class="listitem">MenuHandler can hide and display the tabs.</li>
                   </ul>
                </div>
             </div>
