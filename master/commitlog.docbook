@@ -13,6 +13,66 @@
          </thead>
          <tbody>
             <row>
+               <entry>11698e5</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Fri Dec 25 21:07:07 2015 +0100</entry>
+               <entry>Merge pull request 195 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>28c6e31</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Fri Dec 25 20:45:10 2015 +0100</entry>
+               <entry>Merge pull request 196 from magwas feature shippable</entry>
+            </row>
+            <row>
+               <entry>832864e</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:53:40 2015 +0100</entry>
+               <entry>again</entry>
+            </row>
+            <row>
+               <entry>4ec87c8</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:38:03 2015 +0100</entry>
+               <entry>diags</entry>
+            </row>
+            <row>
+               <entry>050aca6</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:30:06 2015 +0100</entry>
+               <entry>even more diags</entry>
+            </row>
+            <row>
+               <entry>a6742a5</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:21:32 2015 +0100</entry>
+               <entry>more diags</entry>
+            </row>
+            <row>
+               <entry>ec224b3</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:14:46 2015 +0100</entry>
+               <entry>diags</entry>
+            </row>
+            <row>
+               <entry>31e9077</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:01:31 2015 +0100</entry>
+               <entry>using our docker image on shippable</entry>
+            </row>
+            <row>
+               <entry>fd89cbd</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Fri Dec 25 14:54:35 2015 +0100</entry>
+               <entry>Merge pull request 194 from magwas feature anchor_url</entry>
+            </row>
+            <row>
+               <entry>d76ff13</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 13:16:56 2015 +0100</entry>
+               <entry>test timing</entry>
+            </row>
+            <row>
                <entry>38fc867</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Mon Dec 21 22:32:54 2015 +0100</entry>
@@ -1583,12 +1643,6 @@
                <entry>Mag</entry>
                <entry>Mon May 18 21:50:20 2015 +0200</entry>
                <entry>password_login_needs_correct_credentialType cannot_create_user_with_already_existing_email</entry>
-            </row>
-            <row>
-               <entry>ae4ffe6</entry>
-               <entry>Mag</entry>
-               <entry>Mon May 18 19:41:06 2015 +0200</entry>
-               <entry>new user story. closes 24</entry>
             </row>
          </tbody>
       </tgroup>
