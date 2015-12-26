@@ -13,6 +13,60 @@
          </thead>
          <tbody>
             <row>
+               <entry>ee0bb37</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sat Dec 26 01:03:23 2015 +0100</entry>
+               <entry>Merge pull request 197 from magwas feature applicationtool_bug</entry>
+            </row>
+            <row>
+               <entry>a520804</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 23:06:48 2015 +0100</entry>
+               <entry>fix applicationtool cover with tests</entry>
+            </row>
+            <row>
+               <entry>28c6e31</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Fri Dec 25 20:45:10 2015 +0100</entry>
+               <entry>Merge pull request 196 from magwas feature shippable</entry>
+            </row>
+            <row>
+               <entry>832864e</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:53:40 2015 +0100</entry>
+               <entry>again</entry>
+            </row>
+            <row>
+               <entry>4ec87c8</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:38:03 2015 +0100</entry>
+               <entry>diags</entry>
+            </row>
+            <row>
+               <entry>050aca6</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:30:06 2015 +0100</entry>
+               <entry>even more diags</entry>
+            </row>
+            <row>
+               <entry>a6742a5</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:21:32 2015 +0100</entry>
+               <entry>more diags</entry>
+            </row>
+            <row>
+               <entry>ec224b3</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:14:46 2015 +0100</entry>
+               <entry>diags</entry>
+            </row>
+            <row>
+               <entry>31e9077</entry>
+               <entry>Mag</entry>
+               <entry>Fri Dec 25 15:01:31 2015 +0100</entry>
+               <entry>using our docker image on shippable</entry>
+            </row>
+            <row>
                <entry>fd89cbd</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Fri Dec 25 14:54:35 2015 +0100</entry>
@@ -1583,18 +1637,6 @@
                <entry>Mag</entry>
                <entry>Mon May 18 21:50:20 2015 +0200</entry>
                <entry>password_login_needs_correct_credentialType cannot_create_user_with_already_existing_email</entry>
-            </row>
-            <row>
-               <entry>ae4ffe6</entry>
-               <entry>Mag</entry>
-               <entry>Mon May 18 19:41:06 2015 +0200</entry>
-               <entry>new user story. closes 24</entry>
-            </row>
-            <row>
-               <entry>b9ee5bc</entry>
-               <entry>Mag</entry>
-               <entry>Mon May 18 15:24:34 2015 +0200</entry>
-               <entry>error detection move fix</entry>
             </row>
          </tbody>
       </tgroup>

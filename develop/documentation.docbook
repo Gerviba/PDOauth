@@ -7,11 +7,11 @@
       </varlistentry>
       <varlistentry>
          <term>Commit:</term>
-         <listitem>fd89cbd42411d419ec1b410610bc585c4167902c</listitem>
+         <listitem>ee0bb37b28561c6599cbe8552bfee3536ce6752b</listitem>
       </varlistentry>
       <varlistentry>
          <term>Build:</term>
-         <listitem>98776311</listitem>
+         <listitem>98822995</listitem>
       </varlistentry>
    </variablelist>
    <para>
@@ -603,6 +603,17 @@
             <listitem>The name of the application must be unique case 2.  </listitem>
             <listitem>The redirect uri is stored as given.  </listitem>
             <listitem>The redirect uri must be https.  </listitem>
+         </itemizedlist>
+      </section>
+      <section>
+         <title>Application tool</title>
+         <itemizedlist>
+            <listitem>RunApplicationToolWithParameters.  </listitem>
+            <listitem>Applicationtool gives error if no parameters are given.  </listitem>
+            <listitem>Applicationtool gives help for dash dash help.  </listitem>
+            <listitem>Applicationtool works with a name a https redrect uri a secret and an assurance.  </listitem>
+            <listitem>Applicationtool works with a name a https redrect uri a secret and two assurances.  </listitem>
+            <listitem>Applicationtool refuses http uri.  </listitem>
          </itemizedlist>
       </section>
       <section>
