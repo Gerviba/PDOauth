@@ -7,11 +7,11 @@
       </varlistentry>
       <varlistentry>
          <term>Commit:</term>
-         <listitem>f2c0a32a50bb12b9998d9b6ec56a121cc8d56ef9</listitem>
+         <listitem>2303945e9c980c83c54fae3f448a8cc0129fdd7b</listitem>
       </varlistentry>
       <varlistentry>
          <term>Build:</term>
-         <listitem>98825897</listitem>
+         <listitem>98855400</listitem>
       </varlistentry>
    </variablelist>
    <para>
@@ -290,7 +290,10 @@
             <listitem>The users hash is changed to the new one.  </listitem>
             <listitem>If the user had a hash before,it is overwritten.  </listitem>
             <listitem>It is possible to delete the hash by not giving a digest in the request.  </listitem>
+            <listitem>When hash is deleted no hashgiven assurance remains.  </listitem>
+            <listitem>UpdateHashForUser.    </listitem>
             <listitem>The assurances are overwritten on hash update.  </listitem>
+            <listitem>A hashgiven assurance is created when a hash is given. </listitem>
             <listitem>Emailverification assurance is an exception from overwriting.  </listitem>
             <listitem>Without login it is not possible to update the hash.  </listitem>
             <listitem>The hash update request should contain csrf token.  </listitem>

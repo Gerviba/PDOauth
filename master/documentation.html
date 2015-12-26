@@ -69,30 +69,30 @@
                      <dt><span class="section"><a href="#d54e358">Deregister integration</a></span></dt>
                      <dt><span class="section"><a href="#d54e382">Userinfo integration</a></span></dt>
                      <dt><span class="section"><a href="#d54e388">Hash</a></span></dt>
-                     <dt><span class="section"><a href="#d54e410">Password reset integration</a></span></dt>
-                     <dt><span class="section"><a href="#d54e426">Redirection</a></span></dt>
-                     <dt><span class="section"><a href="#d54e433">Server side</a></span></dt>
-                     <dt><span class="section"><a href="#d54e449">Assurance integration</a></span></dt>
-                     <dt><span class="section"><a href="#d54e459">Key data</a></span></dt>
-                     <dt><span class="section"><a href="#d54e475">Facebook</a></span></dt>
-                     <dt><span class="section"><a href="#d54e489">Authorisaton</a></span></dt>
-                     <dt><span class="section"><a href="#d54e507">Deregister</a></span></dt>
-                     <dt><span class="section"><a href="#d54e531">Login</a></span></dt>
-                     <dt><span class="section"><a href="#d54e545">Registration</a></span></dt>
-                     <dt><span class="section"><a href="#d54e580">Ssl login</a></span></dt>
-                     <dt><span class="section"><a href="#d54e615">Web interface</a></span></dt>
-                     <dt><span class="section"><a href="#d54e656">Auth provider</a></span></dt>
-                     <dt><span class="section"><a href="#d54e679">Token info by access key</a></span></dt>
-                     <dt><span class="section"><a href="#d54e693">User</a></span></dt>
-                     <dt><span class="section"><a href="#d54e730">Uri service</a></span></dt>
-                     <dt><span class="section"><a href="#d54e746">User info</a></span></dt>
-                     <dt><span class="section"><a href="#d54e795">Credential</a></span></dt>
-                     <dt><span class="section"><a href="#d54e821">Logout</a></span></dt>
-                     <dt><span class="section"><a href="#d54e829">Password reset</a></span></dt>
-                     <dt><span class="section"><a href="#d54e862">Assurance</a></span></dt>
-                     <dt><span class="section"><a href="#d54e886">Application</a></span></dt>
-                     <dt><span class="section"><a href="#d54e902">Application tool</a></span></dt>
-                     <dt><span class="section"><a href="#d54e918">JavaScript tests</a></span></dt>
+                     <dt><span class="section"><a href="#d54e417">Password reset integration</a></span></dt>
+                     <dt><span class="section"><a href="#d54e433">Redirection</a></span></dt>
+                     <dt><span class="section"><a href="#d54e440">Server side</a></span></dt>
+                     <dt><span class="section"><a href="#d54e456">Assurance integration</a></span></dt>
+                     <dt><span class="section"><a href="#d54e466">Key data</a></span></dt>
+                     <dt><span class="section"><a href="#d54e482">Facebook</a></span></dt>
+                     <dt><span class="section"><a href="#d54e496">Authorisaton</a></span></dt>
+                     <dt><span class="section"><a href="#d54e514">Deregister</a></span></dt>
+                     <dt><span class="section"><a href="#d54e538">Login</a></span></dt>
+                     <dt><span class="section"><a href="#d54e552">Registration</a></span></dt>
+                     <dt><span class="section"><a href="#d54e587">Ssl login</a></span></dt>
+                     <dt><span class="section"><a href="#d54e622">Web interface</a></span></dt>
+                     <dt><span class="section"><a href="#d54e663">Auth provider</a></span></dt>
+                     <dt><span class="section"><a href="#d54e686">Token info by access key</a></span></dt>
+                     <dt><span class="section"><a href="#d54e700">User</a></span></dt>
+                     <dt><span class="section"><a href="#d54e737">Uri service</a></span></dt>
+                     <dt><span class="section"><a href="#d54e753">User info</a></span></dt>
+                     <dt><span class="section"><a href="#d54e802">Credential</a></span></dt>
+                     <dt><span class="section"><a href="#d54e828">Logout</a></span></dt>
+                     <dt><span class="section"><a href="#d54e836">Password reset</a></span></dt>
+                     <dt><span class="section"><a href="#d54e869">Assurance</a></span></dt>
+                     <dt><span class="section"><a href="#d54e893">Application</a></span></dt>
+                     <dt><span class="section"><a href="#d54e909">Application tool</a></span></dt>
+                     <dt><span class="section"><a href="#d54e925">JavaScript tests</a></span></dt>
                   </dl>
                </dd>
             </dl>
@@ -102,9 +102,9 @@
                <dt><span class="term">Branch:</span></dt>
                <dd>master</dd>
                <dt><span class="term">Commit:</span></dt>
-               <dd>f2c0a32a50bb12b9998d9b6ec56a121cc8d56ef9</dd>
+               <dd>2303945e9c980c83c54fae3f448a8cc0129fdd7b</dd>
                <dt><span class="term">Build:</span></dt>
-               <dd>98825897</dd>
+               <dd>98855400</dd>
             </dl>
          </div>
          <p>
@@ -747,7 +747,10 @@
                      <li class="listitem">The users hash is changed to the new one.  </li>
                      <li class="listitem">If the user had a hash before,it is overwritten.  </li>
                      <li class="listitem">It is possible to delete the hash by not giving a digest in the request.  </li>
+                     <li class="listitem">When hash is deleted no hashgiven assurance remains.  </li>
+                     <li class="listitem">UpdateHashForUser.    </li>
                      <li class="listitem">The assurances are overwritten on hash update.  </li>
+                     <li class="listitem">A hashgiven assurance is created when a hash is given. </li>
                      <li class="listitem">Emailverification assurance is an exception from overwriting.  </li>
                      <li class="listitem">Without login it is not possible to update the hash.  </li>
                      <li class="listitem">The hash update request should contain csrf token.  </li>
@@ -759,7 +762,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e410"></a>Password reset integration
+                        <h3 class="title"><a id="d54e417"></a>Password reset integration
                         </h3>
                      </div>
                   </div>
@@ -779,7 +782,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e426"></a>Redirection
+                        <h3 class="title"><a id="d54e433"></a>Redirection
                         </h3>
                      </div>
                   </div>
@@ -796,7 +799,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e433"></a>Server side
+                        <h3 class="title"><a id="d54e440"></a>Server side
                         </h3>
                      </div>
                   </div>
@@ -818,7 +821,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e449"></a>Assurance integration
+                        <h3 class="title"><a id="d54e456"></a>Assurance integration
                         </h3>
                      </div>
                   </div>
@@ -838,7 +841,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e459"></a>Key data
+                        <h3 class="title"><a id="d54e466"></a>Key data
                         </h3>
                      </div>
                   </div>
@@ -858,7 +861,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e475"></a>Facebook
+                        <h3 class="title"><a id="d54e482"></a>Facebook
                         </h3>
                      </div>
                   </div>
@@ -877,7 +880,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e489"></a>Authorisaton
+                        <h3 class="title"><a id="d54e496"></a>Authorisaton
                         </h3>
                      </div>
                   </div>
@@ -898,7 +901,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e507"></a>Deregister
+                        <h3 class="title"><a id="d54e514"></a>Deregister
                         </h3>
                      </div>
                   </div>
@@ -922,7 +925,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e531"></a>Login
+                        <h3 class="title"><a id="d54e538"></a>Login
                         </h3>
                      </div>
                   </div>
@@ -941,7 +944,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e545"></a>Registration
+                        <h3 class="title"><a id="d54e552"></a>Registration
                         </h3>
                      </div>
                   </div>
@@ -974,7 +977,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e580"></a>Ssl login
+                        <h3 class="title"><a id="d54e587"></a>Ssl login
                         </h3>
                      </div>
                   </div>
@@ -1011,7 +1014,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e615"></a>Web interface
+                        <h3 class="title"><a id="d54e622"></a>Web interface
                         </h3>
                      </div>
                   </div>
@@ -1043,7 +1046,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e656"></a>Auth provider
+                        <h3 class="title"><a id="d54e663"></a>Auth provider
                         </h3>
                      </div>
                   </div>
@@ -1068,7 +1071,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e679"></a>Token info by access key
+                        <h3 class="title"><a id="d54e686"></a>Token info by access key
                         </h3>
                      </div>
                   </div>
@@ -1087,7 +1090,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e693"></a>User
+                        <h3 class="title"><a id="d54e700"></a>User
                         </h3>
                      </div>
                   </div>
@@ -1117,7 +1120,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e730"></a>Uri service
+                        <h3 class="title"><a id="d54e737"></a>Uri service
                         </h3>
                      </div>
                   </div>
@@ -1137,7 +1140,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e746"></a>User info
+                        <h3 class="title"><a id="d54e753"></a>User info
                         </h3>
                      </div>
                   </div>
@@ -1181,7 +1184,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e795"></a>Credential
+                        <h3 class="title"><a id="d54e802"></a>Credential
                         </h3>
                      </div>
                   </div>
@@ -1208,7 +1211,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e821"></a>Logout
+                        <h3 class="title"><a id="d54e828"></a>Logout
                         </h3>
                      </div>
                   </div>
@@ -1224,7 +1227,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e829"></a>Password reset
+                        <h3 class="title"><a id="d54e836"></a>Password reset
                         </h3>
                      </div>
                   </div>
@@ -1252,7 +1255,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e862"></a>Assurance
+                        <h3 class="title"><a id="d54e869"></a>Assurance
                         </h3>
                      </div>
                   </div>
@@ -1282,7 +1285,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e886"></a>Application
+                        <h3 class="title"><a id="d54e893"></a>Application
                         </h3>
                      </div>
                   </div>
@@ -1302,7 +1305,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e902"></a>Application tool
+                        <h3 class="title"><a id="d54e909"></a>Application tool
                         </h3>
                      </div>
                   </div>
@@ -1326,7 +1329,7 @@
                <div class="titlepage">
                   <div>
                      <div>
-                        <h3 class="title"><a id="d54e918"></a>JavaScript tests
+                        <h3 class="title"><a id="d54e925"></a>JavaScript tests
                         </h3>
                      </div>
                   </div>

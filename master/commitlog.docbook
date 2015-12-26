@@ -13,10 +13,28 @@
          </thead>
          <tbody>
             <row>
+               <entry>2303945</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sat Dec 26 11:34:55 2015 +0100</entry>
+               <entry>Merge pull request 200 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>f3adc67</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sat Dec 26 01:58:08 2015 +0100</entry>
+               <entry>Merge pull request 198 from magwas feature hashgiven</entry>
+            </row>
+            <row>
                <entry>f2c0a32</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Sat Dec 26 01:57:52 2015 +0100</entry>
                <entry>Merge pull request 199 from edemo develop</entry>
+            </row>
+            <row>
+               <entry>fcaf54a</entry>
+               <entry>Mag</entry>
+               <entry>Sat Dec 26 01:05:07 2015 +0100</entry>
+               <entry>hashgiven attribute. closes 179</entry>
             </row>
             <row>
                <entry>ee0bb37</entry>
@@ -1649,12 +1667,6 @@
                <entry>Mag</entry>
                <entry>Tue May 19 09:10:30 2015 +0200</entry>
                <entry>default target installs. closes 25</entry>
-            </row>
-            <row>
-               <entry>473415b</entry>
-               <entry>Mag</entry>
-               <entry>Tue May 19 07:08:48 2015 +0200</entry>
-               <entry>show current uri in new user test</entry>
             </row>
          </tbody>
       </tgroup>
