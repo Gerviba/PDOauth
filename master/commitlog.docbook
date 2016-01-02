@@ -13,6 +13,24 @@
          </thead>
          <tbody>
             <row>
+               <entry>1d08e25</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sat Jan 2 14:08:53 2016 +0000</entry>
+               <entry>Merge 0860f565202a481b437fe5eda360e2de9698ba97 into 2303945e9c980c83c54fae3f448a8cc0129fdd7b</entry>
+            </row>
+            <row>
+               <entry>0860f56</entry>
+               <entry>Árpád Magosányi</entry>
+               <entry>Sat Jan 2 15:08:38 2016 +0100</entry>
+               <entry>Merge pull request 220 from magwas feature 500</entry>
+            </row>
+            <row>
+               <entry>439e07b</entry>
+               <entry>Mag</entry>
+               <entry>Sat Jan 2 13:15:30 2016 +0100</entry>
+               <entry>500 error fixed. fixes 203</entry>
+            </row>
+            <row>
                <entry>2303945</entry>
                <entry>Árpád Magosányi</entry>
                <entry>Sat Dec 26 11:34:55 2015 +0100</entry>
