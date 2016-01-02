@@ -13,10 +13,10 @@
          </thead>
          <tbody>
             <row>
-               <entry>1d08e25</entry>
+               <entry>3973077</entry>
                <entry>Árpád Magosányi</entry>
-               <entry>Sat Jan 2 14:08:53 2016 +0000</entry>
-               <entry>Merge 0860f565202a481b437fe5eda360e2de9698ba97 into 2303945e9c980c83c54fae3f448a8cc0129fdd7b</entry>
+               <entry>Sat Jan 2 17:00:03 2016 +0100</entry>
+               <entry>Merge pull request 221 from edemo develop</entry>
             </row>
             <row>
                <entry>0860f56</entry>
@@ -1679,12 +1679,6 @@
                <entry>Mag</entry>
                <entry>Tue May 19 09:15:22 2015 +0200</entry>
                <entry>doc site in README.MD</entry>
-            </row>
-            <row>
-               <entry>c3be2c7</entry>
-               <entry>Mag</entry>
-               <entry>Tue May 19 09:10:30 2015 +0200</entry>
-               <entry>default target installs. closes 25</entry>
             </row>
          </tbody>
       </tgroup>
